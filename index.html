@@ -1100,79 +1100,255 @@
       <div class="section__header">
         <span class="section__tag">Reservation</span>
         <h2 class="section__title">Reservez votre velo<br>en quelques clics</h2>
-        <p class="section__desc">Selectionnez vos velos, vos dates, et nous preparons tout pour votre arrivee.</p>
+        <p class="section__desc">3 etapes simples. Pas de paiement en ligne — reglement sur place.</p>
       </div>
 
-      <div class="booking-layout">
-        <!-- Booking Cart -->
-        <div class="booking-cart" id="bookingCart">
-          <h3 class="booking-cart__title">Votre selection</h3>
-          <div class="booking-cart__items" id="cartItems">
-            <p class="booking-cart__empty">Aucun velo selectionne. <a href="#velos">Choisir un velo</a></p>
+      <!-- Progress Steps -->
+      <div class="booking-progress">
+        <div class="booking-progress__step active" data-step="1">
+          <div class="booking-progress__number">1</div>
+          <span>Velos & Dates</span>
+        </div>
+        <div class="booking-progress__line"></div>
+        <div class="booking-progress__step" data-step="2">
+          <div class="booking-progress__number">2</div>
+          <span>Vos coordonnees</span>
+        </div>
+        <div class="booking-progress__line"></div>
+        <div class="booking-progress__step" data-step="3">
+          <div class="booking-progress__number">3</div>
+          <span>Confirmation</span>
+        </div>
+      </div>
+
+      <form class="booking-wizard" id="bookingForm" novalidate>
+
+        <!-- ======= STEP 1: Velos & Dates ======= -->
+        <div class="booking-step active" id="bookingStep1">
+
+          <div class="booking-step__grid">
+            <!-- Left: Cart -->
+            <div class="booking-cart" id="bookingCart">
+              <div class="booking-cart__header">
+                <h3 class="booking-cart__title">Votre selection</h3>
+                <span class="booking-cart__count" id="cartCount">0 articles</span>
+              </div>
+
+              <div class="booking-cart__items" id="cartItems">
+                <div class="booking-cart__empty" id="cartEmpty">
+                  <div class="booking-cart__empty-icon">🚲</div>
+                  <p>Aucun velo selectionne</p>
+                  <a href="#velos" class="btn btn--outline btn--sm">Choisir un velo</a>
+                </div>
+              </div>
+
+              <div class="booking-cart__summary" id="cartSummary" style="display:none">
+                <div class="booking-cart__line">
+                  <span>Sous-total / jour</span>
+                  <span id="cartSubtotal">&euro;0</span>
+                </div>
+                <div class="booking-cart__line" id="cartDaysLine" style="display:none">
+                  <span>Duree</span>
+                  <span id="cartDays">—</span>
+                </div>
+                <div class="booking-cart__line booking-cart__line--discount" id="cartDiscountLine" style="display:none">
+                  <span>Remise longue duree</span>
+                  <span id="cartDiscount" class="text-green">—</span>
+                </div>
+                <div class="booking-cart__line booking-cart__line--total">
+                  <span>Total estime</span>
+                  <span id="cartTotal">&euro;0</span>
+                </div>
+                <div class="booking-cart__line booking-cart__line--deposit">
+                  <span>Caution (remboursable)</span>
+                  <span id="cartDeposit">&euro;0</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Right: Date & Time -->
+            <div class="booking-dates">
+              <h3 class="booking-dates__title">Dates & recuperation</h3>
+
+              <div class="booking-form__row">
+                <div class="booking-form__group">
+                  <label for="dateStart">Date de debut *</label>
+                  <input type="date" id="dateStart" name="dateStart" required>
+                  <span class="booking-form__error" id="dateStartError"></span>
+                </div>
+                <div class="booking-form__group">
+                  <label for="dateEnd">Date de retour *</label>
+                  <input type="date" id="dateEnd" name="dateEnd" required>
+                  <span class="booking-form__error" id="dateEndError"></span>
+                </div>
+              </div>
+
+              <div class="booking-dates__duration" id="durationDisplay" style="display:none">
+                <span class="booking-dates__duration-icon">📅</span>
+                <span id="durationText">—</span>
+              </div>
+
+              <div class="booking-form__group">
+                <label for="pickupTime">Heure de recuperation *</label>
+                <select id="pickupTime" name="pickupTime" required>
+                  <option value="">— Choisir un creneau —</option>
+                  <optgroup label="Matin">
+                    <option value="08:00">08:00 — Ouverture</option>
+                    <option value="08:30">08:30</option>
+                    <option value="09:00">09:00</option>
+                    <option value="09:30">09:30</option>
+                    <option value="10:00">10:00</option>
+                    <option value="10:30">10:30</option>
+                    <option value="11:00">11:00</option>
+                    <option value="11:30">11:30</option>
+                  </optgroup>
+                  <optgroup label="Apres-midi">
+                    <option value="12:00">12:00</option>
+                    <option value="14:00">14:00</option>
+                    <option value="14:30">14:30</option>
+                    <option value="15:00">15:00</option>
+                    <option value="15:30">15:30</option>
+                    <option value="16:00">16:00</option>
+                  </optgroup>
+                </select>
+                <span class="booking-form__error" id="pickupTimeError"></span>
+              </div>
+
+              <div class="booking-form__group">
+                <label for="returnTime">Heure de retour souhaitee</label>
+                <select id="returnTime" name="returnTime">
+                  <option value="flexible">Flexible (avant fermeture)</option>
+                  <optgroup label="Matin">
+                    <option value="08:00">08:00</option>
+                    <option value="09:00">09:00</option>
+                    <option value="10:00">10:00</option>
+                    <option value="11:00">11:00</option>
+                  </optgroup>
+                  <optgroup label="Apres-midi">
+                    <option value="14:00">14:00</option>
+                    <option value="15:00">15:00</option>
+                    <option value="16:00">16:00</option>
+                    <option value="17:00">17:00</option>
+                    <option value="18:00">18:00</option>
+                    <option value="19:00">19:00 — Fermeture</option>
+                  </optgroup>
+                </select>
+              </div>
+
+              <div class="booking-info-box">
+                <strong>Bon à savoir</strong>
+                <ul>
+                  <li>Retour possible apres fermeture (boite à cles disponible)</li>
+                  <li>Livraison hotel gratuite (3+ jours, Intra-Muros)</li>
+                  <li>Annulation gratuite jusqu'à 24h avant</li>
+                </ul>
+              </div>
+            </div>
           </div>
-          <div class="booking-cart__summary" id="cartSummary" style="display:none">
-            <div class="booking-cart__line">
-              <span>Sous-total</span>
-              <span id="cartSubtotal">&euro;0</span>
-            </div>
-            <div class="booking-cart__line booking-cart__line--total">
-              <span>Total</span>
-              <span id="cartTotal">&euro;0</span>
-            </div>
+
+          <div class="booking-step__actions">
+            <span></span>
+            <button type="button" class="btn btn--primary btn--lg" id="toStep2">
+              Continuer — Coordonnees
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </button>
           </div>
         </div>
 
-        <!-- Booking Form -->
-        <form class="booking-form" id="bookingForm">
-          <div class="booking-form__group">
-            <label for="dateStart">Date de debut</label>
-            <input type="date" id="dateStart" name="dateStart" required>
+        <!-- ======= STEP 2: Coordonnees ======= -->
+        <div class="booking-step" id="bookingStep2">
+          <div class="booking-step__grid">
+
+            <div class="booking-contact">
+              <h3 class="booking-dates__title">Vos coordonnees</h3>
+              <p class="booking-contact__intro">Pour vous envoyer la confirmation et vous contacter le jour J.</p>
+
+              <div class="booking-form__row">
+                <div class="booking-form__group">
+                  <label for="firstName">Prenom *</label>
+                  <input type="text" id="firstName" name="firstName" placeholder="Votre prenom" required autocomplete="given-name">
+                  <span class="booking-form__error" id="firstNameError"></span>
+                </div>
+                <div class="booking-form__group">
+                  <label for="lastName">Nom *</label>
+                  <input type="text" id="lastName" name="lastName" placeholder="Votre nom de famille" required autocomplete="family-name">
+                  <span class="booking-form__error" id="lastNameError"></span>
+                </div>
+              </div>
+
+              <div class="booking-form__group">
+                <label for="email">Adresse email *</label>
+                <input type="email" id="email" name="email" placeholder="votre@email.com" required autocomplete="email">
+                <span class="booking-form__hint">Nous enverrons la confirmation ici</span>
+                <span class="booking-form__error" id="emailError"></span>
+              </div>
+
+              <div class="booking-form__group">
+                <label for="phone">Telephone *</label>
+                <input type="tel" id="phone" name="phone" placeholder="+33 6 12 34 56 78" required autocomplete="tel">
+                <span class="booking-form__hint">En cas de besoin le jour de la location</span>
+                <span class="booking-form__error" id="phoneError"></span>
+              </div>
+
+              <div class="booking-form__group">
+                <label for="groupSize">Nombre de personnes dans le groupe</label>
+                <select id="groupSize" name="groupSize">
+                  <option value="1">1 personne (solo)</option>
+                  <option value="2" selected>2 personnes (couple)</option>
+                  <option value="3">3 personnes</option>
+                  <option value="4">4 personnes (famille)</option>
+                  <option value="5">5 personnes</option>
+                  <option value="6+">6+ personnes (groupe)</option>
+                </select>
+              </div>
+
+              <div class="booking-form__group">
+                <label for="accommodation">Hebergement à Saint-Malo (optionnel)</label>
+                <input type="text" id="accommodation" name="accommodation" placeholder="Nom de l'hotel, camping, Airbnb...">
+                <span class="booking-form__hint">Pour la livraison gratuite (locations 3+ jours)</span>
+              </div>
+
+              <div class="booking-form__group">
+                <label for="notes">Remarques ou demandes speciales</label>
+                <textarea id="notes" name="notes" rows="3" placeholder="Tailles souhaitees (ex: H 1m75, F 1m60), besoins specifiques, allergies..."></textarea>
+              </div>
+
+              <div class="booking-form__checkbox">
+                <input type="checkbox" id="acceptTerms" name="acceptTerms" required>
+                <label for="acceptTerms">J'accepte les <a href="#" target="_blank">conditions generales de location</a> et la <a href="#" target="_blank">politique d'annulation</a> *</label>
+                <span class="booking-form__error" id="acceptTermsError"></span>
+              </div>
+            </div>
+
+            <!-- Mini recap sidebar -->
+            <div class="booking-recap">
+              <h4 class="booking-recap__title">Recapitulatif</h4>
+              <div class="booking-recap__dates" id="recapDates">—</div>
+              <div class="booking-recap__items" id="recapItems">—</div>
+              <div class="booking-recap__total">
+                <span>Total</span>
+                <span id="recapTotal">&euro;0</span>
+              </div>
+              <button type="button" class="booking-recap__edit" id="backToStep1Edit">Modifier la selection</button>
+            </div>
+
           </div>
-          <div class="booking-form__group">
-            <label for="dateEnd">Date de fin</label>
-            <input type="date" id="dateEnd" name="dateEnd" required>
+
+          <div class="booking-step__actions">
+            <button type="button" class="btn btn--outline btn--lg" id="backToStep1">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+              Retour
+            </button>
+            <button type="submit" class="btn btn--primary btn--lg" id="submitBooking">
+              Confirmer la reservation
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 13l4 4L19 7"/></svg>
+            </button>
           </div>
-          <div class="booking-form__group">
-            <label for="pickupTime">Heure de recuperation</label>
-            <select id="pickupTime" name="pickupTime" required>
-              <option value="">Choisir...</option>
-              <option value="08:00">08:00</option>
-              <option value="08:30">08:30</option>
-              <option value="09:00">09:00</option>
-              <option value="09:30">09:30</option>
-              <option value="10:00">10:00</option>
-              <option value="10:30">10:30</option>
-              <option value="11:00">11:00</option>
-              <option value="11:30">11:30</option>
-              <option value="12:00">12:00</option>
-              <option value="14:00">14:00</option>
-              <option value="14:30">14:30</option>
-              <option value="15:00">15:00</option>
-              <option value="15:30">15:30</option>
-              <option value="16:00">16:00</option>
-            </select>
-          </div>
-          <div class="booking-form__divider"></div>
-          <div class="booking-form__group">
-            <label for="fullName">Nom complet</label>
-            <input type="text" id="fullName" name="fullName" placeholder="Votre nom et prenom" required>
-          </div>
-          <div class="booking-form__group">
-            <label for="email">Email</label>
-            <input type="email" id="email" name="email" placeholder="votre@email.com" required>
-          </div>
-          <div class="booking-form__group">
-            <label for="phone">Telephone</label>
-            <input type="tel" id="phone" name="phone" placeholder="+33 6 12 34 56 78" required>
-          </div>
-          <div class="booking-form__group">
-            <label for="notes">Remarques (optionnel)</label>
-            <textarea id="notes" name="notes" rows="3" placeholder="Tailles souhaitees, besoin de sieges enfants, etc."></textarea>
-          </div>
-          <button type="submit" class="btn btn--primary btn--full btn--lg" id="submitBooking">Confirmer la reservation</button>
-          <p class="booking-form__note">Pas de paiement en ligne. Reglement sur place le jour de la recuperation.</p>
-        </form>
-      </div>
+        </div>
+
+        <!-- ======= STEP 3: Confirmation (shown in modal) ======= -->
+
+      </form>
     </div>
   </section>
 
@@ -1289,13 +1465,106 @@
   <!-- Confirmation Modal -->
   <div class="modal" id="confirmationModal">
     <div class="modal__overlay"></div>
-    <div class="modal__content">
+    <div class="modal__content modal__content--receipt">
       <button class="modal__close" id="modalClose">&times;</button>
-      <div class="modal__icon">✅</div>
-      <h2 class="modal__title">Reservation confirmee !</h2>
-      <p class="modal__text">Merci pour votre reservation. Vous recevrez un email de confirmation avec tous les details. A bientôt à Saint-Malo !</p>
-      <div class="modal__details" id="modalDetails"></div>
-      <button class="btn btn--primary btn--full" id="modalOk">Parfait !</button>
+
+      <div class="receipt">
+        <div class="receipt__header">
+          <div class="receipt__icon">✅</div>
+          <h2 class="receipt__title">Reservation confirmee !</h2>
+          <p class="receipt__subtitle">Merci ! Un email de confirmation arrive dans quelques minutes.</p>
+          <div class="receipt__ref">Ref. : <strong id="receiptRef">VSM-000000</strong></div>
+        </div>
+
+        <div class="receipt__section">
+          <h4>Client</h4>
+          <div class="receipt__row">
+            <span>Nom</span>
+            <span id="receiptName">—</span>
+          </div>
+          <div class="receipt__row">
+            <span>Email</span>
+            <span id="receiptEmail">—</span>
+          </div>
+          <div class="receipt__row">
+            <span>Telephone</span>
+            <span id="receiptPhone">—</span>
+          </div>
+          <div class="receipt__row" id="receiptGroupRow" style="display:none">
+            <span>Groupe</span>
+            <span id="receiptGroup">—</span>
+          </div>
+        </div>
+
+        <div class="receipt__section">
+          <h4>Periode de location</h4>
+          <div class="receipt__row">
+            <span>Du</span>
+            <span id="receiptDateStart">—</span>
+          </div>
+          <div class="receipt__row">
+            <span>Au</span>
+            <span id="receiptDateEnd">—</span>
+          </div>
+          <div class="receipt__row">
+            <span>Duree</span>
+            <span id="receiptDuration">—</span>
+          </div>
+          <div class="receipt__row">
+            <span>Recuperation</span>
+            <span id="receiptPickup">—</span>
+          </div>
+          <div class="receipt__row">
+            <span>Retour</span>
+            <span id="receiptReturn">—</span>
+          </div>
+        </div>
+
+        <div class="receipt__section">
+          <h4>Articles loues</h4>
+          <div id="receiptItems"><!-- filled by JS --></div>
+        </div>
+
+        <div class="receipt__section receipt__section--total">
+          <div class="receipt__row" id="receiptDiscountRow" style="display:none">
+            <span>Remise longue duree</span>
+            <span id="receiptDiscount" class="text-green">—</span>
+          </div>
+          <div class="receipt__row receipt__row--bold">
+            <span>Total à regler sur place</span>
+            <span id="receiptTotal">&euro;0</span>
+          </div>
+          <div class="receipt__row">
+            <span>Caution (remboursable au retour)</span>
+            <span id="receiptDeposit">&euro;0</span>
+          </div>
+        </div>
+
+        <div class="receipt__section" id="receiptNotesSection" style="display:none">
+          <h4>Remarques</h4>
+          <p id="receiptNotes">—</p>
+        </div>
+
+        <div class="receipt__footer">
+          <div class="receipt__info-row">
+            <span>📍</span>
+            <span>12 Rue de Dinan, Intra-Muros — 35400 Saint-Malo</span>
+          </div>
+          <div class="receipt__info-row">
+            <span>📞</span>
+            <span>02 99 12 34 56</span>
+          </div>
+          <div class="receipt__info-row">
+            <span>📧</span>
+            <span>bonjour@velo-saint-malo.fr</span>
+          </div>
+          <p class="receipt__cancel">Annulation gratuite jusqu'à 24h avant. Contactez-nous par telephone ou email.</p>
+        </div>
+      </div>
+
+      <div class="modal__actions">
+        <button class="btn btn--primary btn--full btn--lg" id="modalOk">Fermer</button>
+      </div>
     </div>
   </div>
 
