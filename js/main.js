@@ -10,6 +10,7 @@ let currentStep = 1;
 document.addEventListener('DOMContentLoaded', () => {
   initNavigation();
   initBikeFilters();
+  initBikeToggles();
   initBookingButtons();
   initFAQ();
   initBookingWizard();
@@ -36,6 +37,30 @@ function initNavigation() {
     link.addEventListener('click', () => {
       toggle.classList.remove('active');
       menu.classList.remove('active');
+    });
+  });
+}
+
+// --- Bike Card Expand/Collapse Toggles ---
+function initBikeToggles() {
+  document.querySelectorAll('.bike-card').forEach(card => {
+    const desc = card.querySelector('.bike-card__desc');
+    if (!desc) return;
+
+    const toggle = document.createElement('button');
+    toggle.type = 'button';
+    toggle.className = 'bike-card__toggle';
+    toggle.setAttribute('aria-expanded', 'false');
+    toggle.innerHTML = 'Specifications <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M6 9l6 6 6-6"/></svg>';
+
+    desc.insertAdjacentElement('afterend', toggle);
+
+    toggle.addEventListener('click', () => {
+      const expanded = card.classList.toggle('expanded');
+      toggle.setAttribute('aria-expanded', String(expanded));
+      toggle.innerHTML = expanded
+        ? 'Masquer <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M6 9l6 6 6-6"/></svg>'
+        : 'Specifications <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M6 9l6 6 6-6"/></svg>';
     });
   });
 }

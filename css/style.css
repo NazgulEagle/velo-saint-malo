@@ -368,7 +368,7 @@ a:hover {
 
 /* --- Sections --- */
 .section {
-  padding: 100px 0;
+  padding: 64px 0;
 }
 
 .section--alt {
@@ -471,7 +471,7 @@ a:hover {
 
 .bike-card__image {
   position: relative;
-  height: 180px;
+  height: 100px;
   background: linear-gradient(135deg,
     color-mix(in srgb, var(--bike-color) 10%, white),
     color-mix(in srgb, var(--bike-color) 25%, white));
@@ -506,7 +506,7 @@ a:hover {
 }
 
 .bike-card__content {
-  padding: 20px;
+  padding: 16px;
 }
 
 .bike-card__brand {
@@ -527,10 +527,62 @@ a:hover {
 }
 
 .bike-card__desc {
-  font-size: 0.9rem;
+  font-size: 0.85rem;
   color: var(--text-light);
-  margin-bottom: 12px;
+  margin-bottom: 8px;
   line-height: 1.5;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.bike-card.expanded .bike-card__desc {
+  -webkit-line-clamp: unset;
+  overflow: visible;
+}
+
+/* --- Collapsible specs & features --- */
+.bike-card__specs,
+.bike-card__features {
+  display: none;
+}
+
+.bike-card.expanded .bike-card__specs,
+.bike-card.expanded .bike-card__features {
+  display: block;
+}
+
+.bike-card__toggle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  width: 100%;
+  padding: 6px;
+  margin-bottom: 8px;
+  background: var(--bg-alt);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  font-size: 0.78rem;
+  font-weight: 500;
+  color: var(--text-light);
+  cursor: pointer;
+  transition: all var(--transition);
+}
+
+.bike-card__toggle:hover {
+  color: var(--primary-light);
+  border-color: var(--primary-light);
+  background: color-mix(in srgb, var(--primary-light) 5%, white);
+}
+
+.bike-card__toggle svg {
+  transition: transform 0.2s ease;
+}
+
+.bike-card.expanded .bike-card__toggle svg {
+  transform: rotate(180deg);
 }
 
 .bike-card__features {
@@ -940,8 +992,8 @@ a:hover {
 
 .route-card {
   background: var(--bg);
-  border-radius: var(--radius-lg);
-  padding: 28px;
+  border-radius: var(--radius);
+  padding: 20px;
   border: 1px solid var(--border);
   transition: all var(--transition);
 }
@@ -1004,10 +1056,14 @@ a:hover {
 }
 
 .route-card__desc {
-  font-size: 0.9rem;
+  font-size: 0.85rem;
   color: var(--text-light);
-  line-height: 1.6;
-  margin-bottom: 16px;
+  line-height: 1.5;
+  margin-bottom: 12px;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
 }
 
 .route-card__meta {
@@ -2130,7 +2186,7 @@ a:hover {
   }
 
   .section {
-    padding: 60px 0;
+    padding: 48px 0;
   }
 
   .step__connector {
