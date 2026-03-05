@@ -80,205 +80,626 @@
         <button class="bike-filter" data-filter="city">Ville</button>
         <button class="bike-filter" data-filter="electric">Electrique</button>
         <button class="bike-filter" data-filter="sport">Sport</button>
-        <button class="bike-filter" data-filter="family">Famille</button>
+        <button class="bike-filter" data-filter="kids">Enfants</button>
+        <button class="bike-filter" data-filter="accessory">Accessoires</button>
       </div>
 
       <div class="bikes-grid">
-        <!-- Velo de Ville -->
+
+        <!-- ==================== VELOS DE VILLE ==================== -->
+
+        <!-- Gazelle Paris C7 -->
         <div class="bike-card" data-category="city">
           <div class="bike-card__image" style="--bike-color: #3b82f6">
             <div class="bike-card__icon">🚲</div>
             <span class="bike-card__badge">Populaire</span>
           </div>
           <div class="bike-card__content">
-            <h3 class="bike-card__name">Velo de Ville</h3>
-            <p class="bike-card__desc">Parfait pour les balades en ville et le long des remparts. Confortable, leger et facile à manier.</p>
+            <span class="bike-card__brand">Gazelle</span>
+            <h3 class="bike-card__name">Paris C7</h3>
+            <p class="bike-card__desc">Le velo hollandais par excellence. Position droite ultra-confortable pour les balades en ville et le long des remparts.</p>
+            <ul class="bike-card__specs">
+              <li><span>Cadre</span><span>Aluminium — col de cygne (enjambement bas)</span></li>
+              <li><span>Vitesses</span><span>Shimano Nexus 7 (moyeu)</span></li>
+              <li><span>Freins</span><span>Rollerbrake avant + arriere</span></li>
+              <li><span>Poids</span><span>19 kg</span></li>
+            </ul>
             <ul class="bike-card__features">
-              <li>Cadre aluminium leger</li>
-              <li>7 vitesses Shimano</li>
-              <li>Panier avant inclus</li>
-              <li>Antivol fourni</li>
+              <li>Porte-bagages + antivol de cadre</li>
+              <li>Eclairage dynamo integre</li>
+              <li>Panier avant disponible</li>
+            </ul>
+            <div class="bike-card__footer">
+              <div class="bike-card__price">
+                <span class="bike-card__price-amount">&euro;15</span>
+                <span class="bike-card__price-period">/jour</span>
+              </div>
+              <button class="btn btn--primary btn--sm add-to-booking" data-bike="gazelle-paris" data-name="Gazelle Paris C7" data-price="15">Ajouter</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Riverside 500 -->
+        <div class="bike-card" data-category="city">
+          <div class="bike-card__image" style="--bike-color: #6366f1">
+            <div class="bike-card__icon">🚲</div>
+          </div>
+          <div class="bike-card__content">
+            <span class="bike-card__brand">Riverside</span>
+            <h3 class="bike-card__name">500</h3>
+            <p class="bike-card__desc">Polyvalent et leger, le hybride parfait entre velo de ville et randonneuse. Ideal pour les voies vertes vers Dinan ou Cancale.</p>
+            <ul class="bike-card__specs">
+              <li><span>Cadre</span><span>Aluminium 6061 — H ou mixte</span></li>
+              <li><span>Vitesses</span><span>Shimano Altus 9v (derailleur)</span></li>
+              <li><span>Freins</span><span>Disques mecaniques Tektro</span></li>
+              <li><span>Poids</span><span>13,7 kg</span></li>
+            </ul>
+            <ul class="bike-card__features">
+              <li>Fourche aluminium suspendue</li>
+              <li>Pneus 700x42 polyvalents</li>
+              <li>Porte-bagages compatible</li>
             </ul>
             <div class="bike-card__footer">
               <div class="bike-card__price">
                 <span class="bike-card__price-amount">&euro;12</span>
                 <span class="bike-card__price-period">/jour</span>
               </div>
-              <button class="btn btn--primary btn--sm add-to-booking" data-bike="city" data-name="Velo de Ville" data-price="12">Ajouter</button>
+              <button class="btn btn--primary btn--sm add-to-booking" data-bike="riverside-500" data-name="Riverside 500" data-price="12">Ajouter</button>
             </div>
           </div>
         </div>
 
-        <!-- Velo Electrique -->
-        <div class="bike-card" data-category="electric">
-          <div class="bike-card__image" style="--bike-color: #10b981">
-            <div class="bike-card__icon">⚡</div>
-            <span class="bike-card__badge bike-card__badge--green">Eco</span>
+        <!-- Trek FX 3 -->
+        <div class="bike-card" data-category="city sport">
+          <div class="bike-card__image" style="--bike-color: #0ea5e9">
+            <div class="bike-card__icon">🚲</div>
           </div>
           <div class="bike-card__content">
-            <h3 class="bike-card__name">Velo Electrique</h3>
-            <p class="bike-card__desc">Assistance electrique pour aller plus loin sans effort. Ideal pour les longues excursions côtieres.</p>
-            <ul class="bike-card__features">
-              <li>Autonomie 80 km</li>
-              <li>Moteur Bosch 250W</li>
-              <li>Ecran LCD integre</li>
-              <li>3 niveaux d'assistance</li>
+            <span class="bike-card__brand">Trek</span>
+            <h3 class="bike-card__name">FX 3 Disc</h3>
+            <p class="bike-card__desc">Fitness bike rapide et sportif. Pour ceux qui veulent couvrir de la distance : Saint-Malo → Dinan en 1h30 sans forcer.</p>
+            <ul class="bike-card__specs">
+              <li><span>Cadre</span><span>Alpha Gold aluminium</span></li>
+              <li><span>Vitesses</span><span>Shimano Alivio/Acera 2x9 (18v)</span></li>
+              <li><span>Freins</span><span>Disques hydrauliques Shimano</span></li>
+              <li><span>Poids</span><span>11,5 kg</span></li>
             </ul>
-            <div class="bike-card__footer">
-              <div class="bike-card__price">
-                <span class="bike-card__price-amount">&euro;25</span>
-                <span class="bike-card__price-period">/jour</span>
-              </div>
-              <button class="btn btn--primary btn--sm add-to-booking" data-bike="ebike" data-name="Velo Electrique" data-price="25">Ajouter</button>
-            </div>
-          </div>
-        </div>
-
-        <!-- VTT -->
-        <div class="bike-card" data-category="sport">
-          <div class="bike-card__image" style="--bike-color: #f59e0b">
-            <div class="bike-card__icon">🏔️</div>
-          </div>
-          <div class="bike-card__content">
-            <h3 class="bike-card__name">VTT</h3>
-            <p class="bike-card__desc">Pour les chemins côtiers et les sentiers naturels. Suspension avant et pneus tout-terrain.</p>
             <ul class="bike-card__features">
-              <li>Suspension avant SR Suntour</li>
-              <li>21 vitesses</li>
-              <li>Freins à disque</li>
-              <li>Pneus tout-terrain</li>
+              <li>Fourche carbone IsoZone</li>
+              <li>Pneus 700x35 semi-slick</li>
+              <li>Poignees ergonomiques</li>
             </ul>
             <div class="bike-card__footer">
               <div class="bike-card__price">
                 <span class="bike-card__price-amount">&euro;18</span>
                 <span class="bike-card__price-period">/jour</span>
               </div>
-              <button class="btn btn--primary btn--sm add-to-booking" data-bike="vtt" data-name="VTT" data-price="18">Ajouter</button>
+              <button class="btn btn--primary btn--sm add-to-booking" data-bike="trek-fx3" data-name="Trek FX 3 Disc" data-price="18">Ajouter</button>
             </div>
           </div>
         </div>
 
-        <!-- VTT Electrique -->
-        <div class="bike-card" data-category="electric sport">
-          <div class="bike-card__image" style="--bike-color: #8b5cf6">
-            <div class="bike-card__icon">🔋</div>
-            <span class="bike-card__badge bike-card__badge--purple">Premium</span>
+        <!-- ==================== VELOS ELECTRIQUES ==================== -->
+
+        <!-- Moustache Samedi 28.3 -->
+        <div class="bike-card" data-category="electric">
+          <div class="bike-card__image" style="--bike-color: #10b981">
+            <div class="bike-card__icon">⚡</div>
+            <span class="bike-card__badge bike-card__badge--green">Best-seller</span>
           </div>
           <div class="bike-card__content">
-            <h3 class="bike-card__name">VTT Electrique</h3>
-            <p class="bike-card__desc">La puissance electrique combinee avec les capacites tout-terrain. Pour les aventuriers ambitieux.</p>
+            <span class="bike-card__brand">Moustache</span>
+            <h3 class="bike-card__name">Samedi 28.3</h3>
+            <p class="bike-card__desc">E-bike francais haut de gamme. Moteur Bosch puissant et batterie grande autonomie : parfait pour l'excursion au Mont Saint-Michel (55 km).</p>
+            <ul class="bike-card__specs">
+              <li><span>Moteur</span><span>Bosch Performance Line CX (85 Nm)</span></li>
+              <li><span>Batterie</span><span>Bosch PowerTube 625 Wh</span></li>
+              <li><span>Autonomie</span><span>80–120 km (mode Eco)</span></li>
+              <li><span>Vitesses</span><span>Shimano Deore 10v</span></li>
+              <li><span>Poids</span><span>25 kg</span></li>
+            </ul>
             <ul class="bike-card__features">
-              <li>Moteur Shimano Steps</li>
-              <li>Autonomie 100 km</li>
-              <li>Suspension full</li>
-              <li>Freins hydrauliques</li>
+              <li>Ecran Bosch Intuvia — 4 modes d'assistance</li>
+              <li>Freins à disque hydrauliques Shimano</li>
+              <li>Porte-bagages + garde-boue integres</li>
             </ul>
             <div class="bike-card__footer">
               <div class="bike-card__price">
                 <span class="bike-card__price-amount">&euro;35</span>
                 <span class="bike-card__price-period">/jour</span>
               </div>
-              <button class="btn btn--primary btn--sm add-to-booking" data-bike="evtt" data-name="VTT Electrique" data-price="35">Ajouter</button>
+              <button class="btn btn--primary btn--sm add-to-booking" data-bike="moustache-28" data-name="Moustache Samedi 28.3" data-price="35">Ajouter</button>
             </div>
           </div>
         </div>
 
-        <!-- Tandem -->
-        <div class="bike-card" data-category="family">
-          <div class="bike-card__image" style="--bike-color: #ec4899">
-            <div class="bike-card__icon">👫</div>
+        <!-- Trek Verve+ 3 -->
+        <div class="bike-card" data-category="electric">
+          <div class="bike-card__image" style="--bike-color: #22c55e">
+            <div class="bike-card__icon">⚡</div>
           </div>
           <div class="bike-card__content">
-            <h3 class="bike-card__name">Tandem</h3>
-            <p class="bike-card__desc">Partagez l'aventure à deux ! Parfait pour les couples ou les amis qui veulent pedaler ensemble.</p>
+            <span class="bike-card__brand">Trek</span>
+            <h3 class="bike-card__name">Verve+ 3 Lowstep</h3>
+            <p class="bike-card__desc">E-bike confortable avec enjambement bas. Facile à monter/descendre, ideal pour les balades tranquilles le long de la Côte d'Emeraude.</p>
+            <ul class="bike-card__specs">
+              <li><span>Moteur</span><span>Bosch Active Line Plus (50 Nm)</span></li>
+              <li><span>Batterie</span><span>Bosch PowerTube 500 Wh</span></li>
+              <li><span>Autonomie</span><span>60–100 km</span></li>
+              <li><span>Vitesses</span><span>Shimano Alivio 9v</span></li>
+              <li><span>Poids</span><span>23 kg</span></li>
+            </ul>
             <ul class="bike-card__features">
-              <li>2 places confortables</li>
-              <li>7 vitesses</li>
-              <li>Cadre renforce</li>
-              <li>Double freinage</li>
+              <li>Cadre Lowstep — enjambement très facile</li>
+              <li>Ecran Bosch Purion — commande au guidon</li>
+              <li>Selle Bontrager Boulevard gel</li>
             </ul>
             <div class="bike-card__footer">
               <div class="bike-card__price">
                 <span class="bike-card__price-amount">&euro;30</span>
                 <span class="bike-card__price-period">/jour</span>
               </div>
-              <button class="btn btn--primary btn--sm add-to-booking" data-bike="tandem" data-name="Tandem" data-price="30">Ajouter</button>
+              <button class="btn btn--primary btn--sm add-to-booking" data-bike="trek-verve" data-name="Trek Verve+ 3 Lowstep" data-price="30">Ajouter</button>
             </div>
           </div>
         </div>
 
-        <!-- Velo Enfant -->
-        <div class="bike-card" data-category="family">
+        <!-- Cube Touring Hybrid One 625 -->
+        <div class="bike-card" data-category="electric">
+          <div class="bike-card__image" style="--bike-color: #059669">
+            <div class="bike-card__icon">⚡</div>
+            <span class="bike-card__badge bike-card__badge--purple">Longue distance</span>
+          </div>
+          <div class="bike-card__content">
+            <span class="bike-card__brand">Cube</span>
+            <h3 class="bike-card__name">Touring Hybrid One 625</h3>
+            <p class="bike-card__desc">Le randonneur electrique par excellence. Concu pour les longues distances avec confort maximal. Notre choix pour les circuits de plusieurs jours.</p>
+            <ul class="bike-card__specs">
+              <li><span>Moteur</span><span>Bosch Performance CX Gen4 (85 Nm)</span></li>
+              <li><span>Batterie</span><span>Bosch PowerTube 625 Wh</span></li>
+              <li><span>Autonomie</span><span>90–140 km</span></li>
+              <li><span>Vitesses</span><span>Shimano Deore 12v</span></li>
+              <li><span>Poids</span><span>26 kg</span></li>
+            </ul>
+            <ul class="bike-card__features">
+              <li>Fourche suspendue SR Suntour (63 mm)</li>
+              <li>Eclairage Supernova integre (60 lux)</li>
+              <li>Porte-bagages robuste (25 kg)</li>
+            </ul>
+            <div class="bike-card__footer">
+              <div class="bike-card__price">
+                <span class="bike-card__price-amount">&euro;38</span>
+                <span class="bike-card__price-period">/jour</span>
+              </div>
+              <button class="btn btn--primary btn--sm add-to-booking" data-bike="cube-touring" data-name="Cube Touring Hybrid One 625" data-price="38">Ajouter</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- ==================== VTT & SPORT ==================== -->
+
+        <!-- Giant Talon 2 -->
+        <div class="bike-card" data-category="sport">
+          <div class="bike-card__image" style="--bike-color: #f59e0b">
+            <div class="bike-card__icon">🏔️</div>
+          </div>
+          <div class="bike-card__content">
+            <span class="bike-card__brand">Giant</span>
+            <h3 class="bike-card__name">Talon 2 — 29"</h3>
+            <p class="bike-card__desc">VTT hardtail performant pour les sentiers côtiers et les chemins autour de la Pointe du Grouin. Excellent rapport qualite/prix.</p>
+            <ul class="bike-card__specs">
+              <li><span>Cadre</span><span>ALUXX aluminium</span></li>
+              <li><span>Suspension</span><span>SR Suntour XCE 100 mm</span></li>
+              <li><span>Vitesses</span><span>Shimano Deore 2x10 (20v)</span></li>
+              <li><span>Freins</span><span>Disques hydrauliques Shimano MT200</span></li>
+              <li><span>Roues</span><span>29" — pneus Maxxis Ikon</span></li>
+            </ul>
+            <ul class="bike-card__features">
+              <li>Kit de reparation + pompe fournis</li>
+              <li>Casque VTT inclus</li>
+            </ul>
+            <div class="bike-card__footer">
+              <div class="bike-card__price">
+                <span class="bike-card__price-amount">&euro;22</span>
+                <span class="bike-card__price-period">/jour</span>
+              </div>
+              <button class="btn btn--primary btn--sm add-to-booking" data-bike="giant-talon" data-name="Giant Talon 2 29&quot;" data-price="22">Ajouter</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Cube Stereo Hybrid (E-VTT) -->
+        <div class="bike-card" data-category="electric sport">
+          <div class="bike-card__image" style="--bike-color: #8b5cf6">
+            <div class="bike-card__icon">🔋</div>
+            <span class="bike-card__badge bike-card__badge--purple">Premium</span>
+          </div>
+          <div class="bike-card__content">
+            <span class="bike-card__brand">Cube</span>
+            <h3 class="bike-card__name">Stereo Hybrid 140 — E-VTT</h3>
+            <p class="bike-card__desc">VTT electrique tout-suspendu. La puissance Bosch CX combinee avec 140 mm de debattement pour les sentiers techniques de Bretagne.</p>
+            <ul class="bike-card__specs">
+              <li><span>Moteur</span><span>Bosch Performance CX (85 Nm)</span></li>
+              <li><span>Batterie</span><span>Bosch PowerTube 750 Wh</span></li>
+              <li><span>Autonomie</span><span>70–120 km</span></li>
+              <li><span>Suspension</span><span>Full 140 mm (av + ar)</span></li>
+              <li><span>Freins</span><span>Shimano 4 pistons hydrauliques</span></li>
+              <li><span>Roues</span><span>29" — Schwalbe Nobby Nic</span></li>
+            </ul>
+            <ul class="bike-card__features">
+              <li>Casque VTT + gants inclus</li>
+              <li>Tige de selle telescopique</li>
+            </ul>
+            <div class="bike-card__footer">
+              <div class="bike-card__price">
+                <span class="bike-card__price-amount">&euro;55</span>
+                <span class="bike-card__price-period">/jour</span>
+              </div>
+              <button class="btn btn--primary btn--sm add-to-booking" data-bike="cube-stereo" data-name="Cube Stereo Hybrid 140 E-VTT" data-price="55">Ajouter</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Tandem -->
+        <div class="bike-card" data-category="city">
+          <div class="bike-card__image" style="--bike-color: #ec4899">
+            <div class="bike-card__icon">👫</div>
+          </div>
+          <div class="bike-card__content">
+            <span class="bike-card__brand">Tandem</span>
+            <h3 class="bike-card__name">Peugeot T02 — 2 places</h3>
+            <p class="bike-card__desc">Partagez l'aventure à deux ! Parfait pour les couples ou les amis qui veulent pedaler ensemble le long des remparts.</p>
+            <ul class="bike-card__specs">
+              <li><span>Cadre</span><span>Acier renforce — 2 postes</span></li>
+              <li><span>Vitesses</span><span>Shimano Tourney 7v</span></li>
+              <li><span>Freins</span><span>V-brake avant + arriere</span></li>
+              <li><span>Roues</span><span>26" — pneus ville</span></li>
+            </ul>
+            <ul class="bike-card__features">
+              <li>2 selles reglables</li>
+              <li>Double systeme de pedalage synchronise</li>
+              <li>2 casques inclus</li>
+            </ul>
+            <div class="bike-card__footer">
+              <div class="bike-card__price">
+                <span class="bike-card__price-amount">&euro;30</span>
+                <span class="bike-card__price-period">/jour</span>
+              </div>
+              <button class="btn btn--primary btn--sm add-to-booking" data-bike="tandem" data-name="Tandem Peugeot T02" data-price="30">Ajouter</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- ==================== VELOS ENFANTS ==================== -->
+
+        <!-- Draisienne 2-4 ans -->
+        <div class="bike-card" data-category="kids">
+          <div class="bike-card__image" style="--bike-color: #f472b6">
+            <div class="bike-card__icon">👶</div>
+          </div>
+          <div class="bike-card__content">
+            <span class="bike-card__brand">Btwin</span>
+            <h3 class="bike-card__name">Draisienne RunRide 500 — 2 à 4 ans</h3>
+            <p class="bike-card__desc">Premiere experience sur deux roues ! Sans pedales, l'enfant apprend l'equilibre naturellement. Roues 10" increvables.</p>
+            <ul class="bike-card__specs">
+              <li><span>Age</span><span>2–4 ans (85–100 cm)</span></li>
+              <li><span>Roues</span><span>10" — mousse increvable</span></li>
+              <li><span>Poids</span><span>3,4 kg</span></li>
+              <li><span>Selle</span><span>Reglable 29–39 cm</span></li>
+            </ul>
+            <ul class="bike-card__features">
+              <li>Casque enfant inclus</li>
+              <li>Frein arriere</li>
+            </ul>
+            <div class="bike-card__footer">
+              <div class="bike-card__price">
+                <span class="bike-card__price-amount">&euro;5</span>
+                <span class="bike-card__price-period">/jour</span>
+              </div>
+              <button class="btn btn--primary btn--sm add-to-booking" data-bike="draisienne" data-name="Draisienne RunRide 500" data-price="5">Ajouter</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Velo enfant 16" (4-6 ans) -->
+        <div class="bike-card" data-category="kids">
           <div class="bike-card__image" style="--bike-color: #06b6d4">
             <div class="bike-card__icon">🧒</div>
           </div>
           <div class="bike-card__content">
-            <h3 class="bike-card__name">Velo Enfant</h3>
-            <p class="bike-card__desc">Pour les petits cyclistes de 4 à 12 ans. Plusieurs tailles disponibles. Casque inclus !</p>
+            <span class="bike-card__brand">Btwin</span>
+            <h3 class="bike-card__name">500 Doctogirl / Heroboy — 16"</h3>
+            <p class="bike-card__desc">Premier vrai velo avec pedales. Stabilisateurs amovibles, cadre abaisse et frein adapte aux petites mains.</p>
+            <ul class="bike-card__specs">
+              <li><span>Age</span><span>4–6 ans (100–120 cm)</span></li>
+              <li><span>Roues</span><span>16"</span></li>
+              <li><span>Vitesses</span><span>Monovitesse (pignon fixe)</span></li>
+              <li><span>Poids</span><span>8,5 kg</span></li>
+            </ul>
             <ul class="bike-card__features">
-              <li>Tailles 16" à 24"</li>
+              <li>Stabilisateurs amovibles inclus</li>
               <li>Casque enfant inclus</li>
-              <li>Couleurs fun</li>
-              <li>Stabilisateurs dispo</li>
+              <li>Carter de chaine protege</li>
             </ul>
             <div class="bike-card__footer">
               <div class="bike-card__price">
                 <span class="bike-card__price-amount">&euro;8</span>
                 <span class="bike-card__price-period">/jour</span>
               </div>
-              <button class="btn btn--primary btn--sm add-to-booking" data-bike="enfant" data-name="Velo Enfant" data-price="8">Ajouter</button>
+              <button class="btn btn--primary btn--sm add-to-booking" data-bike="enfant-16" data-name="Velo Enfant 16&quot; (4-6 ans)" data-price="8">Ajouter</button>
             </div>
           </div>
         </div>
 
-        <!-- Remorque Enfant -->
-        <div class="bike-card" data-category="family">
-          <div class="bike-card__image" style="--bike-color: #f97316">
-            <div class="bike-card__icon">🛒</div>
+        <!-- Velo enfant 20" (6-9 ans) -->
+        <div class="bike-card" data-category="kids">
+          <div class="bike-card__image" style="--bike-color: #14b8a6">
+            <div class="bike-card__icon">🚴‍♂️</div>
           </div>
           <div class="bike-card__content">
-            <h3 class="bike-card__name">Remorque Enfant</h3>
-            <p class="bike-card__desc">Transportez vos petits en toute securite. S'attache à n'importe quel velo adulte.</p>
+            <span class="bike-card__brand">Btwin</span>
+            <h3 class="bike-card__name">Riverside 500 Junior — 20"</h3>
+            <p class="bike-card__desc">Le velo des grands ! 6 vitesses, freins V-brake, et un look cool pour les balades familiales sur la Côte d'Emeraude.</p>
+            <ul class="bike-card__specs">
+              <li><span>Age</span><span>6–9 ans (120–135 cm)</span></li>
+              <li><span>Roues</span><span>20"</span></li>
+              <li><span>Vitesses</span><span>Shimano 6v (poignee tournante)</span></li>
+              <li><span>Poids</span><span>10,5 kg</span></li>
+            </ul>
             <ul class="bike-card__features">
-              <li>1 ou 2 places</li>
-              <li>Harnais 5 points</li>
-              <li>Protection pluie incluse</li>
-              <li>Drapeau de securite</li>
+              <li>Casque enfant inclus</li>
+              <li>Bequille + garde-boue</li>
+              <li>Eclairage avant/arriere</li>
             </ul>
             <div class="bike-card__footer">
               <div class="bike-card__price">
                 <span class="bike-card__price-amount">&euro;10</span>
                 <span class="bike-card__price-period">/jour</span>
               </div>
-              <button class="btn btn--primary btn--sm add-to-booking" data-bike="remorque" data-name="Remorque Enfant" data-price="10">Ajouter</button>
+              <button class="btn btn--primary btn--sm add-to-booking" data-bike="enfant-20" data-name="Velo Enfant 20&quot; (6-9 ans)" data-price="10">Ajouter</button>
             </div>
           </div>
         </div>
 
-        <!-- Velo Cargo -->
-        <div class="bike-card" data-category="electric family">
-          <div class="bike-card__image" style="--bike-color: #14b8a6">
-            <div class="bike-card__icon">📦</div>
-            <span class="bike-card__badge bike-card__badge--green">Nouveau</span>
+        <!-- Velo enfant/ado 24" (9-12 ans) -->
+        <div class="bike-card" data-category="kids">
+          <div class="bike-card__image" style="--bike-color: #2563eb">
+            <div class="bike-card__icon">🚵</div>
           </div>
           <div class="bike-card__content">
-            <h3 class="bike-card__name">Velo Cargo Electrique</h3>
-            <p class="bike-card__desc">Le compagnon ideal pour les familles. Transportez enfants et affaires avec facilite.</p>
+            <span class="bike-card__brand">Trek</span>
+            <h3 class="bike-card__name">Precaliber 24 — 9 à 12 ans</h3>
+            <p class="bike-card__desc">VTT junior serieux. Suspension avant, 8 vitesses et freins à disque : pret pour les vrais sentiers comme les grands.</p>
+            <ul class="bike-card__specs">
+              <li><span>Age</span><span>9–12 ans (135–150 cm)</span></li>
+              <li><span>Roues</span><span>24"</span></li>
+              <li><span>Vitesses</span><span>Shimano Altus 8v</span></li>
+              <li><span>Suspension</span><span>SR Suntour 50 mm</span></li>
+              <li><span>Freins</span><span>Disques mecaniques</span></li>
+            </ul>
             <ul class="bike-card__features">
-              <li>Bac avant pour 2 enfants</li>
-              <li>Assistance electrique</li>
-              <li>Capacite 100 kg</li>
-              <li>Ceintures de securite</li>
+              <li>Casque VTT junior inclus</li>
+              <li>Pneus semi-slick polyvalents</li>
             </ul>
             <div class="bike-card__footer">
               <div class="bike-card__price">
-                <span class="bike-card__price-amount">&euro;40</span>
+                <span class="bike-card__price-amount">&euro;14</span>
                 <span class="bike-card__price-period">/jour</span>
               </div>
-              <button class="btn btn--primary btn--sm add-to-booking" data-bike="cargo" data-name="Velo Cargo Electrique" data-price="40">Ajouter</button>
+              <button class="btn btn--primary btn--sm add-to-booking" data-bike="enfant-24" data-name="Trek Precaliber 24&quot; (9-12 ans)" data-price="14">Ajouter</button>
             </div>
           </div>
         </div>
+
+        <!-- ==================== ACCESSOIRES ==================== -->
+
+        <!-- Siege Enfant Arriere -->
+        <div class="bike-card" data-category="accessory kids">
+          <div class="bike-card__image" style="--bike-color: #f97316">
+            <div class="bike-card__icon">🪑</div>
+          </div>
+          <div class="bike-card__content">
+            <span class="bike-card__brand">Thule</span>
+            <h3 class="bike-card__name">Yepp 2 Maxi — Siege arriere</h3>
+            <p class="bike-card__desc">Siege enfant arriere premium. Fixation rapide sur porte-bagages, harnais 5 points. Pour les tout-petits qui ne pedalent pas encore.</p>
+            <ul class="bike-card__specs">
+              <li><span>Age</span><span>9 mois – 6 ans (max 22 kg)</span></li>
+              <li><span>Fixation</span><span>Porte-bagages (clic rapide)</span></li>
+              <li><span>Securite</span><span>Harnais reglable 5 points</span></li>
+            </ul>
+            <ul class="bike-card__features">
+              <li>Compatible avec nos velos ville & e-bikes</li>
+              <li>Protection pied laterale</li>
+              <li>Casque bebe inclus</li>
+            </ul>
+            <div class="bike-card__footer">
+              <div class="bike-card__price">
+                <span class="bike-card__price-amount">&euro;5</span>
+                <span class="bike-card__price-period">/jour</span>
+              </div>
+              <button class="btn btn--primary btn--sm add-to-booking" data-bike="siege-enfant" data-name="Siege Thule Yepp 2 Maxi" data-price="5">Ajouter</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Remorque Enfant Thule -->
+        <div class="bike-card" data-category="accessory kids">
+          <div class="bike-card__image" style="--bike-color: #ea580c">
+            <div class="bike-card__icon">🛒</div>
+            <span class="bike-card__badge">Famille</span>
+          </div>
+          <div class="bike-card__content">
+            <span class="bike-card__brand">Thule</span>
+            <h3 class="bike-card__name">Chariot Cross 2 — Remorque enfant</h3>
+            <p class="bike-card__desc">La reference des remorques enfants. 2 places, suspension integree, convertible en poussette. Parfait pour les longues sorties en famille.</p>
+            <ul class="bike-card__specs">
+              <li><span>Places</span><span>2 enfants (max 45 kg total)</span></li>
+              <li><span>Suspension</span><span>Amortisseurs VersaWing</span></li>
+              <li><span>Roues</span><span>20" + roue poussette</span></li>
+              <li><span>Poids</span><span>14,5 kg (à vide)</span></li>
+            </ul>
+            <ul class="bike-card__features">
+              <li>Protection pluie + pare-soleil inclus</li>
+              <li>Drapeau de securite + reflecteurs</li>
+              <li>Convertible poussette en 30 sec</li>
+            </ul>
+            <div class="bike-card__footer">
+              <div class="bike-card__price">
+                <span class="bike-card__price-amount">&euro;12</span>
+                <span class="bike-card__price-period">/jour</span>
+              </div>
+              <button class="btn btn--primary btn--sm add-to-booking" data-bike="remorque" data-name="Remorque Thule Chariot Cross 2" data-price="12">Ajouter</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Follow-Me Tandem -->
+        <div class="bike-card" data-category="accessory kids">
+          <div class="bike-card__image" style="--bike-color: #d946ef">
+            <div class="bike-card__icon">🔗</div>
+          </div>
+          <div class="bike-card__content">
+            <span class="bike-card__brand">FollowMe</span>
+            <h3 class="bike-card__name">Barre de remorquage — Tandem parent-enfant</h3>
+            <p class="bike-card__desc">Attachez le velo de votre enfant au vôtre. Il pedale quand il veut, vous tirez quand il est fatigue. Genial pour les longues distances.</p>
+            <ul class="bike-card__specs">
+              <li><span>Compatible</span><span>Velos enfant 16"–20"</span></li>
+              <li><span>Systeme</span><span>Barre rigide avec pivot</span></li>
+              <li><span>Fixation</span><span>Axe de roue arriere (60 sec)</span></li>
+            </ul>
+            <ul class="bike-card__features">
+              <li>L'enfant peut pedaler librement</li>
+              <li>Decrochage rapide en route</li>
+              <li>Inclus avec location velo enfant</li>
+            </ul>
+            <div class="bike-card__footer">
+              <div class="bike-card__price">
+                <span class="bike-card__price-amount">&euro;6</span>
+                <span class="bike-card__price-period">/jour</span>
+              </div>
+              <button class="btn btn--primary btn--sm add-to-booking" data-bike="followme" data-name="Barre FollowMe Tandem" data-price="6">Ajouter</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Babboe Cargo -->
+        <div class="bike-card" data-category="electric accessory">
+          <div class="bike-card__image" style="--bike-color: #14b8a6">
+            <div class="bike-card__icon">📦</div>
+            <span class="bike-card__badge bike-card__badge--green">Famille XL</span>
+          </div>
+          <div class="bike-card__content">
+            <span class="bike-card__brand">Babboe</span>
+            <h3 class="bike-card__name">Curve-E — Cargo electrique</h3>
+            <p class="bike-card__desc">Le biporteur familial ! Bac avant pour 2 enfants + courses. Assistance electrique Yamaha. La liberte totale en famille.</p>
+            <ul class="bike-card__specs">
+              <li><span>Moteur</span><span>Yamaha SyncDrive 250W</span></li>
+              <li><span>Batterie</span><span>Yamaha 500 Wh</span></li>
+              <li><span>Bac</span><span>2 enfants + banquette (max 80 kg)</span></li>
+              <li><span>Vitesses</span><span>Shimano Nexus 7v (moyeu)</span></li>
+              <li><span>Poids</span><span>41 kg</span></li>
+            </ul>
+            <ul class="bike-card__features">
+              <li>Ceintures 3 points pour chaque enfant</li>
+              <li>Protection pluie avec fenêtres</li>
+              <li>Eclairage LED integre</li>
+            </ul>
+            <div class="bike-card__footer">
+              <div class="bike-card__price">
+                <span class="bike-card__price-amount">&euro;45</span>
+                <span class="bike-card__price-period">/jour</span>
+              </div>
+              <button class="btn btn--primary btn--sm add-to-booking" data-bike="babboe-cargo" data-name="Babboe Curve-E Cargo" data-price="45">Ajouter</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Sacoche + Panier -->
+        <div class="bike-card" data-category="accessory">
+          <div class="bike-card__image" style="--bike-color: #78716c">
+            <div class="bike-card__icon">🎒</div>
+          </div>
+          <div class="bike-card__content">
+            <span class="bike-card__brand">Ortlieb</span>
+            <h3 class="bike-card__name">Back-Roller Classic — Sacoche etanche</h3>
+            <p class="bike-card__desc">Sacoches laterales impermeables. Incontournables pour les excursions : pique-nique, serviettes de plage, affaires de plongee...</p>
+            <ul class="bike-card__specs">
+              <li><span>Volume</span><span>2 x 20 litres (paire)</span></li>
+              <li><span>Etancheite</span><span>IP64 — 100% waterproof</span></li>
+              <li><span>Fixation</span><span>Quick-Lock 2.1 (porte-bagages)</span></li>
+            </ul>
+            <ul class="bike-card__features">
+              <li>Vendues par paire (gauche + droite)</li>
+              <li>Bandouliere pour porter à pied</li>
+            </ul>
+            <div class="bike-card__footer">
+              <div class="bike-card__price">
+                <span class="bike-card__price-amount">&euro;4</span>
+                <span class="bike-card__price-period">/jour</span>
+              </div>
+              <button class="btn btn--primary btn--sm add-to-booking" data-bike="sacoche" data-name="Sacoches Ortlieb (paire)" data-price="4">Ajouter</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Casque adulte -->
+        <div class="bike-card" data-category="accessory">
+          <div class="bike-card__image" style="--bike-color: #64748b">
+            <div class="bike-card__icon">⛑️</div>
+          </div>
+          <div class="bike-card__content">
+            <span class="bike-card__brand">Giro</span>
+            <h3 class="bike-card__name">Register MIPS — Casque adulte</h3>
+            <p class="bike-card__desc">Casque adulte avec technologie MIPS (protection multi-directionnelle). Leger, aere, reglable. Obligatoire pour les enfants, recommande pour tous.</p>
+            <ul class="bike-card__specs">
+              <li><span>Tailles</span><span>S/M (51–55 cm), M/L (54–61 cm)</span></li>
+              <li><span>Securite</span><span>MIPS + coque In-Mold</span></li>
+              <li><span>Poids</span><span>295 g</span></li>
+            </ul>
+            <ul class="bike-card__features">
+              <li>Visiere amovible</li>
+              <li>22 aérations</li>
+              <li>Gratuit avec les e-bikes et VTT</li>
+            </ul>
+            <div class="bike-card__footer">
+              <div class="bike-card__price">
+                <span class="bike-card__price-amount">&euro;2</span>
+                <span class="bike-card__price-period">/jour</span>
+              </div>
+              <button class="btn btn--primary btn--sm add-to-booking" data-bike="casque" data-name="Casque Giro Register MIPS" data-price="2">Ajouter</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- GPS Garmin -->
+        <div class="bike-card" data-category="accessory">
+          <div class="bike-card__image" style="--bike-color: #0d9488">
+            <div class="bike-card__icon">📍</div>
+          </div>
+          <div class="bike-card__content">
+            <span class="bike-card__brand">Garmin</span>
+            <h3 class="bike-card__name">Edge Explore 2 — GPS velo</h3>
+            <p class="bike-card__desc">GPS velo avec cartes preinstallees de Bretagne. Nos itineraires recommandes sont pre-charges. Impossible de se perdre !</p>
+            <ul class="bike-card__specs">
+              <li><span>Ecran</span><span>3" tactile couleur</span></li>
+              <li><span>Autonomie</span><span>16 heures</span></li>
+              <li><span>Cartes</span><span>Europe complete + itineraires Velo Saint-Malo</span></li>
+            </ul>
+            <ul class="bike-card__features">
+              <li>6 itineraires pre-charges</li>
+              <li>Navigation virage par virage</li>
+              <li>Support guidon inclus</li>
+            </ul>
+            <div class="bike-card__footer">
+              <div class="bike-card__price">
+                <span class="bike-card__price-amount">&euro;7</span>
+                <span class="bike-card__price-period">/jour</span>
+              </div>
+              <button class="btn btn--primary btn--sm add-to-booking" data-bike="gps" data-name="GPS Garmin Edge Explore 2" data-price="7">Ajouter</button>
+            </div>
+          </div>
+        </div>
+
       </div>
     </div>
   </section>
@@ -331,63 +752,180 @@
         <button class="pricing-toggle__btn" data-duration="week">Semaine</button>
       </div>
 
-      <div class="pricing-grid">
-        <div class="pricing-card">
-          <h3 class="pricing-card__name">Velo de Ville</h3>
-          <div class="pricing-card__price">
-            <span class="pricing-card__amount" data-day="12" data-weekend="20" data-week="60">&euro;12</span>
-            <span class="pricing-card__period">/jour</span>
-          </div>
-          <ul class="pricing-card__features">
-            <li>Antivol inclus</li>
-            <li>Panier avant</li>
-            <li>Casque en option (&euro;2)</li>
-          </ul>
-          <button class="btn btn--outline btn--full add-to-booking" data-bike="city" data-name="Velo de Ville" data-price="12">Selectionner</button>
-        </div>
+      <div class="pricing-table-wrapper">
+        <table class="pricing-table">
+          <thead>
+            <tr>
+              <th>Velo / Accessoire</th>
+              <th>1 jour</th>
+              <th>Week-end<br><small>(sam–dim)</small></th>
+              <th>Semaine<br><small>(7 jours)</small></th>
+              <th></th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="pricing-table__category"><td colspan="5">Velos de Ville</td></tr>
+            <tr>
+              <td><strong>Riverside 500</strong> <span class="pricing-table__sub">Hybride 9v</span></td>
+              <td>&euro;12</td>
+              <td>&euro;20</td>
+              <td>&euro;60</td>
+              <td><button class="btn btn--primary btn--sm add-to-booking" data-bike="riverside-500" data-name="Riverside 500" data-price="12">+</button></td>
+            </tr>
+            <tr>
+              <td><strong>Gazelle Paris C7</strong> <span class="pricing-table__sub">Hollandais confort</span></td>
+              <td>&euro;15</td>
+              <td>&euro;26</td>
+              <td>&euro;75</td>
+              <td><button class="btn btn--primary btn--sm add-to-booking" data-bike="gazelle-paris" data-name="Gazelle Paris C7" data-price="15">+</button></td>
+            </tr>
+            <tr>
+              <td><strong>Trek FX 3 Disc</strong> <span class="pricing-table__sub">Fitness / sportif</span></td>
+              <td>&euro;18</td>
+              <td>&euro;32</td>
+              <td>&euro;90</td>
+              <td><button class="btn btn--primary btn--sm add-to-booking" data-bike="trek-fx3" data-name="Trek FX 3 Disc" data-price="18">+</button></td>
+            </tr>
+            <tr>
+              <td><strong>Tandem Peugeot T02</strong> <span class="pricing-table__sub">2 places</span></td>
+              <td>&euro;30</td>
+              <td>&euro;52</td>
+              <td>&euro;155</td>
+              <td><button class="btn btn--primary btn--sm add-to-booking" data-bike="tandem" data-name="Tandem Peugeot T02" data-price="30">+</button></td>
+            </tr>
 
-        <div class="pricing-card pricing-card--popular">
-          <span class="pricing-card__badge">Le + demande</span>
-          <h3 class="pricing-card__name">Velo Electrique</h3>
-          <div class="pricing-card__price">
-            <span class="pricing-card__amount" data-day="25" data-weekend="45" data-week="130">&euro;25</span>
-            <span class="pricing-card__period">/jour</span>
-          </div>
-          <ul class="pricing-card__features">
-            <li>Antivol inclus</li>
-            <li>Casque inclus</li>
-            <li>Autonomie 80 km</li>
-            <li>Chargeur fourni</li>
-          </ul>
-          <button class="btn btn--primary btn--full add-to-booking" data-bike="ebike" data-name="Velo Electrique" data-price="25">Selectionner</button>
-        </div>
+            <tr class="pricing-table__category"><td colspan="5">Velos Electriques</td></tr>
+            <tr class="pricing-table__highlight">
+              <td><strong>Trek Verve+ 3</strong> <span class="pricing-table__sub">Bosch 500 Wh — confort</span> <span class="pricing-table__badge">Populaire</span></td>
+              <td>&euro;30</td>
+              <td>&euro;52</td>
+              <td>&euro;155</td>
+              <td><button class="btn btn--primary btn--sm add-to-booking" data-bike="trek-verve" data-name="Trek Verve+ 3 Lowstep" data-price="30">+</button></td>
+            </tr>
+            <tr class="pricing-table__highlight">
+              <td><strong>Moustache Samedi 28.3</strong> <span class="pricing-table__sub">Bosch CX 625 Wh — performant</span></td>
+              <td>&euro;35</td>
+              <td>&euro;62</td>
+              <td>&euro;180</td>
+              <td><button class="btn btn--primary btn--sm add-to-booking" data-bike="moustache-28" data-name="Moustache Samedi 28.3" data-price="35">+</button></td>
+            </tr>
+            <tr class="pricing-table__highlight">
+              <td><strong>Cube Touring Hybrid One</strong> <span class="pricing-table__sub">Bosch CX 625 Wh — longue distance</span></td>
+              <td>&euro;38</td>
+              <td>&euro;68</td>
+              <td>&euro;200</td>
+              <td><button class="btn btn--primary btn--sm add-to-booking" data-bike="cube-touring" data-name="Cube Touring Hybrid One 625" data-price="38">+</button></td>
+            </tr>
 
-        <div class="pricing-card">
-          <h3 class="pricing-card__name">VTT</h3>
-          <div class="pricing-card__price">
-            <span class="pricing-card__amount" data-day="18" data-weekend="32" data-week="90">&euro;18</span>
-            <span class="pricing-card__period">/jour</span>
-          </div>
-          <ul class="pricing-card__features">
-            <li>Antivol inclus</li>
-            <li>Casque inclus</li>
-            <li>Kit de reparation</li>
-          </ul>
-          <button class="btn btn--outline btn--full add-to-booking" data-bike="vtt" data-name="VTT" data-price="18">Selectionner</button>
-        </div>
+            <tr class="pricing-table__category"><td colspan="5">VTT & Sport</td></tr>
+            <tr>
+              <td><strong>Giant Talon 2 — 29"</strong> <span class="pricing-table__sub">Hardtail, Deore 20v</span></td>
+              <td>&euro;22</td>
+              <td>&euro;38</td>
+              <td>&euro;110</td>
+              <td><button class="btn btn--primary btn--sm add-to-booking" data-bike="giant-talon" data-name="Giant Talon 2 29&quot;" data-price="22">+</button></td>
+            </tr>
+            <tr>
+              <td><strong>Cube Stereo Hybrid 140</strong> <span class="pricing-table__sub">E-VTT full — Bosch 750 Wh</span> <span class="pricing-table__badge">Premium</span></td>
+              <td>&euro;55</td>
+              <td>&euro;95</td>
+              <td>&euro;280</td>
+              <td><button class="btn btn--primary btn--sm add-to-booking" data-bike="cube-stereo" data-name="Cube Stereo Hybrid 140 E-VTT" data-price="55">+</button></td>
+            </tr>
 
-        <div class="pricing-card">
-          <h3 class="pricing-card__name">Tandem</h3>
-          <div class="pricing-card__price">
-            <span class="pricing-card__amount" data-day="30" data-weekend="52" data-week="155">&euro;30</span>
-            <span class="pricing-card__period">/jour</span>
-          </div>
-          <ul class="pricing-card__features">
-            <li>2 casques inclus</li>
-            <li>Antivol inclus</li>
-            <li>Photo souvenir offerte</li>
-          </ul>
-          <button class="btn btn--outline btn--full add-to-booking" data-bike="tandem" data-name="Tandem" data-price="30">Selectionner</button>
+            <tr class="pricing-table__category"><td colspan="5">Velos Enfants</td></tr>
+            <tr>
+              <td><strong>Draisienne RunRide 500</strong> <span class="pricing-table__sub">2–4 ans</span></td>
+              <td>&euro;5</td>
+              <td>&euro;8</td>
+              <td>&euro;25</td>
+              <td><button class="btn btn--primary btn--sm add-to-booking" data-bike="draisienne" data-name="Draisienne RunRide 500" data-price="5">+</button></td>
+            </tr>
+            <tr>
+              <td><strong>Btwin 500 — 16"</strong> <span class="pricing-table__sub">4–6 ans</span></td>
+              <td>&euro;8</td>
+              <td>&euro;14</td>
+              <td>&euro;40</td>
+              <td><button class="btn btn--primary btn--sm add-to-booking" data-bike="enfant-16" data-name="Velo Enfant 16&quot; (4-6 ans)" data-price="8">+</button></td>
+            </tr>
+            <tr>
+              <td><strong>Riverside 500 Junior — 20"</strong> <span class="pricing-table__sub">6–9 ans</span></td>
+              <td>&euro;10</td>
+              <td>&euro;17</td>
+              <td>&euro;50</td>
+              <td><button class="btn btn--primary btn--sm add-to-booking" data-bike="enfant-20" data-name="Velo Enfant 20&quot; (6-9 ans)" data-price="10">+</button></td>
+            </tr>
+            <tr>
+              <td><strong>Trek Precaliber 24"</strong> <span class="pricing-table__sub">9–12 ans — VTT junior</span></td>
+              <td>&euro;14</td>
+              <td>&euro;24</td>
+              <td>&euro;70</td>
+              <td><button class="btn btn--primary btn--sm add-to-booking" data-bike="enfant-24" data-name="Trek Precaliber 24&quot; (9-12 ans)" data-price="14">+</button></td>
+            </tr>
+
+            <tr class="pricing-table__category"><td colspan="5">Accessoires</td></tr>
+            <tr>
+              <td><strong>Casque adulte Giro MIPS</strong></td>
+              <td>&euro;2</td>
+              <td>&euro;3</td>
+              <td>&euro;8</td>
+              <td><button class="btn btn--primary btn--sm add-to-booking" data-bike="casque" data-name="Casque Giro Register MIPS" data-price="2">+</button></td>
+            </tr>
+            <tr>
+              <td><strong>Sacoches Ortlieb</strong> <span class="pricing-table__sub">Paire etanche 2x20L</span></td>
+              <td>&euro;4</td>
+              <td>&euro;7</td>
+              <td>&euro;20</td>
+              <td><button class="btn btn--primary btn--sm add-to-booking" data-bike="sacoche" data-name="Sacoches Ortlieb (paire)" data-price="4">+</button></td>
+            </tr>
+            <tr>
+              <td><strong>GPS Garmin Edge Explore 2</strong></td>
+              <td>&euro;7</td>
+              <td>&euro;12</td>
+              <td>&euro;35</td>
+              <td><button class="btn btn--primary btn--sm add-to-booking" data-bike="gps" data-name="GPS Garmin Edge Explore 2" data-price="7">+</button></td>
+            </tr>
+            <tr>
+              <td><strong>Siege enfant Thule Yepp 2</strong> <span class="pricing-table__sub">9 mois–6 ans</span></td>
+              <td>&euro;5</td>
+              <td>&euro;8</td>
+              <td>&euro;25</td>
+              <td><button class="btn btn--primary btn--sm add-to-booking" data-bike="siege-enfant" data-name="Siege Thule Yepp 2 Maxi" data-price="5">+</button></td>
+            </tr>
+            <tr>
+              <td><strong>Remorque Thule Chariot Cross 2</strong> <span class="pricing-table__sub">2 enfants</span></td>
+              <td>&euro;12</td>
+              <td>&euro;20</td>
+              <td>&euro;60</td>
+              <td><button class="btn btn--primary btn--sm add-to-booking" data-bike="remorque" data-name="Remorque Thule Chariot Cross 2" data-price="12">+</button></td>
+            </tr>
+            <tr>
+              <td><strong>Barre FollowMe</strong> <span class="pricing-table__sub">Tandem parent-enfant</span></td>
+              <td>&euro;6</td>
+              <td>&euro;10</td>
+              <td>&euro;30</td>
+              <td><button class="btn btn--primary btn--sm add-to-booking" data-bike="followme" data-name="Barre FollowMe Tandem" data-price="6">+</button></td>
+            </tr>
+            <tr>
+              <td><strong>Babboe Curve-E Cargo</strong> <span class="pricing-table__sub">Biporteur electrique familial</span></td>
+              <td>&euro;45</td>
+              <td>&euro;78</td>
+              <td>&euro;230</td>
+              <td><button class="btn btn--primary btn--sm add-to-booking" data-bike="babboe-cargo" data-name="Babboe Curve-E Cargo" data-price="45">+</button></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="tarifs__includes">
+        <h4>Toujours inclus</h4>
+        <div class="tarifs__includes-grid">
+          <div class="tarifs__include-item">🔒 Antivol Abus</div>
+          <div class="tarifs__include-item">🗺️ Carte itineraires</div>
+          <div class="tarifs__include-item">📞 Assistance 7j/7</div>
+          <div class="tarifs__include-item">🔧 Kit reparation</div>
+          <div class="tarifs__include-item">💡 Eclairage LED</div>
+          <div class="tarifs__include-item">⛑️ Casque enfant (–12 ans)</div>
         </div>
       </div>
 
