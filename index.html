@@ -1,0 +1,766 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Velo Saint-Malo — Location de Velos à Saint-Malo</title>
+  <meta name="description" content="Louez votre velo à Saint-Malo. Velos de ville, VTT, velos electriques, tandems. Reservez en ligne, roulez librement.">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🚲</text></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav class="nav" id="nav">
+    <div class="nav__container">
+      <a href="#" class="nav__logo">
+        <span class="nav__logo-icon">🚲</span>
+        <span class="nav__logo-text">Velo Saint-Malo</span>
+      </a>
+      <button class="nav__toggle" id="navToggle" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav__menu" id="navMenu">
+        <li><a href="#velos" class="nav__link">Nos Velos</a></li>
+        <li><a href="#tarifs" class="nav__link">Tarifs</a></li>
+        <li><a href="#itineraires" class="nav__link">Itineraires</a></li>
+        <li><a href="#avis" class="nav__link">Avis</a></li>
+        <li><a href="#faq" class="nav__link">FAQ</a></li>
+        <li><a href="#reservation" class="nav__link nav__link--cta">Reserver</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <section class="hero" id="hero">
+    <div class="hero__bg"></div>
+    <div class="hero__content">
+      <span class="hero__badge">Saint-Malo, Bretagne</span>
+      <h1 class="hero__title">Explorez Saint-Malo<br><span class="hero__title--accent">à velo</span></h1>
+      <p class="hero__subtitle">Location de velos pour decouvrir les remparts, la Cote d'Emeraude et les plus beaux itineraires bretons. Reservez en ligne, on s'occupe du reste.</p>
+      <div class="hero__actions">
+        <a href="#reservation" class="btn btn--primary btn--lg">Reserver maintenant</a>
+        <a href="#velos" class="btn btn--outline btn--lg">Voir nos velos</a>
+      </div>
+      <div class="hero__stats">
+        <div class="hero__stat">
+          <strong>500+</strong>
+          <span>Clients satisfaits</span>
+        </div>
+        <div class="hero__stat">
+          <strong>50+</strong>
+          <span>Velos disponibles</span>
+        </div>
+        <div class="hero__stat">
+          <strong>7j/7</strong>
+          <span>Ouvert toute la saison</span>
+        </div>
+      </div>
+    </div>
+    <div class="hero__scroll">
+      <span>Decouvrir</span>
+      <div class="hero__scroll-line"></div>
+    </div>
+  </section>
+
+  <!-- Nos Velos -->
+  <section class="section velos" id="velos">
+    <div class="container">
+      <div class="section__header">
+        <span class="section__tag">Nos Velos</span>
+        <h2 class="section__title">Trouvez le velo parfait<br>pour votre aventure</h2>
+        <p class="section__desc">Du velo de ville classique au VTT electrique, nous avons le velo ideal pour chaque explorateur.</p>
+      </div>
+
+      <div class="bike-filters">
+        <button class="bike-filter active" data-filter="all">Tous</button>
+        <button class="bike-filter" data-filter="city">Ville</button>
+        <button class="bike-filter" data-filter="electric">Electrique</button>
+        <button class="bike-filter" data-filter="sport">Sport</button>
+        <button class="bike-filter" data-filter="family">Famille</button>
+      </div>
+
+      <div class="bikes-grid">
+        <!-- Velo de Ville -->
+        <div class="bike-card" data-category="city">
+          <div class="bike-card__image" style="--bike-color: #3b82f6">
+            <div class="bike-card__icon">🚲</div>
+            <span class="bike-card__badge">Populaire</span>
+          </div>
+          <div class="bike-card__content">
+            <h3 class="bike-card__name">Velo de Ville</h3>
+            <p class="bike-card__desc">Parfait pour les balades en ville et le long des remparts. Confortable, leger et facile à manier.</p>
+            <ul class="bike-card__features">
+              <li>Cadre aluminium leger</li>
+              <li>7 vitesses Shimano</li>
+              <li>Panier avant inclus</li>
+              <li>Antivol fourni</li>
+            </ul>
+            <div class="bike-card__footer">
+              <div class="bike-card__price">
+                <span class="bike-card__price-amount">&euro;12</span>
+                <span class="bike-card__price-period">/jour</span>
+              </div>
+              <button class="btn btn--primary btn--sm add-to-booking" data-bike="city" data-name="Velo de Ville" data-price="12">Ajouter</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Velo Electrique -->
+        <div class="bike-card" data-category="electric">
+          <div class="bike-card__image" style="--bike-color: #10b981">
+            <div class="bike-card__icon">⚡</div>
+            <span class="bike-card__badge bike-card__badge--green">Eco</span>
+          </div>
+          <div class="bike-card__content">
+            <h3 class="bike-card__name">Velo Electrique</h3>
+            <p class="bike-card__desc">Assistance electrique pour aller plus loin sans effort. Ideal pour les longues excursions côtieres.</p>
+            <ul class="bike-card__features">
+              <li>Autonomie 80 km</li>
+              <li>Moteur Bosch 250W</li>
+              <li>Ecran LCD integre</li>
+              <li>3 niveaux d'assistance</li>
+            </ul>
+            <div class="bike-card__footer">
+              <div class="bike-card__price">
+                <span class="bike-card__price-amount">&euro;25</span>
+                <span class="bike-card__price-period">/jour</span>
+              </div>
+              <button class="btn btn--primary btn--sm add-to-booking" data-bike="ebike" data-name="Velo Electrique" data-price="25">Ajouter</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- VTT -->
+        <div class="bike-card" data-category="sport">
+          <div class="bike-card__image" style="--bike-color: #f59e0b">
+            <div class="bike-card__icon">🏔️</div>
+          </div>
+          <div class="bike-card__content">
+            <h3 class="bike-card__name">VTT</h3>
+            <p class="bike-card__desc">Pour les chemins côtiers et les sentiers naturels. Suspension avant et pneus tout-terrain.</p>
+            <ul class="bike-card__features">
+              <li>Suspension avant SR Suntour</li>
+              <li>21 vitesses</li>
+              <li>Freins à disque</li>
+              <li>Pneus tout-terrain</li>
+            </ul>
+            <div class="bike-card__footer">
+              <div class="bike-card__price">
+                <span class="bike-card__price-amount">&euro;18</span>
+                <span class="bike-card__price-period">/jour</span>
+              </div>
+              <button class="btn btn--primary btn--sm add-to-booking" data-bike="vtt" data-name="VTT" data-price="18">Ajouter</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- VTT Electrique -->
+        <div class="bike-card" data-category="electric sport">
+          <div class="bike-card__image" style="--bike-color: #8b5cf6">
+            <div class="bike-card__icon">🔋</div>
+            <span class="bike-card__badge bike-card__badge--purple">Premium</span>
+          </div>
+          <div class="bike-card__content">
+            <h3 class="bike-card__name">VTT Electrique</h3>
+            <p class="bike-card__desc">La puissance electrique combinee avec les capacites tout-terrain. Pour les aventuriers ambitieux.</p>
+            <ul class="bike-card__features">
+              <li>Moteur Shimano Steps</li>
+              <li>Autonomie 100 km</li>
+              <li>Suspension full</li>
+              <li>Freins hydrauliques</li>
+            </ul>
+            <div class="bike-card__footer">
+              <div class="bike-card__price">
+                <span class="bike-card__price-amount">&euro;35</span>
+                <span class="bike-card__price-period">/jour</span>
+              </div>
+              <button class="btn btn--primary btn--sm add-to-booking" data-bike="evtt" data-name="VTT Electrique" data-price="35">Ajouter</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Tandem -->
+        <div class="bike-card" data-category="family">
+          <div class="bike-card__image" style="--bike-color: #ec4899">
+            <div class="bike-card__icon">👫</div>
+          </div>
+          <div class="bike-card__content">
+            <h3 class="bike-card__name">Tandem</h3>
+            <p class="bike-card__desc">Partagez l'aventure à deux ! Parfait pour les couples ou les amis qui veulent pedaler ensemble.</p>
+            <ul class="bike-card__features">
+              <li>2 places confortables</li>
+              <li>7 vitesses</li>
+              <li>Cadre renforce</li>
+              <li>Double freinage</li>
+            </ul>
+            <div class="bike-card__footer">
+              <div class="bike-card__price">
+                <span class="bike-card__price-amount">&euro;30</span>
+                <span class="bike-card__price-period">/jour</span>
+              </div>
+              <button class="btn btn--primary btn--sm add-to-booking" data-bike="tandem" data-name="Tandem" data-price="30">Ajouter</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Velo Enfant -->
+        <div class="bike-card" data-category="family">
+          <div class="bike-card__image" style="--bike-color: #06b6d4">
+            <div class="bike-card__icon">🧒</div>
+          </div>
+          <div class="bike-card__content">
+            <h3 class="bike-card__name">Velo Enfant</h3>
+            <p class="bike-card__desc">Pour les petits cyclistes de 4 à 12 ans. Plusieurs tailles disponibles. Casque inclus !</p>
+            <ul class="bike-card__features">
+              <li>Tailles 16" à 24"</li>
+              <li>Casque enfant inclus</li>
+              <li>Couleurs fun</li>
+              <li>Stabilisateurs dispo</li>
+            </ul>
+            <div class="bike-card__footer">
+              <div class="bike-card__price">
+                <span class="bike-card__price-amount">&euro;8</span>
+                <span class="bike-card__price-period">/jour</span>
+              </div>
+              <button class="btn btn--primary btn--sm add-to-booking" data-bike="enfant" data-name="Velo Enfant" data-price="8">Ajouter</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Remorque Enfant -->
+        <div class="bike-card" data-category="family">
+          <div class="bike-card__image" style="--bike-color: #f97316">
+            <div class="bike-card__icon">🛒</div>
+          </div>
+          <div class="bike-card__content">
+            <h3 class="bike-card__name">Remorque Enfant</h3>
+            <p class="bike-card__desc">Transportez vos petits en toute securite. S'attache à n'importe quel velo adulte.</p>
+            <ul class="bike-card__features">
+              <li>1 ou 2 places</li>
+              <li>Harnais 5 points</li>
+              <li>Protection pluie incluse</li>
+              <li>Drapeau de securite</li>
+            </ul>
+            <div class="bike-card__footer">
+              <div class="bike-card__price">
+                <span class="bike-card__price-amount">&euro;10</span>
+                <span class="bike-card__price-period">/jour</span>
+              </div>
+              <button class="btn btn--primary btn--sm add-to-booking" data-bike="remorque" data-name="Remorque Enfant" data-price="10">Ajouter</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Velo Cargo -->
+        <div class="bike-card" data-category="electric family">
+          <div class="bike-card__image" style="--bike-color: #14b8a6">
+            <div class="bike-card__icon">📦</div>
+            <span class="bike-card__badge bike-card__badge--green">Nouveau</span>
+          </div>
+          <div class="bike-card__content">
+            <h3 class="bike-card__name">Velo Cargo Electrique</h3>
+            <p class="bike-card__desc">Le compagnon ideal pour les familles. Transportez enfants et affaires avec facilite.</p>
+            <ul class="bike-card__features">
+              <li>Bac avant pour 2 enfants</li>
+              <li>Assistance electrique</li>
+              <li>Capacite 100 kg</li>
+              <li>Ceintures de securite</li>
+            </ul>
+            <div class="bike-card__footer">
+              <div class="bike-card__price">
+                <span class="bike-card__price-amount">&euro;40</span>
+                <span class="bike-card__price-period">/jour</span>
+              </div>
+              <button class="btn btn--primary btn--sm add-to-booking" data-bike="cargo" data-name="Velo Cargo Electrique" data-price="40">Ajouter</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Comment ca marche -->
+  <section class="section section--alt how-it-works" id="comment-ca-marche">
+    <div class="container">
+      <div class="section__header">
+        <span class="section__tag">Simple & Rapide</span>
+        <h2 class="section__title">Comment ca marche</h2>
+        <p class="section__desc">En 3 etapes, vous êtes en selle. Pas de paperasse, pas de complications.</p>
+      </div>
+      <div class="steps-grid">
+        <div class="step">
+          <div class="step__number">01</div>
+          <div class="step__icon">📅</div>
+          <h3 class="step__title">Choisissez vos dates</h3>
+          <p class="step__desc">Selectionnez vos dates et les velos qui vous conviennent. Reservation en ligne 24h/24.</p>
+        </div>
+        <div class="step__connector"></div>
+        <div class="step">
+          <div class="step__number">02</div>
+          <div class="step__icon">📍</div>
+          <h3 class="step__title">Recupérez sur place</h3>
+          <p class="step__desc">Rendez-vous à notre boutique Intra-Muros. Briefing rapide, reglages, et c'est parti !</p>
+        </div>
+        <div class="step__connector"></div>
+        <div class="step">
+          <div class="step__number">03</div>
+          <div class="step__icon">🚴</div>
+          <h3 class="step__title">Roulez librement</h3>
+          <p class="step__desc">Explorez Saint-Malo à votre rythme. Carte des itineraires fournie. Retour flexible.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Tarifs -->
+  <section class="section tarifs" id="tarifs">
+    <div class="container">
+      <div class="section__header">
+        <span class="section__tag">Tarifs</span>
+        <h2 class="section__title">Des tarifs clairs,<br>sans surprises</h2>
+        <p class="section__desc">Plus vous louez longtemps, plus le tarif journalier baisse. Remises automatiques.</p>
+      </div>
+
+      <div class="pricing-toggle">
+        <button class="pricing-toggle__btn active" data-duration="day">Journee</button>
+        <button class="pricing-toggle__btn" data-duration="weekend">Week-end</button>
+        <button class="pricing-toggle__btn" data-duration="week">Semaine</button>
+      </div>
+
+      <div class="pricing-grid">
+        <div class="pricing-card">
+          <h3 class="pricing-card__name">Velo de Ville</h3>
+          <div class="pricing-card__price">
+            <span class="pricing-card__amount" data-day="12" data-weekend="20" data-week="60">&euro;12</span>
+            <span class="pricing-card__period">/jour</span>
+          </div>
+          <ul class="pricing-card__features">
+            <li>Antivol inclus</li>
+            <li>Panier avant</li>
+            <li>Casque en option (&euro;2)</li>
+          </ul>
+          <button class="btn btn--outline btn--full add-to-booking" data-bike="city" data-name="Velo de Ville" data-price="12">Selectionner</button>
+        </div>
+
+        <div class="pricing-card pricing-card--popular">
+          <span class="pricing-card__badge">Le + demande</span>
+          <h3 class="pricing-card__name">Velo Electrique</h3>
+          <div class="pricing-card__price">
+            <span class="pricing-card__amount" data-day="25" data-weekend="45" data-week="130">&euro;25</span>
+            <span class="pricing-card__period">/jour</span>
+          </div>
+          <ul class="pricing-card__features">
+            <li>Antivol inclus</li>
+            <li>Casque inclus</li>
+            <li>Autonomie 80 km</li>
+            <li>Chargeur fourni</li>
+          </ul>
+          <button class="btn btn--primary btn--full add-to-booking" data-bike="ebike" data-name="Velo Electrique" data-price="25">Selectionner</button>
+        </div>
+
+        <div class="pricing-card">
+          <h3 class="pricing-card__name">VTT</h3>
+          <div class="pricing-card__price">
+            <span class="pricing-card__amount" data-day="18" data-weekend="32" data-week="90">&euro;18</span>
+            <span class="pricing-card__period">/jour</span>
+          </div>
+          <ul class="pricing-card__features">
+            <li>Antivol inclus</li>
+            <li>Casque inclus</li>
+            <li>Kit de reparation</li>
+          </ul>
+          <button class="btn btn--outline btn--full add-to-booking" data-bike="vtt" data-name="VTT" data-price="18">Selectionner</button>
+        </div>
+
+        <div class="pricing-card">
+          <h3 class="pricing-card__name">Tandem</h3>
+          <div class="pricing-card__price">
+            <span class="pricing-card__amount" data-day="30" data-weekend="52" data-week="155">&euro;30</span>
+            <span class="pricing-card__period">/jour</span>
+          </div>
+          <ul class="pricing-card__features">
+            <li>2 casques inclus</li>
+            <li>Antivol inclus</li>
+            <li>Photo souvenir offerte</li>
+          </ul>
+          <button class="btn btn--outline btn--full add-to-booking" data-bike="tandem" data-name="Tandem" data-price="30">Selectionner</button>
+        </div>
+      </div>
+
+      <p class="tarifs__note">Tous les tarifs incluent l'antivol, la carte des itineraires et l'assistance telephonique. Caution de &euro;150 demandee (remboursee au retour).</p>
+    </div>
+  </section>
+
+  <!-- Itineraires -->
+  <section class="section section--alt itineraires" id="itineraires">
+    <div class="container">
+      <div class="section__header">
+        <span class="section__tag">Itineraires</span>
+        <h2 class="section__title">Les plus beaux parcours<br>autour de Saint-Malo</h2>
+        <p class="section__desc">Nous vous fournissons une carte avec nos itineraires recommandes. Voici les favoris de nos clients.</p>
+      </div>
+      <div class="routes-grid">
+        <div class="route-card route-card--featured">
+          <div class="route-card__header">
+            <span class="route-card__difficulty route-card__difficulty--easy">Facile</span>
+            <span class="route-card__distance">5 km</span>
+          </div>
+          <div class="route-card__icon">🏰</div>
+          <h3 class="route-card__name">Tour des Remparts</h3>
+          <p class="route-card__desc">Faites le tour complet des remparts de Saint-Malo. Vues imprenables sur la mer, les iles et le port.</p>
+          <div class="route-card__meta">
+            <span>~30 min</span>
+            <span>Tout velo</span>
+            <span>Famille</span>
+          </div>
+        </div>
+
+        <div class="route-card">
+          <div class="route-card__header">
+            <span class="route-card__difficulty route-card__difficulty--medium">Modere</span>
+            <span class="route-card__distance">15 km</span>
+          </div>
+          <div class="route-card__icon">🦪</div>
+          <h3 class="route-card__name">Saint-Malo → Cancale</h3>
+          <p class="route-card__desc">Longez la côte jusqu'à Cancale, capitale de l'huitre. Paysages spectaculaires et degustation à l'arrivee !</p>
+          <div class="route-card__meta">
+            <span>~1h15</span>
+            <span>Velo / E-bike</span>
+            <span>Côtier</span>
+          </div>
+        </div>
+
+        <div class="route-card">
+          <div class="route-card__header">
+            <span class="route-card__difficulty route-card__difficulty--medium">Modere</span>
+            <span class="route-card__distance">20 km</span>
+          </div>
+          <div class="route-card__icon">🌊</div>
+          <h3 class="route-card__name">Pointe du Grouin</h3>
+          <p class="route-card__desc">Jusqu'au point le plus au nord de la Bretagne. Reservez naturelle, phoques et panoramas à 360&deg;.</p>
+          <div class="route-card__meta">
+            <span>~1h30</span>
+            <span>VTT / E-bike</span>
+            <span>Nature</span>
+          </div>
+        </div>
+
+        <div class="route-card">
+          <div class="route-card__header">
+            <span class="route-card__difficulty route-card__difficulty--medium">Modere</span>
+            <span class="route-card__distance">25 km</span>
+          </div>
+          <div class="route-card__icon">⛵</div>
+          <h3 class="route-card__name">Bord de Rance</h3>
+          <p class="route-card__desc">Suivez l'estuaire de la Rance à travers les villages de peche et les points de vue sur le barrage.</p>
+          <div class="route-card__meta">
+            <span>~2h</span>
+            <span>Tout velo</span>
+            <span>Riviere</span>
+          </div>
+        </div>
+
+        <div class="route-card">
+          <div class="route-card__header">
+            <span class="route-card__difficulty route-card__difficulty--hard">Sportif</span>
+            <span class="route-card__distance">30 km</span>
+          </div>
+          <div class="route-card__icon">🏛️</div>
+          <h3 class="route-card__name">Saint-Malo → Dinan</h3>
+          <p class="route-card__desc">La voie verte le long de la Rance jusqu'à la cite medievale de Dinan. Un classique absolu.</p>
+          <div class="route-card__meta">
+            <span>~2h30</span>
+            <span>Velo / E-bike</span>
+            <span>Voie verte</span>
+          </div>
+        </div>
+
+        <div class="route-card">
+          <div class="route-card__header">
+            <span class="route-card__difficulty route-card__difficulty--hard">Sportif</span>
+            <span class="route-card__distance">55 km</span>
+          </div>
+          <div class="route-card__icon">🗻</div>
+          <h3 class="route-card__name">Mont Saint-Michel</h3>
+          <p class="route-card__desc">L'aventure ultime ! Rejoignez le Mont Saint-Michel par les petites routes côtieres. E-bike recommande.</p>
+          <div class="route-card__meta">
+            <span>~4h</span>
+            <span>E-bike recommande</span>
+            <span>Epique</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Avis -->
+  <section class="section avis" id="avis">
+    <div class="container">
+      <div class="section__header">
+        <span class="section__tag">Avis Clients</span>
+        <h2 class="section__title">Ce que disent<br>nos cyclistes</h2>
+      </div>
+      <div class="reviews-grid">
+        <div class="review-card">
+          <div class="review-card__stars">★★★★★</div>
+          <p class="review-card__text">"Service impeccable ! Les velos electriques sont top pour aller jusqu'à Cancale. On a adore la balade le long de la côte. A refaire absolument !"</p>
+          <div class="review-card__author">
+            <div class="review-card__avatar">ML</div>
+            <div>
+              <strong>Marie L.</strong>
+              <span>Paris — Aout 2025</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="review-card">
+          <div class="review-card__stars">★★★★★</div>
+          <p class="review-card__text">"Parfait pour une famille avec enfants. Les velos etaient en excellent etat et le personnel très accueillant. La carte des itineraires est un vrai plus."</p>
+          <div class="review-card__author">
+            <div class="review-card__avatar">TD</div>
+            <div>
+              <strong>Thomas D.</strong>
+              <span>Lyon — Juillet 2025</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="review-card">
+          <div class="review-card__stars">★★★★★</div>
+          <p class="review-card__text">"Nous avons loue un tandem pour decouvrir Saint-Malo. Fou rire garanti et souvenirs inoubliables ! L'equipe est super sympa."</p>
+          <div class="review-card__author">
+            <div class="review-card__avatar">SC</div>
+            <div>
+              <strong>Sophie & Clement</strong>
+              <span>Nantes — Juin 2025</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="review-card">
+          <div class="review-card__stars">★★★★★</div>
+          <p class="review-card__text">"VTT electrique au top pour l'excursion vers Dinan. La voie verte est magnifique et le velo avait largement assez d'autonomie pour l'aller-retour."</p>
+          <div class="review-card__author">
+            <div class="review-card__avatar">JB</div>
+            <div>
+              <strong>Jean-Baptiste R.</strong>
+              <span>Rennes — Septembre 2025</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Reservation -->
+  <section class="section section--alt reservation" id="reservation">
+    <div class="container">
+      <div class="section__header">
+        <span class="section__tag">Reservation</span>
+        <h2 class="section__title">Reservez votre velo<br>en quelques clics</h2>
+        <p class="section__desc">Selectionnez vos velos, vos dates, et nous preparons tout pour votre arrivee.</p>
+      </div>
+
+      <div class="booking-layout">
+        <!-- Booking Cart -->
+        <div class="booking-cart" id="bookingCart">
+          <h3 class="booking-cart__title">Votre selection</h3>
+          <div class="booking-cart__items" id="cartItems">
+            <p class="booking-cart__empty">Aucun velo selectionne. <a href="#velos">Choisir un velo</a></p>
+          </div>
+          <div class="booking-cart__summary" id="cartSummary" style="display:none">
+            <div class="booking-cart__line">
+              <span>Sous-total</span>
+              <span id="cartSubtotal">&euro;0</span>
+            </div>
+            <div class="booking-cart__line booking-cart__line--total">
+              <span>Total</span>
+              <span id="cartTotal">&euro;0</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Booking Form -->
+        <form class="booking-form" id="bookingForm">
+          <div class="booking-form__group">
+            <label for="dateStart">Date de debut</label>
+            <input type="date" id="dateStart" name="dateStart" required>
+          </div>
+          <div class="booking-form__group">
+            <label for="dateEnd">Date de fin</label>
+            <input type="date" id="dateEnd" name="dateEnd" required>
+          </div>
+          <div class="booking-form__group">
+            <label for="pickupTime">Heure de recuperation</label>
+            <select id="pickupTime" name="pickupTime" required>
+              <option value="">Choisir...</option>
+              <option value="08:00">08:00</option>
+              <option value="08:30">08:30</option>
+              <option value="09:00">09:00</option>
+              <option value="09:30">09:30</option>
+              <option value="10:00">10:00</option>
+              <option value="10:30">10:30</option>
+              <option value="11:00">11:00</option>
+              <option value="11:30">11:30</option>
+              <option value="12:00">12:00</option>
+              <option value="14:00">14:00</option>
+              <option value="14:30">14:30</option>
+              <option value="15:00">15:00</option>
+              <option value="15:30">15:30</option>
+              <option value="16:00">16:00</option>
+            </select>
+          </div>
+          <div class="booking-form__divider"></div>
+          <div class="booking-form__group">
+            <label for="fullName">Nom complet</label>
+            <input type="text" id="fullName" name="fullName" placeholder="Votre nom et prenom" required>
+          </div>
+          <div class="booking-form__group">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="votre@email.com" required>
+          </div>
+          <div class="booking-form__group">
+            <label for="phone">Telephone</label>
+            <input type="tel" id="phone" name="phone" placeholder="+33 6 12 34 56 78" required>
+          </div>
+          <div class="booking-form__group">
+            <label for="notes">Remarques (optionnel)</label>
+            <textarea id="notes" name="notes" rows="3" placeholder="Tailles souhaitees, besoin de sieges enfants, etc."></textarea>
+          </div>
+          <button type="submit" class="btn btn--primary btn--full btn--lg" id="submitBooking">Confirmer la reservation</button>
+          <p class="booking-form__note">Pas de paiement en ligne. Reglement sur place le jour de la recuperation.</p>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="section faq" id="faq">
+    <div class="container">
+      <div class="section__header">
+        <span class="section__tag">FAQ</span>
+        <h2 class="section__title">Questions frequentes</h2>
+      </div>
+      <div class="faq-list">
+        <div class="faq-item">
+          <button class="faq-item__question">
+            Quels sont vos horaires d'ouverture ?
+            <span class="faq-item__icon">+</span>
+          </button>
+          <div class="faq-item__answer">
+            <p>Nous sommes ouverts 7j/7 d'avril à octobre, de 8h00 à 19h00. Hors saison (novembre à mars), nous sommes ouverts du mercredi au dimanche, de 9h00 à 17h00. Contactez-nous pour toute demande speciale.</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-item__question">
+            Faut-il reserver à l'avance ?
+            <span class="faq-item__icon">+</span>
+          </button>
+          <div class="faq-item__answer">
+            <p>En haute saison (juillet-aout), la reservation est fortement recommandee, surtout pour les velos electriques et les tandems. Hors saison, vous pouvez venir directement mais reserver vous garantit la disponibilite.</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-item__question">
+            Une caution est-elle demandee ?
+            <span class="faq-item__icon">+</span>
+          </button>
+          <div class="faq-item__answer">
+            <p>Oui, une caution de &euro;150 est demandee par velo (ou &euro;300 pour un velo electrique). Elle est restituee integralement au retour du velo en bon etat. Nous acceptons les cartes bancaires et les espèces.</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-item__question">
+            Que se passe-t-il en cas de crevaison ou de panne ?
+            <span class="faq-item__icon">+</span>
+          </button>
+          <div class="faq-item__answer">
+            <p>Chaque velo est fourni avec un kit de reparation de base. En cas de problème serieux, appelez-nous et nous viendrons vous chercher dans un rayon de 20 km autour de Saint-Malo. Ce service est gratuit.</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-item__question">
+            Peut-on rendre le velo après la fermeture ?
+            <span class="faq-item__icon">+</span>
+          </button>
+          <div class="faq-item__answer">
+            <p>Oui ! Nous avons un système de boite à cles devant la boutique. Vous pouvez deposer le velo, verrouiller l'antivol et glisser la cle dans la boite. Nous verifierons le velo le lendemain matin.</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-item__question">
+            Proposez-vous la livraison à l'hotel ?
+            <span class="faq-item__icon">+</span>
+          </button>
+          <div class="faq-item__answer">
+            <p>Oui, pour les locations de 3 jours ou plus, nous livrons et recuperons gratuitement les velos à votre hotel ou hebergement dans Saint-Malo Intra-Muros et Saint-Servan. Un supplement de &euro;10 s'applique pour les autres quartiers.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div class="footer__brand">
+          <a href="#" class="nav__logo">
+            <span class="nav__logo-icon">🚲</span>
+            <span class="nav__logo-text">Velo Saint-Malo</span>
+          </a>
+          <p>Location de velos à Saint-Malo depuis 2024. Decouvrez la Côte d'Emeraude sur deux roues.</p>
+        </div>
+        <div class="footer__links">
+          <h4>Navigation</h4>
+          <ul>
+            <li><a href="#velos">Nos Velos</a></li>
+            <li><a href="#tarifs">Tarifs</a></li>
+            <li><a href="#itineraires">Itineraires</a></li>
+            <li><a href="#reservation">Reservation</a></li>
+          </ul>
+        </div>
+        <div class="footer__links">
+          <h4>Informations</h4>
+          <ul>
+            <li><a href="#faq">FAQ</a></li>
+            <li><a href="#avis">Avis clients</a></li>
+            <li><a href="#">Conditions generales</a></li>
+            <li><a href="#">Politique de confidentialite</a></li>
+          </ul>
+        </div>
+        <div class="footer__contact">
+          <h4>Contact</h4>
+          <ul>
+            <li>📍 12 Rue de Dinan, Intra-Muros<br>35400 Saint-Malo</li>
+            <li>📞 <a href="tel:+33299123456">02 99 12 34 56</a></li>
+            <li>📧 <a href="mailto:bonjour@velo-saint-malo.fr">bonjour@velo-saint-malo.fr</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <p>&copy; 2026 Velo Saint-Malo. Tous droits reserves.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Confirmation Modal -->
+  <div class="modal" id="confirmationModal">
+    <div class="modal__overlay"></div>
+    <div class="modal__content">
+      <button class="modal__close" id="modalClose">&times;</button>
+      <div class="modal__icon">✅</div>
+      <h2 class="modal__title">Reservation confirmee !</h2>
+      <p class="modal__text">Merci pour votre reservation. Vous recevrez un email de confirmation avec tous les details. A bientôt à Saint-Malo !</p>
+      <div class="modal__details" id="modalDetails"></div>
+      <button class="btn btn--primary btn--full" id="modalOk">Parfait !</button>
+    </div>
+  </div>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
