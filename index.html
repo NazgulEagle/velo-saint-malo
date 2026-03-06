@@ -204,6 +204,8 @@
 </head>
 <body>
 
+  <a href="#hero" class="sr-only sr-only-focusable">Aller au contenu principal</a>
+
   <!-- Top Info Bar -->
   <div class="info-bar">
     <div class="info-bar__container">
@@ -223,7 +225,7 @@
   <!-- Navigation -->
   <nav class="nav" id="nav">
     <div class="nav__container">
-      <a href="#" class="nav__logo">
+      <a href="#hero" class="nav__logo">
         <span class="nav__logo-text">Velo Saint-Malo</span>
       </a>
       <button class="nav__toggle" id="navToggle" aria-label="Menu">
@@ -239,6 +241,8 @@
       </ul>
     </div>
   </nav>
+
+  <main>
 
   <!-- Hero -->
   <section class="hero" id="hero">
@@ -1609,7 +1613,7 @@
 
               <div class="booking-form__checkbox">
                 <input type="checkbox" id="acceptTerms" name="acceptTerms" required>
-                <label for="acceptTerms">J'accepte les <a href="#" target="_blank">conditions generales de location</a> et la <a href="#" target="_blank">politique d'annulation</a> *</label>
+                <label for="acceptTerms">J'accepte les <a href="#faq" target="_blank">conditions generales de location</a> et la <a href="#faq" target="_blank">politique d'annulation</a> *</label>
                 <span class="booking-form__error" id="acceptTermsError"></span>
               </div>
             </div>
@@ -1655,7 +1659,7 @@
       </div>
       <div class="faq-list">
         <div class="faq-item">
-          <button class="faq-item__question">
+          <button class="faq-item__question" aria-expanded="false">
             Quels sont vos horaires d'ouverture ?
             <span class="faq-item__icon">+</span>
           </button>
@@ -1664,7 +1668,7 @@
           </div>
         </div>
         <div class="faq-item">
-          <button class="faq-item__question">
+          <button class="faq-item__question" aria-expanded="false">
             Faut-il reserver à l'avance ?
             <span class="faq-item__icon">+</span>
           </button>
@@ -1673,7 +1677,7 @@
           </div>
         </div>
         <div class="faq-item">
-          <button class="faq-item__question">
+          <button class="faq-item__question" aria-expanded="false">
             Une caution est-elle demandee ?
             <span class="faq-item__icon">+</span>
           </button>
@@ -1682,7 +1686,7 @@
           </div>
         </div>
         <div class="faq-item">
-          <button class="faq-item__question">
+          <button class="faq-item__question" aria-expanded="false">
             Que se passe-t-il en cas de crevaison ou de panne ?
             <span class="faq-item__icon">+</span>
           </button>
@@ -1691,7 +1695,7 @@
           </div>
         </div>
         <div class="faq-item">
-          <button class="faq-item__question">
+          <button class="faq-item__question" aria-expanded="false">
             Peut-on rendre le velo après la fermeture ?
             <span class="faq-item__icon">+</span>
           </button>
@@ -1700,7 +1704,7 @@
           </div>
         </div>
         <div class="faq-item">
-          <button class="faq-item__question">
+          <button class="faq-item__question" aria-expanded="false">
             Proposez-vous la livraison à l'hotel ?
             <span class="faq-item__icon">+</span>
           </button>
@@ -1709,7 +1713,7 @@
           </div>
         </div>
         <div class="faq-item">
-          <button class="faq-item__question">
+          <button class="faq-item__question" aria-expanded="false">
             Peut-on louer un velo pour une demi-journee ?
             <span class="faq-item__icon">+</span>
           </button>
@@ -1718,7 +1722,7 @@
           </div>
         </div>
         <div class="faq-item">
-          <button class="faq-item__question">
+          <button class="faq-item__question" aria-expanded="false">
             Proposez-vous des forfaits famille ?
             <span class="faq-item__icon">+</span>
           </button>
@@ -1739,12 +1743,14 @@
     et point de depart de vos plus belles balades a velo.
   -->
 
+  </main>
+
   <!-- Footer -->
   <footer class="footer">
     <div class="container">
       <div class="footer__grid">
         <div class="footer__brand">
-          <a href="#" class="nav__logo">
+          <a href="#hero" class="nav__logo">
             <span class="nav__logo-text">Velo Saint-Malo</span>
           </a>
           <p>Location de velos à Saint-Malo depuis 2024. Decouvrez la Côte d'Emeraude sur deux roues.</p>
@@ -1763,8 +1769,8 @@
           <ul>
             <li><a href="#faq">FAQ</a></li>
             <li><a href="#avis">Avis clients</a></li>
-            <li><a href="#">Conditions generales</a></li>
-            <li><a href="#">Politique de confidentialite</a></li>
+            <li><a href="#faq">Conditions generales</a></li>
+            <li><a href="#faq">Politique de confidentialite</a></li>
           </ul>
         </div>
         <div class="footer__contact">
@@ -1884,12 +1890,12 @@
 
   <!-- Floating Contact (mobile) -->
   <div class="floating-contact">
-    <a href="tel:+33299123456" class="floating-contact__btn">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg>
+    <a href="tel:+33299123456" class="floating-contact__btn" aria-label="Appeler le 02 99 12 34 56">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg>
       Appeler
     </a>
   </div>
 
-  <script src="js/main.js"></script>
+  <script src="js/main.js" defer></script>
 </body>
 </html>
