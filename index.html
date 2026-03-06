@@ -35,7 +35,7 @@
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🚲</text></svg>">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
 
   <!-- Structured Data: LocalBusiness -->
@@ -191,11 +191,26 @@
 </head>
 <body>
 
+  <!-- Top Info Bar -->
+  <div class="info-bar">
+    <div class="info-bar__container">
+      <div class="info-bar__item">
+        <span>12 Rue de Dinan, Intra-Muros — 35400 Saint-Malo</span>
+      </div>
+      <div class="info-bar__item">
+        <span class="info-bar__hours">Ouvert 7j/7 avr–oct 8h–19h</span>
+        <span>|</span>
+        <span><a href="tel:+33299123456">02 99 12 34 56</a></span>
+        <span>|</span>
+        <span><a href="mailto:bonjour@velo-saint-malo.fr">bonjour@velo-saint-malo.fr</a></span>
+      </div>
+    </div>
+  </div>
+
   <!-- Navigation -->
   <nav class="nav" id="nav">
     <div class="nav__container">
       <a href="#" class="nav__logo">
-        <span class="nav__logo-icon">🚲</span>
         <span class="nav__logo-text">Velo Saint-Malo</span>
       </a>
       <button class="nav__toggle" id="navToggle" aria-label="Menu">
@@ -216,12 +231,12 @@
   <section class="hero" id="hero">
     <div class="hero__bg"></div>
     <div class="hero__content">
-      <span class="hero__badge">Saint-Malo, Bretagne</span>
-      <h1 class="hero__title">Explorez Saint-Malo<br><span class="hero__title--accent">à velo</span></h1>
-      <p class="hero__subtitle">Location de velos pour decouvrir les remparts, la Cote d'Emeraude et les plus beaux itineraires bretons. Reservez en ligne, on s'occupe du reste.</p>
+      <span class="hero__badge" title="Cite corsaire depuis 1590 — Ni Francais, ni Breton, Malouin suis.">Saint-Malo &middot; Cote d'Emeraude</span>
+      <h1 class="hero__title">Explorez Saint-Malo<br><span class="hero__title--accent">a velo</span></h1>
+      <p class="hero__subtitle">Location de velos pour decouvrir les remparts, la Cote d'Emeraude et les plus beaux itineraires bretons. Reservez en ligne, recuperez Intra-Muros.</p>
       <div class="hero__actions">
         <a href="#reservation" class="btn btn--primary btn--lg">Reserver maintenant</a>
-        <a href="#velos" class="btn btn--outline btn--lg">Voir nos velos</a>
+        <a href="tel:+33299123456" class="btn btn--outline btn--lg">Appeler le 02 99 12 34 56</a>
       </div>
       <div class="hero__stats">
         <div class="hero__stat">
@@ -233,8 +248,8 @@
           <span>Velos disponibles</span>
         </div>
         <div class="hero__stat">
-          <strong>7j/7</strong>
-          <span>Ouvert toute la saison</span>
+          <strong>des 5&euro;</strong>
+          <span>par jour</span>
         </div>
       </div>
     </div>
@@ -243,6 +258,28 @@
       <div class="hero__scroll-line"></div>
     </div>
   </section>
+
+  <!-- Quick Info Bar -->
+  <div class="quick-info">
+    <div class="quick-info__grid">
+      <div class="quick-info__item">
+        <span class="quick-info__label">Adresse</span>
+        <span class="quick-info__value">12 Rue de Dinan, Intra-Muros</span>
+      </div>
+      <div class="quick-info__item">
+        <span class="quick-info__label">Horaires haute saison</span>
+        <span class="quick-info__value">7j/7 &middot; 8h00 – 19h00</span>
+      </div>
+      <div class="quick-info__item">
+        <span class="quick-info__label">Telephone</span>
+        <span class="quick-info__value"><a href="tel:+33299123456">02 99 12 34 56</a></span>
+      </div>
+      <div class="quick-info__item">
+        <span class="quick-info__label">Tarifs</span>
+        <span class="quick-info__value">des 5&euro;/jour &middot; remises 3j+ et 7j+</span>
+      </div>
+    </div>
+  </div>
 
   <!-- Nos Velos -->
   <section class="section velos" id="velos">
@@ -893,23 +930,20 @@
       <div class="steps-grid">
         <div class="step">
           <div class="step__number">01</div>
-          <div class="step__icon">📅</div>
           <h3 class="step__title">Choisissez vos dates</h3>
           <p class="step__desc">Selectionnez vos dates et les velos qui vous conviennent. Reservation en ligne 24h/24.</p>
         </div>
         <div class="step__connector"></div>
         <div class="step">
           <div class="step__number">02</div>
-          <div class="step__icon">📍</div>
-          <h3 class="step__title">Recupérez sur place</h3>
-          <p class="step__desc">Rendez-vous à notre boutique Intra-Muros. Briefing rapide, reglages, et c'est parti !</p>
+          <h3 class="step__title">Recuperez sur place</h3>
+          <p class="step__desc">Rendez-vous a notre boutique Intra-Muros. Briefing rapide, reglages, et c'est parti !</p>
         </div>
         <div class="step__connector"></div>
         <div class="step">
           <div class="step__number">03</div>
-          <div class="step__icon">🚴</div>
           <h3 class="step__title">Roulez librement</h3>
-          <p class="step__desc">Explorez Saint-Malo à votre rythme. Carte des itineraires fournie. Retour flexible.</p>
+          <p class="step__desc">Explorez Saint-Malo a votre rythme. Carte des itineraires fournie. Retour flexible.</p>
         </div>
       </div>
     </div>
@@ -1098,12 +1132,12 @@
       <div class="tarifs__includes">
         <h4>Toujours inclus</h4>
         <div class="tarifs__includes-grid">
-          <div class="tarifs__include-item">🔒 Antivol Abus</div>
-          <div class="tarifs__include-item">🗺️ Carte itineraires</div>
-          <div class="tarifs__include-item">📞 Assistance 7j/7</div>
-          <div class="tarifs__include-item">🔧 Kit reparation</div>
-          <div class="tarifs__include-item">💡 Eclairage LED</div>
-          <div class="tarifs__include-item">⛑️ Casque enfant (–12 ans)</div>
+          <div class="tarifs__include-item">Antivol Abus</div>
+          <div class="tarifs__include-item">Carte itineraires</div>
+          <div class="tarifs__include-item">Assistance 7j/7</div>
+          <div class="tarifs__include-item">Kit reparation</div>
+          <div class="tarifs__include-item">Eclairage LED</div>
+          <div class="tarifs__include-item">Casque enfant (–12 ans)</div>
         </div>
       </div>
 
@@ -1126,7 +1160,7 @@
             <span class="route-card__distance">5 km</span>
           </div>
           <div class="route-card__icon">🏰</div>
-          <h3 class="route-card__name">Tour des Remparts</h3>
+          <h3 class="route-card__name" title="A maree basse, poussez jusqu'au Grand Be — tombeau de Chateaubriand">Tour des Remparts</h3>
           <p class="route-card__desc">Faites le tour complet des remparts de Saint-Malo. Vues imprenables sur la mer, les iles et le port.</p>
           <div class="route-card__meta">
             <span>~30 min</span>
@@ -1141,8 +1175,8 @@
             <span class="route-card__distance">15 km</span>
           </div>
           <div class="route-card__icon">🦪</div>
-          <h3 class="route-card__name">Saint-Malo → Cancale</h3>
-          <p class="route-card__desc">Longez la côte jusqu'à Cancale, capitale de l'huitre. Paysages spectaculaires et degustation à l'arrivee !</p>
+          <h3 class="route-card__name" title="Astuce malouin : arrivez a Cancale vers midi, commandez une douzaine au marche aux huitres face a la mer.">Saint-Malo → Cancale</h3>
+          <p class="route-card__desc">Longez la cote jusqu'a Cancale, capitale de l'huitre. Paysages spectaculaires et degustation a l'arrivee !</p>
           <div class="route-card__meta">
             <span>~1h15</span>
             <span>Velo / E-bike</span>
@@ -1201,8 +1235,8 @@
             <span class="route-card__distance">55 km</span>
           </div>
           <div class="route-card__icon">🗻</div>
-          <h3 class="route-card__name">Mont Saint-Michel</h3>
-          <p class="route-card__desc">L'aventure ultime ! Rejoignez le Mont Saint-Michel par les petites routes côtieres. E-bike recommande.</p>
+          <h3 class="route-card__name" title="Jacques Cartier a quitte ce port en 1534 pour decouvrir le Canada. Votre aventure commence ici aussi.">Mont Saint-Michel</h3>
+          <p class="route-card__desc">L'aventure ultime ! Rejoignez le Mont Saint-Michel par les petites routes cotieres. E-bike recommande.</p>
           <div class="route-card__meta">
             <span>~4h</span>
             <span>E-bike recommande</span>
@@ -1362,7 +1396,7 @@
               </div>
 
               <div class="booking-dates__duration" id="durationDisplay" style="display:none">
-                <span class="booking-dates__duration-icon">📅</span>
+                <span class="booking-dates__duration-icon">—</span>
                 <span id="durationText">—</span>
               </div>
 
@@ -1596,13 +1630,21 @@
     </div>
   </section>
 
+  <!--
+    « Sire, le roi de France a-t-il un vaisseau a vendre ? »
+    — Robert Surcouf, corsaire malouin (1773-1827)
+
+    Saint-Malo : cite corsaire, berceau de Jacques Cartier,
+    derniere demeure de Chateaubriand sur le Grand Be,
+    et point de depart de vos plus belles balades a velo.
+  -->
+
   <!-- Footer -->
   <footer class="footer">
     <div class="container">
       <div class="footer__grid">
         <div class="footer__brand">
           <a href="#" class="nav__logo">
-            <span class="nav__logo-icon">🚲</span>
             <span class="nav__logo-text">Velo Saint-Malo</span>
           </a>
           <p>Location de velos à Saint-Malo depuis 2024. Decouvrez la Côte d'Emeraude sur deux roues.</p>
@@ -1628,9 +1670,9 @@
         <div class="footer__contact">
           <h4>Contact</h4>
           <ul>
-            <li>📍 12 Rue de Dinan, Intra-Muros<br>35400 Saint-Malo</li>
-            <li>📞 <a href="tel:+33299123456">02 99 12 34 56</a></li>
-            <li>📧 <a href="mailto:bonjour@velo-saint-malo.fr">bonjour@velo-saint-malo.fr</a></li>
+            <li>12 Rue de Dinan, Intra-Muros<br>35400 Saint-Malo</li>
+            <li><a href="tel:+33299123456">02 99 12 34 56</a></li>
+            <li><a href="mailto:bonjour@velo-saint-malo.fr">bonjour@velo-saint-malo.fr</a></li>
           </ul>
         </div>
       </div>
@@ -1725,16 +1767,10 @@
 
         <div class="receipt__footer">
           <div class="receipt__info-row">
-            <span>📍</span>
             <span>12 Rue de Dinan, Intra-Muros — 35400 Saint-Malo</span>
           </div>
           <div class="receipt__info-row">
-            <span>📞</span>
-            <span>02 99 12 34 56</span>
-          </div>
-          <div class="receipt__info-row">
-            <span>📧</span>
-            <span>bonjour@velo-saint-malo.fr</span>
+            <span>02 99 12 34 56 &middot; bonjour@velo-saint-malo.fr</span>
           </div>
           <p class="receipt__cancel">Annulation gratuite jusqu'à 24h avant. Contactez-nous par telephone ou email.</p>
         </div>
@@ -1744,6 +1780,14 @@
         <button class="btn btn--primary btn--full btn--lg" id="modalOk">Fermer</button>
       </div>
     </div>
+  </div>
+
+  <!-- Floating Contact (mobile) -->
+  <div class="floating-contact">
+    <a href="tel:+33299123456" class="floating-contact__btn">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg>
+      Appeler
+    </a>
   </div>
 
   <script src="js/main.js"></script>
