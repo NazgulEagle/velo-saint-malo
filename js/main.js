@@ -6,6 +6,17 @@
 const cart = {};
 let currentStep = 1;
 
+// Half-day price map (4h rental, ~65% of daily rate)
+const halfDayPrices = {
+  'riverside-500': 8, 'gazelle-paris': 10, 'trek-fx3': 12, 'tandem': 20,
+  'trek-verve': 20, 'moustache-28': 23, 'cube-touring': 25,
+  'giant-talon': 15, 'cube-stereo': 35,
+  'draisienne': 3, 'enfant-16': 5, 'enfant-20': 7, 'enfant-24': 9,
+  'forfait-famille': 18, 'forfait-famille-elec': 35,
+  'casque': 2, 'sacoche': 3, 'gps': 5,
+  'siege-enfant': 3, 'remorque': 8, 'followme': 4, 'babboe-cargo': 30
+};
+
 // --- DOM Ready ---
 document.addEventListener('DOMContentLoaded', () => {
   initNavigation();
@@ -120,7 +131,8 @@ function addToCart(bikeId, name, price) {
   if (cart[bikeId]) {
     cart[bikeId].qty += 1;
   } else {
-    cart[bikeId] = { name, price, qty: 1 };
+    const priceHalfDay = halfDayPrices[bikeId] || Math.round(price * 0.65);
+    cart[bikeId] = { name, price, priceHalfDay, qty: 1 };
   }
   renderCart();
   updateRecap();
@@ -149,26 +161,34 @@ function removeFromCart(bikeId) {
   updateRecap();
 }
 
+function isHalfDay() {
+  return document.getElementById('rentalType')?.value === 'halfday';
+}
+
 function getCartTotals() {
   const entries = Object.entries(cart);
+  const halfDay = isHalfDay();
   let dailyTotal = 0;
   let itemCount = 0;
   let hasEbike = false;
 
   entries.forEach(([id, item]) => {
-    dailyTotal += item.price * item.qty;
+    const unitPrice = halfDay ? item.priceHalfDay : item.price;
+    dailyTotal += unitPrice * item.qty;
     itemCount += item.qty;
     if (['moustache-28', 'trek-verve', 'cube-touring', 'cube-stereo', 'babboe-cargo'].includes(id)) {
       hasEbike = true;
     }
   });
 
-  const days = getBookingDays();
+  const days = halfDay ? 1 : getBookingDays();
 
-  // Discount: 3+ days = 10%, 7+ days = 20%
+  // Discount: 3+ days = 10%, 7+ days = 20% (no discount for half-day)
   let discountPct = 0;
-  if (days >= 7) discountPct = 20;
-  else if (days >= 3) discountPct = 10;
+  if (!halfDay) {
+    if (days >= 7) discountPct = 20;
+    else if (days >= 3) discountPct = 10;
+  }
 
   const subtotal = dailyTotal * days;
   const discount = Math.round(subtotal * discountPct / 100);
@@ -177,7 +197,7 @@ function getCartTotals() {
   // Deposit: €300 for e-bikes, €150 for regular
   const deposit = hasEbike ? 300 : (itemCount > 0 ? 150 : 0);
 
-  return { dailyTotal, itemCount, days, discountPct, discount, subtotal, total, deposit, entries };
+  return { dailyTotal, itemCount, days, discountPct, discount, subtotal, total, deposit, entries, halfDay };
 }
 
 function renderCart() {
@@ -186,7 +206,7 @@ function renderCart() {
   const emptyEl = document.getElementById('cartEmpty');
   const countEl = document.getElementById('cartCount');
 
-  const { dailyTotal, itemCount, days, discountPct, discount, subtotal, total, deposit, entries } = getCartTotals();
+  const { dailyTotal, itemCount, days, discountPct, discount, subtotal, total, deposit, entries, halfDay } = getCartTotals();
 
   // Update count badge
   if (countEl) {
@@ -208,13 +228,15 @@ function renderCart() {
 
   // Build items HTML
   let html = '';
+  const priceLabel = halfDay ? '/4h' : '/jour';
   entries.forEach(([id, item]) => {
-    const lineTotal = item.price * item.qty;
+    const unitPrice = halfDay ? item.priceHalfDay : item.price;
+    const lineTotal = unitPrice * item.qty;
     html += `
       <div class="booking-cart__item">
         <div class="booking-cart__item-info">
           <div class="booking-cart__item-name">${item.name}</div>
-          <div class="booking-cart__item-price">${item.qty} x €${item.price}/jour = <strong>€${lineTotal}/jour</strong></div>
+          <div class="booking-cart__item-price">${item.qty} x €${unitPrice}${priceLabel} = <strong>€${lineTotal}${priceLabel}</strong></div>
         </div>
         <div class="booking-cart__item-actions">
           <button class="booking-cart__qty-btn" onclick="updateQty('${id}', -1)" aria-label="Diminuer">−</button>
@@ -253,9 +275,13 @@ function renderCart() {
   }
 
   // Total
-  document.getElementById('cartTotal').textContent = days > 1
-    ? `€${total}`
-    : `€${dailyTotal}/jour`;
+  if (halfDay) {
+    document.getElementById('cartTotal').textContent = `€${dailyTotal}`;
+  } else {
+    document.getElementById('cartTotal').textContent = days > 1
+      ? `€${total}`
+      : `€${dailyTotal}/jour`;
+  }
 
   // Deposit
   document.getElementById('cartDeposit').textContent = `€${deposit}`;
@@ -294,7 +320,13 @@ function initDateDefaults() {
     const durationEl = document.getElementById('durationDisplay');
     const durationText = document.getElementById('durationText');
 
-    if (startInput.value && endInput.value && days > 0) {
+    const halfDay = isHalfDay();
+
+    if (halfDay && startInput.value) {
+      const startFmt = formatDate(startInput.value);
+      durationText.innerHTML = `<strong>${startFmt}</strong> — Demi-journee (4h)`;
+      durationEl.style.display = '';
+    } else if (!halfDay && startInput.value && endInput.value && days > 0) {
       const startFmt = formatDate(startInput.value);
       const endFmt = formatDate(endInput.value);
 
@@ -311,6 +343,19 @@ function initDateDefaults() {
     renderCart();
     updateRecap();
   };
+
+  // Rental type toggle
+  const rentalTypeSelect = document.getElementById('rentalType');
+  const dateEndGroup = document.getElementById('dateEndGroup');
+  rentalTypeSelect?.addEventListener('change', () => {
+    const halfDay = rentalTypeSelect.value === 'halfday';
+    if (dateEndGroup) dateEndGroup.style.display = halfDay ? 'none' : '';
+    if (halfDay) endInput.required = false;
+    else endInput.required = true;
+    renderCart();
+    updateRecap();
+    updateDuration();
+  });
 
   startInput.addEventListener('change', () => {
     const selected = new Date(startInput.value);
@@ -414,7 +459,13 @@ function updateRecap() {
   const pickup = document.getElementById('pickupTime')?.value;
 
   // Dates
-  if (start && end) {
+  const halfDay = isHalfDay();
+  if (halfDay && start) {
+    recapDates.innerHTML = `
+      <div>${formatDate(start)}</div>
+      <div class="booking-recap__days">Demi-journee (4h)${pickup ? ` — recuperation ${pickup}` : ''}</div>
+    `;
+  } else if (start && end) {
     const days = getBookingDays();
     recapDates.innerHTML = `
       <div>${formatDate(start)} → ${formatDate(end)}</div>
@@ -425,9 +476,11 @@ function updateRecap() {
   // Items
   const { total, deposit, entries } = getCartTotals();
   if (entries.length > 0) {
-    recapItems.innerHTML = entries.map(([, item]) =>
-      `<div class="booking-recap__item">${item.qty}x ${item.name} <span>€${item.price * item.qty}/j</span></div>`
-    ).join('');
+    const pLabel = halfDay ? '/4h' : '/j';
+    recapItems.innerHTML = entries.map(([, item]) => {
+      const unitPrice = halfDay ? item.priceHalfDay : item.price;
+      return `<div class="booking-recap__item">${item.qty}x ${item.name} <span>€${unitPrice * item.qty}${pLabel}</span></div>`;
+    }).join('');
   }
 
   // Total
@@ -456,14 +509,16 @@ function validateStep1() {
     valid = false;
   }
 
-  // Date end
-  const end = document.getElementById('dateEnd').value;
-  if (!end) {
-    showError('dateEnd', 'Veuillez choisir une date de retour');
-    valid = false;
-  } else if (start && new Date(end) <= new Date(start)) {
-    showError('dateEnd', 'La date de retour doit être apres la date de debut');
-    valid = false;
+  // Date end (not required for half-day)
+  if (!isHalfDay()) {
+    const end = document.getElementById('dateEnd').value;
+    if (!end) {
+      showError('dateEnd', 'Veuillez choisir une date de retour');
+      valid = false;
+    } else if (start && new Date(end) <= new Date(start)) {
+      showError('dateEnd', 'La date de retour doit être apres la date de debut');
+      valid = false;
+    }
   }
 
   // Pickup time
@@ -578,7 +633,7 @@ function showConfirmation() {
   const pickup = document.getElementById('pickupTime').value;
   const returnTime = document.getElementById('returnTime').value;
 
-  const { days, discountPct, discount, total, deposit, entries } = getCartTotals();
+  const { days, discountPct, discount, total, deposit, entries, halfDay } = getCartTotals();
 
   // Generate reference
   const ref = 'VSM-' + Date.now().toString(36).toUpperCase().slice(-6);
@@ -598,25 +653,33 @@ function showConfirmation() {
 
   // Dates
   document.getElementById('receiptDateStart').textContent = formatDate(start);
-  document.getElementById('receiptDateEnd').textContent = formatDate(end);
-  document.getElementById('receiptDuration').textContent = `${days} jour${days > 1 ? 's' : ''}`;
+  if (halfDay) {
+    document.getElementById('receiptDateEnd').textContent = 'Meme jour';
+    document.getElementById('receiptDuration').textContent = 'Demi-journee (4h)';
+  } else {
+    document.getElementById('receiptDateEnd').textContent = formatDate(end);
+    document.getElementById('receiptDuration').textContent = `${days} jour${days > 1 ? 's' : ''}`;
+  }
   document.getElementById('receiptPickup').textContent = pickup;
   document.getElementById('receiptReturn').textContent = returnTime === 'flexible' ? 'Flexible (avant fermeture)' : returnTime;
 
   // Items
   const itemsHtml = entries.map(([, item]) => {
-    const lineTotal = item.price * item.qty * days;
+    const unitPrice = halfDay ? item.priceHalfDay : item.price;
+    const lineTotal = unitPrice * item.qty * days;
     let discountedTotal = lineTotal;
     if (discountPct > 0) {
       discountedTotal = Math.round(lineTotal * (100 - discountPct) / 100);
     }
+    const pLabel = halfDay ? '/4h' : '/jour';
+    const dLabel = halfDay ? 'demi-journee' : `${days} jour${days > 1 ? 's' : ''}`;
     return `
       <div class="receipt__row">
         <span>${item.qty}x ${item.name}</span>
         <span>${discountPct > 0 ? `<s>€${lineTotal}</s> ` : ''}€${discountedTotal}</span>
       </div>
       <div class="receipt__row receipt__row--sub">
-        <span>${item.qty} x €${item.price}/jour x ${days} jour${days > 1 ? 's' : ''}</span>
+        <span>${item.qty} x €${unitPrice}${pLabel} x ${dLabel}</span>
         <span></span>
       </div>
     `;

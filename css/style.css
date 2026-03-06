@@ -987,6 +987,38 @@ a:hover {
   background: rgba(200, 145, 46, 0.05);
 }
 
+/* Tarifs advantages banner */
+.tarifs__advantages {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+  margin-top: 32px;
+  padding: 24px;
+  background: linear-gradient(135deg, var(--primary-dark), var(--primary));
+  border-radius: var(--radius-lg);
+}
+
+.tarifs__advantage {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  text-align: center;
+  padding: 12px 8px;
+}
+
+.tarifs__advantage strong {
+  font-family: var(--font-heading);
+  font-weight: 400;
+  font-size: 1rem;
+  color: var(--accent);
+}
+
+.tarifs__advantage span {
+  font-size: 0.8rem;
+  color: rgba(255, 255, 255, 0.85);
+  line-height: 1.4;
+}
+
 /* Tarifs includes */
 .tarifs__includes {
   background: var(--bg-alt);
@@ -2380,6 +2412,16 @@ a:hover {
   .routes-grid {
     grid-template-columns: 1fr;
   }
+
+  .tarifs__advantages {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .pricing-table th,
+  .pricing-table td {
+    padding: 10px 8px;
+    font-size: 0.8rem;
+  }
 }
 
 @media (max-width: 480px) {
@@ -2401,6 +2443,10 @@ a:hover {
   }
 
   .reviews-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .tarifs__advantages {
     grid-template-columns: 1fr;
   }
 }

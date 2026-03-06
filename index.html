@@ -80,7 +80,7 @@
         "validThrough": "2026-03-31"
       }
     ],
-    "priceRange": "5 EUR - 55 EUR / jour",
+    "priceRange": "3 EUR - 55 EUR (demi-journee des 3 EUR, journee des 5 EUR)",
     "currenciesAccepted": "EUR",
     "paymentAccepted": "Cash, Credit Card",
     "areaServed": {
@@ -132,6 +132,14 @@
             { "@type": "Offer", "itemOffered": { "@type": "Product", "name": "Btwin 500 16\"", "description": "4-6 ans, stabilisateurs" }, "price": "8", "priceCurrency": "EUR", "unitText": "jour" },
             { "@type": "Offer", "itemOffered": { "@type": "Product", "name": "Trek Precaliber 24\"", "description": "9-12 ans, VTT junior" }, "price": "14", "priceCurrency": "EUR", "unitText": "jour" }
           ]
+        },
+        {
+          "@type": "OfferCatalog",
+          "name": "Forfaits Famille",
+          "itemListElement": [
+            { "@type": "Offer", "itemOffered": { "@type": "Product", "name": "Forfait Famille Classique", "description": "2 velos adultes + 1 enfant + casques, -15%" }, "price": "27", "priceCurrency": "EUR", "unitText": "jour" },
+            { "@type": "Offer", "itemOffered": { "@type": "Product", "name": "Forfait Famille Electrique", "description": "2 e-bikes + 1 enfant + casques, -15%" }, "price": "55", "priceCurrency": "EUR", "unitText": "jour" }
+          ]
         }
       ]
     }
@@ -173,6 +181,11 @@
         "@type": "Question",
         "name": "Proposez-vous la livraison a l'hotel ?",
         "acceptedAnswer": { "@type": "Answer", "text": "Oui, pour les locations de 3 jours ou plus, livraison et recuperation gratuites dans Saint-Malo Intra-Muros et Saint-Servan. Supplement de 10 EUR pour les autres quartiers." }
+      },
+      {
+        "@type": "Question",
+        "name": "Peut-on louer un velo pour une demi-journee ?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Oui, nous proposons la location demi-journee (4 heures) pour tous nos velos et forfaits. Ideal pour une balade le long des remparts ou vers la plage du Sillon." }
       }
     ]
   }
@@ -955,7 +968,27 @@
       <div class="section__header">
         <span class="section__tag">Tarifs</span>
         <h2 class="section__title">Des tarifs clairs,<br>sans surprises</h2>
-        <p class="section__desc">Plus vous louez longtemps, plus le tarif journalier baisse. Remises automatiques.</p>
+        <p class="section__desc">Demi-journee, journee, semaine — plus vous louez, moins vous payez. Caution parmi les plus basses de Saint-Malo.</p>
+      </div>
+
+      <!-- Competitive advantages banner -->
+      <div class="tarifs__advantages">
+        <div class="tarifs__advantage">
+          <strong>Caution reduite</strong>
+          <span>&euro;150 seulement (&euro;300 e-bikes) — la plus basse de la region</span>
+        </div>
+        <div class="tarifs__advantage">
+          <strong>Demi-journee disponible</strong>
+          <span>Ideal pour une balade de quelques heures</span>
+        </div>
+        <div class="tarifs__advantage">
+          <strong>Remise 3j+ et 7j+</strong>
+          <span>–10% des 3 jours, –20% des 7 jours</span>
+        </div>
+        <div class="tarifs__advantage">
+          <strong>Livraison hotel gratuite</strong>
+          <span>Intra-Muros & Saint-Servan (3+ jours)</span>
+        </div>
       </div>
 
       <div class="pricing-toggle">
@@ -969,16 +1002,18 @@
           <thead>
             <tr>
               <th>Velo / Accessoire</th>
+              <th>Demi-journee<br><small>(4h)</small></th>
               <th>1 jour</th>
               <th>Week-end<br><small>(sam–dim)</small></th>
-              <th>Semaine<br><small>(7 jours)</small></th>
+              <th>Semaine<br><small>(7 jours, –20%)</small></th>
               <th></th>
             </tr>
           </thead>
           <tbody>
-            <tr class="pricing-table__category"><td colspan="5">Velos de Ville</td></tr>
+            <tr class="pricing-table__category"><td colspan="6">Velos de Ville</td></tr>
             <tr>
               <td><strong>Riverside 500</strong> <span class="pricing-table__sub">Hybride 9v</span></td>
+              <td>&euro;8</td>
               <td>&euro;12</td>
               <td>&euro;20</td>
               <td>&euro;60</td>
@@ -986,6 +1021,7 @@
             </tr>
             <tr>
               <td><strong>Gazelle Paris C7</strong> <span class="pricing-table__sub">Hollandais confort</span></td>
+              <td>&euro;10</td>
               <td>&euro;15</td>
               <td>&euro;26</td>
               <td>&euro;75</td>
@@ -993,6 +1029,7 @@
             </tr>
             <tr>
               <td><strong>Trek FX 3 Disc</strong> <span class="pricing-table__sub">Fitness / sportif</span></td>
+              <td>&euro;12</td>
               <td>&euro;18</td>
               <td>&euro;32</td>
               <td>&euro;90</td>
@@ -1000,15 +1037,17 @@
             </tr>
             <tr>
               <td><strong>Tandem Peugeot T02</strong> <span class="pricing-table__sub">2 places</span></td>
+              <td>&euro;20</td>
               <td>&euro;30</td>
               <td>&euro;52</td>
               <td>&euro;155</td>
               <td><button class="btn btn--primary btn--sm add-to-booking" data-bike="tandem" data-name="Tandem Peugeot T02" data-price="30">+</button></td>
             </tr>
 
-            <tr class="pricing-table__category"><td colspan="5">Velos Electriques</td></tr>
+            <tr class="pricing-table__category"><td colspan="6">Velos Electriques</td></tr>
             <tr class="pricing-table__highlight">
               <td><strong>Trek Verve+ 3</strong> <span class="pricing-table__sub">Bosch 500 Wh — confort</span> <span class="pricing-table__badge">Populaire</span></td>
+              <td>&euro;20</td>
               <td>&euro;30</td>
               <td>&euro;52</td>
               <td>&euro;155</td>
@@ -1016,6 +1055,7 @@
             </tr>
             <tr class="pricing-table__highlight">
               <td><strong>Moustache Samedi 28.3</strong> <span class="pricing-table__sub">Bosch CX 625 Wh — performant</span></td>
+              <td>&euro;23</td>
               <td>&euro;35</td>
               <td>&euro;62</td>
               <td>&euro;180</td>
@@ -1023,15 +1063,17 @@
             </tr>
             <tr class="pricing-table__highlight">
               <td><strong>Cube Touring Hybrid One</strong> <span class="pricing-table__sub">Bosch CX 625 Wh — longue distance</span></td>
+              <td>&euro;25</td>
               <td>&euro;38</td>
               <td>&euro;68</td>
               <td>&euro;200</td>
               <td><button class="btn btn--primary btn--sm add-to-booking" data-bike="cube-touring" data-name="Cube Touring Hybrid One 625" data-price="38">+</button></td>
             </tr>
 
-            <tr class="pricing-table__category"><td colspan="5">VTT & Sport</td></tr>
+            <tr class="pricing-table__category"><td colspan="6">VTT & Sport</td></tr>
             <tr>
               <td><strong>Giant Talon 2 — 29"</strong> <span class="pricing-table__sub">Hardtail, Deore 20v</span></td>
+              <td>&euro;15</td>
               <td>&euro;22</td>
               <td>&euro;38</td>
               <td>&euro;110</td>
@@ -1039,15 +1081,17 @@
             </tr>
             <tr>
               <td><strong>Cube Stereo Hybrid 140</strong> <span class="pricing-table__sub">E-VTT full — Bosch 750 Wh</span> <span class="pricing-table__badge">Premium</span></td>
+              <td>&euro;35</td>
               <td>&euro;55</td>
               <td>&euro;95</td>
               <td>&euro;280</td>
               <td><button class="btn btn--primary btn--sm add-to-booking" data-bike="cube-stereo" data-name="Cube Stereo Hybrid 140 E-VTT" data-price="55">+</button></td>
             </tr>
 
-            <tr class="pricing-table__category"><td colspan="5">Velos Enfants</td></tr>
+            <tr class="pricing-table__category"><td colspan="6">Velos Enfants</td></tr>
             <tr>
               <td><strong>Draisienne RunRide 500</strong> <span class="pricing-table__sub">2–4 ans</span></td>
+              <td>&euro;3</td>
               <td>&euro;5</td>
               <td>&euro;8</td>
               <td>&euro;25</td>
@@ -1055,6 +1099,7 @@
             </tr>
             <tr>
               <td><strong>Btwin 500 — 16"</strong> <span class="pricing-table__sub">4–6 ans</span></td>
+              <td>&euro;5</td>
               <td>&euro;8</td>
               <td>&euro;14</td>
               <td>&euro;40</td>
@@ -1062,6 +1107,7 @@
             </tr>
             <tr>
               <td><strong>Riverside 500 Junior — 20"</strong> <span class="pricing-table__sub">6–9 ans</span></td>
+              <td>&euro;7</td>
               <td>&euro;10</td>
               <td>&euro;17</td>
               <td>&euro;50</td>
@@ -1069,15 +1115,35 @@
             </tr>
             <tr>
               <td><strong>Trek Precaliber 24"</strong> <span class="pricing-table__sub">9–12 ans — VTT junior</span></td>
+              <td>&euro;9</td>
               <td>&euro;14</td>
               <td>&euro;24</td>
               <td>&euro;70</td>
               <td><button class="btn btn--primary btn--sm add-to-booking" data-bike="enfant-24" data-name="Trek Precaliber 24&quot; (9-12 ans)" data-price="14">+</button></td>
             </tr>
 
-            <tr class="pricing-table__category"><td colspan="5">Accessoires</td></tr>
+            <tr class="pricing-table__category"><td colspan="6">Forfaits Famille</td></tr>
+            <tr class="pricing-table__highlight">
+              <td><strong>Forfait Famille Classique</strong> <span class="pricing-table__sub">2 adultes ville + 1 enfant + casques</span> <span class="pricing-table__badge">–15%</span></td>
+              <td>&euro;18</td>
+              <td>&euro;27</td>
+              <td>&euro;48</td>
+              <td>&euro;140</td>
+              <td><button class="btn btn--primary btn--sm add-to-booking" data-bike="forfait-famille" data-name="Forfait Famille Classique (2+1)" data-price="27">+</button></td>
+            </tr>
+            <tr class="pricing-table__highlight">
+              <td><strong>Forfait Famille Electrique</strong> <span class="pricing-table__sub">2 e-bikes + 1 enfant + casques</span> <span class="pricing-table__badge">–15%</span></td>
+              <td>&euro;35</td>
+              <td>&euro;55</td>
+              <td>&euro;96</td>
+              <td>&euro;275</td>
+              <td><button class="btn btn--primary btn--sm add-to-booking" data-bike="forfait-famille-elec" data-name="Forfait Famille Electrique (2+1)" data-price="55">+</button></td>
+            </tr>
+
+            <tr class="pricing-table__category"><td colspan="6">Accessoires</td></tr>
             <tr>
               <td><strong>Casque adulte Giro MIPS</strong></td>
+              <td>&euro;2</td>
               <td>&euro;2</td>
               <td>&euro;3</td>
               <td>&euro;8</td>
@@ -1085,6 +1151,7 @@
             </tr>
             <tr>
               <td><strong>Sacoches Ortlieb</strong> <span class="pricing-table__sub">Paire etanche 2x20L</span></td>
+              <td>&euro;3</td>
               <td>&euro;4</td>
               <td>&euro;7</td>
               <td>&euro;20</td>
@@ -1092,6 +1159,7 @@
             </tr>
             <tr>
               <td><strong>GPS Garmin Edge Explore 2</strong></td>
+              <td>&euro;5</td>
               <td>&euro;7</td>
               <td>&euro;12</td>
               <td>&euro;35</td>
@@ -1099,6 +1167,7 @@
             </tr>
             <tr>
               <td><strong>Siege enfant Thule Yepp 2</strong> <span class="pricing-table__sub">9 mois–6 ans</span></td>
+              <td>&euro;3</td>
               <td>&euro;5</td>
               <td>&euro;8</td>
               <td>&euro;25</td>
@@ -1106,6 +1175,7 @@
             </tr>
             <tr>
               <td><strong>Remorque Thule Chariot Cross 2</strong> <span class="pricing-table__sub">2 enfants</span></td>
+              <td>&euro;8</td>
               <td>&euro;12</td>
               <td>&euro;20</td>
               <td>&euro;60</td>
@@ -1113,6 +1183,7 @@
             </tr>
             <tr>
               <td><strong>Barre FollowMe</strong> <span class="pricing-table__sub">Tandem parent-enfant</span></td>
+              <td>&euro;4</td>
               <td>&euro;6</td>
               <td>&euro;10</td>
               <td>&euro;30</td>
@@ -1120,6 +1191,7 @@
             </tr>
             <tr>
               <td><strong>Babboe Curve-E Cargo</strong> <span class="pricing-table__sub">Biporteur electrique familial</span></td>
+              <td>&euro;30</td>
               <td>&euro;45</td>
               <td>&euro;78</td>
               <td>&euro;230</td>
@@ -1130,7 +1202,7 @@
       </div>
 
       <div class="tarifs__includes">
-        <h4>Toujours inclus</h4>
+        <h4>Toujours inclus — sans supplement</h4>
         <div class="tarifs__includes-grid">
           <div class="tarifs__include-item">Antivol Abus</div>
           <div class="tarifs__include-item">Carte itineraires</div>
@@ -1138,10 +1210,12 @@
           <div class="tarifs__include-item">Kit reparation</div>
           <div class="tarifs__include-item">Eclairage LED</div>
           <div class="tarifs__include-item">Casque enfant (–12 ans)</div>
+          <div class="tarifs__include-item">Depannage 20 km gratuit</div>
+          <div class="tarifs__include-item">Annulation gratuite 24h</div>
         </div>
       </div>
 
-      <p class="tarifs__note">Tous les tarifs incluent l'antivol, la carte des itineraires et l'assistance telephonique. Caution de &euro;150 demandee (remboursee au retour).</p>
+      <p class="tarifs__note">Caution de &euro;150 par velo (&euro;300 pour les e-bikes) — parmi les plus basses de la region. Remboursee integralement au retour en bon etat. Reglement sur place par CB ou especes.</p>
     </div>
   </section>
 
@@ -1382,13 +1456,21 @@
             <div class="booking-dates">
               <h3 class="booking-dates__title">Dates & recuperation</h3>
 
-              <div class="booking-form__row">
+              <div class="booking-form__group">
+                <label for="rentalType">Type de location *</label>
+                <select id="rentalType" name="rentalType">
+                  <option value="day">Journee complete</option>
+                  <option value="halfday">Demi-journee (4h)</option>
+                </select>
+              </div>
+
+              <div class="booking-form__row" id="dateRow">
                 <div class="booking-form__group">
                   <label for="dateStart">Date de debut *</label>
                   <input type="date" id="dateStart" name="dateStart" required>
                   <span class="booking-form__error" id="dateStartError"></span>
                 </div>
-                <div class="booking-form__group">
+                <div class="booking-form__group" id="dateEndGroup">
                   <label for="dateEnd">Date de retour *</label>
                   <input type="date" id="dateEnd" name="dateEnd" required>
                   <span class="booking-form__error" id="dateEndError"></span>
