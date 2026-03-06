@@ -1,6 +1,6 @@
 # Velo Saint-Malo
 
-> Location de velos a Saint-Malo, Bretagne, France. Velos de ville, electriques, VTT, tandems, velos enfants et accessoires. Reservation en ligne, recuperation Intra-Muros.
+> Location de velos a Saint-Malo, Bretagne, France. Velos de ville, electriques, VTT, tandems, velos enfants et accessoires. Demi-journee, journee, week-end ou semaine. Reservation en ligne, recuperation Intra-Muros.
 
 ## A propos
 
@@ -18,43 +18,51 @@ Velo Saint-Malo est un service de location de velos base a Saint-Malo, dans les 
 - Avril a octobre : 7j/7, 08h00 - 19h00
 - Novembre a mars : mercredi au dimanche, 09h00 - 17h00
 
-## Catalogue de velos
+## Catalogue de velos (demi-journee 4h / jour / week-end / semaine)
 
 ### Velos de Ville
-- Gazelle Paris C7 : velo hollandais confort, Shimano Nexus 7v — 15 EUR/jour
-- Riverside 500 : hybride polyvalent, Shimano Altus 9v — 12 EUR/jour
-- Trek FX 3 Disc : fitness sportif, disques hydrauliques — 18 EUR/jour
-- Tandem Peugeot T02 : 2 places — 30 EUR/jour
+- Gazelle Paris C7 : velo hollandais confort, Shimano Nexus 7v — 10 / 15 / 26 / 75 EUR
+- Riverside 500 : hybride polyvalent, Shimano Altus 9v — 8 / 12 / 20 / 60 EUR
+- Trek FX 3 Disc : fitness sportif, disques hydrauliques — 12 / 18 / 32 / 90 EUR
+- Tandem Peugeot T02 : 2 places — 20 / 30 / 52 / 155 EUR
 
 ### Velos Electriques
-- Moustache Samedi 28.3 : Bosch CX 625 Wh, 80-120 km autonomie — 35 EUR/jour
-- Trek Verve+ 3 Lowstep : Bosch 500 Wh, enjambement bas — 30 EUR/jour
-- Cube Touring Hybrid One 625 : Bosch CX 625 Wh, longue distance 90-140 km — 38 EUR/jour
+- Moustache Samedi 28.3 : Bosch CX 625 Wh, 80-120 km autonomie — 23 / 35 / 62 / 180 EUR
+- Trek Verve+ 3 Lowstep : Bosch 500 Wh, enjambement bas — 20 / 30 / 52 / 155 EUR
+- Cube Touring Hybrid One 625 : Bosch CX 625 Wh, longue distance 90-140 km — 25 / 38 / 68 / 200 EUR
 
 ### VTT & Sport
-- Giant Talon 2 (29") : VTT hardtail, Shimano Deore 20v — 22 EUR/jour
-- Cube Stereo Hybrid 140 : E-VTT full suspension, Bosch CX 750 Wh — 55 EUR/jour
+- Giant Talon 2 (29") : VTT hardtail, Shimano Deore 20v — 15 / 22 / 38 / 110 EUR
+- Cube Stereo Hybrid 140 : E-VTT full suspension, Bosch CX 750 Wh — 35 / 55 / 95 / 280 EUR
 
 ### Velos Enfants
-- Draisienne RunRide 500 : 2-4 ans — 5 EUR/jour
-- Btwin 500 (16") : 4-6 ans — 8 EUR/jour
-- Riverside 500 Junior (20") : 6-9 ans — 10 EUR/jour
-- Trek Precaliber 24" : 9-12 ans, VTT junior — 14 EUR/jour
+- Draisienne RunRide 500 : 2-4 ans — 3 / 5 / 8 / 25 EUR
+- Btwin 500 (16") : 4-6 ans — 5 / 8 / 14 / 40 EUR
+- Riverside 500 Junior (20") : 6-9 ans — 7 / 10 / 17 / 50 EUR
+- Trek Precaliber 24" : 9-12 ans, VTT junior — 9 / 14 / 24 / 70 EUR
+
+### Forfaits Famille (-15%)
+- Forfait Famille Classique : 2 velos adultes ville + 1 enfant + casques — 18 / 27 / 48 / 140 EUR
+- Forfait Famille Electrique : 2 e-bikes + 1 enfant + casques — 35 / 55 / 96 / 275 EUR
 
 ### Accessoires
-- Siege enfant Thule Yepp 2 Maxi : 9 mois-6 ans — 5 EUR/jour
-- Remorque enfant Thule Chariot Cross 2 : 2 places — 12 EUR/jour
-- Barre de remorquage FollowMe : tandem parent-enfant — 6 EUR/jour
-- Babboe Curve-E Cargo : biporteur electrique familial — 45 EUR/jour
-- Sacoches Ortlieb Back-Roller : paire etanche 2x20L — 4 EUR/jour
-- Casque adulte Giro Register MIPS — 2 EUR/jour
-- GPS Garmin Edge Explore 2 : itineraires pre-charges — 7 EUR/jour
+- Siege enfant Thule Yepp 2 Maxi : 9 mois-6 ans — 3 / 5 / 8 / 25 EUR
+- Remorque enfant Thule Chariot Cross 2 : 2 places — 8 / 12 / 20 / 60 EUR
+- Barre de remorquage FollowMe : tandem parent-enfant — 4 / 6 / 10 / 30 EUR
+- Babboe Curve-E Cargo : biporteur electrique familial — 30 / 45 / 78 / 230 EUR
+- Sacoches Ortlieb Back-Roller : paire etanche 2x20L — 3 / 4 / 7 / 20 EUR
+- Casque adulte Giro Register MIPS — 2 / 2 / 3 / 8 EUR
+- GPS Garmin Edge Explore 2 : itineraires pre-charges — 5 / 7 / 12 / 35 EUR
 
 ## Tarification
 
+- Location demi-journee (4 heures) disponible pour tous les velos
 - Remise 10% a partir de 3 jours de location
 - Remise 20% a partir de 7 jours de location
-- Caution : 150 EUR (300 EUR pour velos electriques), remboursable au retour
+- Caution : 150 EUR (300 EUR pour velos electriques) — la plus basse de la region, remboursable au retour
+- Depannage gratuit dans un rayon de 20 km
+- Annulation gratuite jusqu'a 24h avant
+- Livraison hotel gratuite (locations 3+ jours, Intra-Muros & Saint-Servan)
 - Toujours inclus : antivol Abus, carte des itineraires, assistance 7j/7, kit reparation, eclairage LED, casque enfant (-12 ans)
 
 ## Itineraires recommandes
@@ -76,6 +84,7 @@ Velo Saint-Malo est un service de location de velos base a Saint-Malo, dans les 
 - Retour apres fermeture possible (boite a cles)
 - Livraison hotel gratuite (locations 3+ jours, Intra-Muros)
 - Annulation gratuite jusqu'a 24h avant
+- Depannage gratuit 20 km
 
 ## FAQ
 
@@ -83,7 +92,10 @@ Q: Faut-il reserver a l'avance ?
 R: En haute saison (juillet-aout), fortement recommande surtout pour e-bikes et tandems. Hors saison, venez directement.
 
 Q: Quelle caution est demandee ?
-R: 150 EUR par velo standard, 300 EUR par velo electrique. Remboursee integralement au retour en bon etat.
+R: 150 EUR par velo standard, 300 EUR par velo electrique. Remboursee integralement au retour en bon etat. C'est la caution la plus basse de la region.
+
+Q: Peut-on louer pour une demi-journee ?
+R: Oui, location demi-journee (4 heures) disponible pour tous les velos et forfaits. Ideal pour une balade le long des remparts ou vers la plage du Sillon.
 
 Q: Que faire en cas de panne ?
 R: Kit de reparation fourni. En cas de panne serieuse, depannage gratuit dans un rayon de 20 km.
@@ -93,3 +105,6 @@ R: Oui, systeme de boite a cles devant la boutique. Verification le lendemain ma
 
 Q: Livraison a l'hotel possible ?
 R: Oui, gratuite pour locations de 3+ jours dans Intra-Muros et Saint-Servan. 10 EUR supplement pour autres quartiers.
+
+Q: Proposez-vous des forfaits famille ?
+R: Oui, deux forfaits avec -15% : Famille Classique (2 adultes ville + 1 enfant + casques) et Famille Electrique (2 e-bikes + 1 enfant + casques). Disponibles en demi-journee ou journee.

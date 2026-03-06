@@ -17,6 +17,8 @@ const halfDayPrices = {
   'siege-enfant': 3, 'remorque': 8, 'followme': 4, 'babboe-cargo': 30
 };
 
+let participantCount = 0;
+
 // --- DOM Ready ---
 document.addEventListener('DOMContentLoaded', () => {
   initNavigation();
@@ -27,6 +29,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initBookingWizard();
   initScrollAnimations();
   initDateDefaults();
+  initParticipants();
 });
 
 // --- Navigation ---
@@ -626,7 +629,7 @@ function showConfirmation() {
   const lastName = document.getElementById('lastName').value.trim();
   const email = document.getElementById('email').value.trim();
   const phone = document.getElementById('phone').value.trim();
-  const groupSize = document.getElementById('groupSize').value;
+  const participants = getParticipantsData();
   const notes = document.getElementById('notes').value.trim();
   const start = document.getElementById('dateStart').value;
   const end = document.getElementById('dateEnd').value;
@@ -646,9 +649,13 @@ function showConfirmation() {
 
   // Group
   const groupRow = document.getElementById('receiptGroupRow');
-  if (groupSize !== '1') {
+  if (participants.length > 0) {
     groupRow.style.display = '';
-    document.getElementById('receiptGroup').textContent = `${groupSize} personne${groupSize === '2' ? 's' : 's'}`;
+    const adults = participants.filter(p => p.type !== 'child').length;
+    const children = participants.filter(p => p.type === 'child').length;
+    let groupLabel = `${participants.length} personne${participants.length > 1 ? 's' : ''}`;
+    if (children > 0) groupLabel += ` (${adults} adulte${adults > 1 ? 's' : ''}, ${children} enfant${children > 1 ? 's' : ''})`;
+    document.getElementById('receiptGroup').textContent = groupLabel;
   }
 
   // Dates
@@ -729,6 +736,120 @@ function closeModal() {
   updateRecap();
   initDateDefaults();
   goToStep(1);
+}
+
+// ============================================
+//  PARTICIPANTS
+// ============================================
+
+function initParticipants() {
+  // Start with 2 participants by default
+  addParticipantCard('adult');
+  addParticipantCard('adult');
+
+  document.getElementById('addParticipant')?.addEventListener('click', () => {
+    addParticipantCard('adult');
+  });
+}
+
+function addParticipantCard(defaultType) {
+  participantCount++;
+  const idx = participantCount;
+  const list = document.getElementById('participantsList');
+  if (!list) return;
+
+  const card = document.createElement('div');
+  card.className = 'participant-card';
+  card.dataset.idx = idx;
+  card.innerHTML = `
+    <div class="participant-card__header">
+      <span class="participant-card__label">Participant ${idx}</span>
+      ${idx > 1 ? '<button type="button" class="participant-card__remove" title="Supprimer">✕</button>' : ''}
+    </div>
+    <div class="participant-card__fields">
+      <div class="participant-card__field">
+        <label for="pType${idx}">Profil</label>
+        <select id="pType${idx}" name="pType${idx}">
+          <option value="man"${defaultType === 'adult' ? ' selected' : ''}>Homme</option>
+          <option value="woman">Femme</option>
+          <option value="child">Enfant</option>
+        </select>
+      </div>
+      <div class="participant-card__field">
+        <label for="pHeight${idx}">Taille (cm)</label>
+        <input type="number" id="pHeight${idx}" name="pHeight${idx}" placeholder="ex: 175" min="80" max="210">
+      </div>
+      <div class="participant-card__field participant-card__field--age" id="pAgeGroup${idx}" style="display:none">
+        <label for="pAge${idx}">Age</label>
+        <input type="number" id="pAge${idx}" name="pAge${idx}" placeholder="ex: 8" min="1" max="17">
+      </div>
+    </div>
+    <div class="participant-card__options">
+      <label class="participant-card__toggle">
+        <input type="checkbox" id="pEbike${idx}" name="pEbike${idx}">
+        Velo electrique
+      </label>
+      <label class="participant-card__toggle">
+        <input type="checkbox" id="pHelmet${idx}" name="pHelmet${idx}" checked>
+        Casque
+      </label>
+    </div>
+  `;
+
+  list.appendChild(card);
+
+  // Show/hide age field based on type
+  const typeSelect = card.querySelector(`#pType${idx}`);
+  const ageGroup = card.querySelector(`#pAgeGroup${idx}`);
+  const ebikeCheckbox = card.querySelector(`#pEbike${idx}`);
+
+  typeSelect.addEventListener('change', () => {
+    const isChild = typeSelect.value === 'child';
+    ageGroup.style.display = isChild ? '' : 'none';
+    if (isChild) {
+      ebikeCheckbox.checked = false;
+      ebikeCheckbox.disabled = true;
+    } else {
+      ebikeCheckbox.disabled = false;
+    }
+    updateParticipantLabels();
+  });
+
+  // Remove button
+  const removeBtn = card.querySelector('.participant-card__remove');
+  removeBtn?.addEventListener('click', () => {
+    card.remove();
+    updateParticipantLabels();
+  });
+
+  updateParticipantLabels();
+}
+
+function updateParticipantLabels() {
+  const cards = document.querySelectorAll('.participant-card');
+  cards.forEach((card, i) => {
+    const label = card.querySelector('.participant-card__label');
+    const typeSelect = card.querySelector('select[id^="pType"]');
+    const typeLabels = { man: 'Homme', woman: 'Femme', child: 'Enfant' };
+    const type = typeSelect ? typeLabels[typeSelect.value] || '' : '';
+    label.textContent = `Participant ${i + 1}${type ? ' — ' + type : ''}`;
+  });
+}
+
+function getParticipantsData() {
+  const cards = document.querySelectorAll('.participant-card');
+  const participants = [];
+  cards.forEach(card => {
+    const idx = card.dataset.idx;
+    participants.push({
+      type: document.getElementById(`pType${idx}`)?.value || 'man',
+      height: document.getElementById(`pHeight${idx}`)?.value || '',
+      age: document.getElementById(`pAge${idx}`)?.value || '',
+      ebike: document.getElementById(`pEbike${idx}`)?.checked || false,
+      helmet: document.getElementById(`pHelmet${idx}`)?.checked || false
+    });
+  });
+  return participants;
 }
 
 // ============================================
