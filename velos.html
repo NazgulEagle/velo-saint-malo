@@ -607,6 +607,17 @@
     </a>
   </div>
 
-  <script src="js/main.js?v=20260307" defer></script>
+  <script src="js/main.js?v=20260307b" defer></script>
+  <script>
+  // DEBUG TEST — remove after confirming
+  document.addEventListener('DOMContentLoaded', function() {
+    document.body.addEventListener('click', function(e) {
+      var btn = e.target.closest ? e.target.closest('.add-to-booking') : null;
+      if (btn) {
+        alert('Button werkt! Bike: ' + btn.getAttribute('data-name'));
+      }
+    });
+  });
+  </script>
 </body>
 </html>
