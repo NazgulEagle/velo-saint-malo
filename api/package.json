@@ -1,0 +1,12 @@
+{
+  "name": "velo-saint-malo-api",
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "start": "node server.mjs"
+  },
+  "dependencies": {
+    "@notionhq/client": "^2.2.15",
+    "dotenv": "^16.4.7"
+  }
+}

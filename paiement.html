@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Paiement - Velo Saint-Malo</title>
+  <meta name="robots" content="noindex, nofollow">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      background: #f6f9fc;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .checkout {
+      width: 100%;
+      max-width: 480px;
+      margin: 20px;
+    }
+    .checkout__header {
+      text-align: center;
+      margin-bottom: 24px;
+    }
+    .checkout__logo {
+      font-size: 1.3rem;
+      font-weight: 700;
+      color: #0c4a6e;
+      margin-bottom: 4px;
+    }
+    .checkout__ref {
+      font-size: 0.82rem;
+      color: #6b7280;
+    }
+    .checkout__test-badge {
+      display: inline-block;
+      background: #fef3c7;
+      color: #92400e;
+      font-size: 0.72rem;
+      font-weight: 600;
+      padding: 3px 10px;
+      border-radius: 12px;
+      margin-top: 8px;
+      letter-spacing: 0.5px;
+    }
+    .checkout__card {
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: 0 2px 12px rgba(0,0,0,.08), 0 0 0 1px rgba(0,0,0,.04);
+      overflow: hidden;
+    }
+    .checkout__summary {
+      padding: 24px;
+      border-bottom: 1px solid #e5e7eb;
+    }
+    .checkout__line {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 6px 0;
+      font-size: 0.92rem;
+      color: #374151;
+    }
+    .checkout__line--total {
+      font-weight: 700;
+      font-size: 1.05rem;
+      color: #111;
+      padding-top: 12px;
+      border-top: 1px solid #e5e7eb;
+      margin-top: 8px;
+    }
+    .checkout__line--deposit {
+      font-size: 0.85rem;
+      color: #6b7280;
+    }
+    .checkout__line--deposit span:last-child {
+      color: #92400e;
+      font-weight: 600;
+    }
+    .checkout__form {
+      padding: 24px;
+    }
+    .checkout__form h3 {
+      font-size: 0.88rem;
+      color: #374151;
+      margin-bottom: 16px;
+      font-weight: 600;
+    }
+    .field {
+      margin-bottom: 16px;
+    }
+    .field label {
+      display: block;
+      font-size: 0.82rem;
+      color: #6b7280;
+      margin-bottom: 6px;
+      font-weight: 500;
+    }
+    .field input {
+      width: 100%;
+      padding: 10px 12px;
+      border: 1px solid #d1d5db;
+      border-radius: 6px;
+      font-size: 0.92rem;
+      color: #111;
+      background: #fff;
+      transition: border-color 0.15s, box-shadow 0.15s;
+    }
+    .field input:focus {
+      outline: none;
+      border-color: #635bff;
+      box-shadow: 0 0 0 3px rgba(99, 91, 255, .15);
+    }
+    .field input::placeholder { color: #9ca3af; }
+    .field__row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+    }
+    .field__hint {
+      font-size: 0.75rem;
+      color: #9ca3af;
+      margin-top: 4px;
+    }
+    .field__error {
+      font-size: 0.78rem;
+      color: #dc2626;
+      margin-top: 4px;
+      display: none;
+    }
+    .checkout__btn {
+      width: 100%;
+      padding: 14px;
+      background: #635bff;
+      color: #fff;
+      border: none;
+      border-radius: 6px;
+      font-size: 1rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background 0.15s;
+      margin-top: 8px;
+    }
+    .checkout__btn:hover { background: #4f46e5; }
+    .checkout__btn:disabled {
+      background: #9ca3af;
+      cursor: not-allowed;
+    }
+    .checkout__btn--processing {
+      position: relative;
+      color: transparent;
+    }
+    .checkout__btn--processing::after {
+      content: '';
+      position: absolute;
+      top: 50%; left: 50%;
+      width: 20px; height: 20px;
+      margin: -10px 0 0 -10px;
+      border: 2px solid #fff;
+      border-top-color: transparent;
+      border-radius: 50%;
+      animation: spin 0.6s linear infinite;
+    }
+    @keyframes spin { to { transform: rotate(360deg); } }
+    .checkout__cancel {
+      display: block;
+      text-align: center;
+      margin-top: 16px;
+      font-size: 0.85rem;
+      color: #6b7280;
+      text-decoration: none;
+    }
+    .checkout__cancel:hover { color: #374151; }
+    .checkout__footer {
+      text-align: center;
+      padding: 16px 24px;
+      border-top: 1px solid #e5e7eb;
+      font-size: 0.78rem;
+      color: #9ca3af;
+    }
+    .checkout__footer svg {
+      vertical-align: middle;
+      margin-right: 4px;
+    }
+    .checkout__powered {
+      text-align: center;
+      margin-top: 16px;
+      font-size: 0.75rem;
+      color: #9ca3af;
+    }
+
+    /* Success state */
+    .checkout__success {
+      display: none;
+      text-align: center;
+      padding: 48px 24px;
+    }
+    .checkout__success.active { display: block; }
+    .checkout__success-icon {
+      width: 64px; height: 64px;
+      background: #dcfce7;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 16px;
+      font-size: 1.8rem;
+    }
+    .checkout__success h2 {
+      font-size: 1.2rem;
+      color: #111;
+      margin-bottom: 8px;
+    }
+    .checkout__success p {
+      font-size: 0.9rem;
+      color: #6b7280;
+      margin-bottom: 24px;
+      line-height: 1.5;
+    }
+    .checkout__success-details {
+      background: #f9fafb;
+      border-radius: 8px;
+      padding: 16px;
+      text-align: left;
+      margin-bottom: 24px;
+    }
+    .checkout__success-details .checkout__line {
+      padding: 4px 0;
+    }
+    .checkout__btn--success {
+      background: #16a34a;
+    }
+    .checkout__btn--success:hover {
+      background: #15803d;
+    }
+  </style>
+</head>
+<body>
+
+<div class="checkout">
+  <div class="checkout__header">
+    <div class="checkout__logo">Velo Saint-Malo</div>
+    <div class="checkout__ref">Reservation <span id="ref">-</span></div>
+    <div class="checkout__test-badge">MODE TEST - Aucun paiement reel</div>
+  </div>
+
+  <div class="checkout__card">
+    <!-- Payment form -->
+    <div id="paymentForm">
+      <div class="checkout__summary">
+        <div class="checkout__line">
+          <span>Location velos (total)</span>
+          <span id="totalFullDisplay">-</span>
+        </div>
+        <div class="checkout__line checkout__line--total">
+          <span>Acompte en ligne (5%)</span>
+          <span id="acompteDisplay">-</span>
+        </div>
+        <div class="checkout__line checkout__line--deposit" style="margin-top: 12px;">
+          <span>Reste a payer sur place</span>
+          <span id="remainingDisplay">-</span>
+        </div>
+        <div class="checkout__line checkout__line--deposit">
+          <span>+ Caution sur place (remboursable)</span>
+          <span id="depositDisplay">-</span>
+        </div>
+      </div>
+
+      <div class="checkout__form">
+        <h3>Informations de paiement</h3>
+
+        <div class="field">
+          <label for="cardEmail">Email</label>
+          <input type="email" id="cardEmail" placeholder="votre@email.com" value="">
+        </div>
+
+        <div class="field">
+          <label for="cardNumber">Numero de carte</label>
+          <input type="text" id="cardNumber" placeholder="4242 4242 4242 4242" maxlength="19" inputmode="numeric">
+          <div class="field__hint">Carte test : 4242 4242 4242 4242</div>
+          <div class="field__error" id="cardError">Numero de carte invalide</div>
+        </div>
+
+        <div class="field__row">
+          <div class="field">
+            <label for="cardExpiry">Date d'expiration</label>
+            <input type="text" id="cardExpiry" placeholder="MM / AA" maxlength="7" inputmode="numeric">
+            <div class="field__hint">Ex: 12 / 28</div>
+          </div>
+          <div class="field">
+            <label for="cardCvc">CVC</label>
+            <input type="text" id="cardCvc" placeholder="123" maxlength="4" inputmode="numeric">
+          </div>
+        </div>
+
+        <div class="field">
+          <label for="cardName">Nom sur la carte</label>
+          <input type="text" id="cardName" placeholder="JEAN DUPONT">
+        </div>
+
+        <button type="button" class="checkout__btn" id="payBtn">
+          Payer l'acompte de <span id="payBtnAmount">-</span>
+        </button>
+
+        <a href="#" class="checkout__cancel" id="cancelBtn">Annuler et revenir a la reservation</a>
+      </div>
+
+      <div class="checkout__footer">
+        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0110 0v4"/></svg>
+        Paiement securise - Connexion chiffree SSL
+      </div>
+    </div>
+
+    <!-- Success state -->
+    <div class="checkout__success" id="successState">
+      <div class="checkout__success-icon">&#10003;</div>
+      <h2>Acompte confirme !</h2>
+      <p>Votre reservation est confirmee.<br>Le reste du montant et la caution seront regles sur place lors de la recuperation des velos.</p>
+
+      <div class="checkout__success-details">
+        <div class="checkout__line">
+          <span>Reference</span>
+          <span id="successRef">-</span>
+        </div>
+        <div class="checkout__line">
+          <span>Acompte paye</span>
+          <span id="successAcompte">-</span>
+        </div>
+        <div class="checkout__line checkout__line--deposit">
+          <span>Reste a payer sur place</span>
+          <span id="successRemaining">-</span>
+        </div>
+        <div class="checkout__line checkout__line--deposit">
+          <span>+ Caution sur place</span>
+          <span id="successDeposit">-</span>
+        </div>
+        <div class="checkout__line">
+          <span>Statut</span>
+          <span style="color: #16a34a; font-weight: 600;">Confirme</span>
+        </div>
+      </div>
+
+      <button type="button" class="checkout__btn checkout__btn--success" id="returnBtn">
+        Retour a la confirmation
+      </button>
+    </div>
+  </div>
+
+  <div class="checkout__powered">Powered by <strong>Stripe</strong> (mode test)</div>
+</div>
+
+<script>
+const API_URL = window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1'
+  ? 'http://localhost:3456'
+  : 'https://velo-saint-malo.fr/api';
+
+// Parse URL params
+const params = new URLSearchParams(window.location.search);
+const sessionId = params.get('session');
+const acompte = parseFloat(params.get('acompte') || '0');
+const total = parseFloat(params.get('total') || '0');
+const deposit = parseInt(params.get('deposit') || '0');
+const remaining = Math.round((total - acompte) * 100) / 100;
+const ref = params.get('ref') || '-';
+
+// Fill display
+document.getElementById('ref').textContent = ref;
+document.getElementById('totalFullDisplay').textContent = `EUR${total}`;
+document.getElementById('acompteDisplay').textContent = `EUR${acompte}`;
+document.getElementById('remainingDisplay').textContent = `EUR${remaining}`;
+document.getElementById('depositDisplay').textContent = `EUR${deposit}`;
+document.getElementById('payBtnAmount').textContent = `EUR${acompte}`;
+
+// Card number formatting
+const cardInput = document.getElementById('cardNumber');
+cardInput.addEventListener('input', (e) => {
+  let v = e.target.value.replace(/\D/g, '').slice(0, 16);
+  e.target.value = v.replace(/(\d{4})(?=\d)/g, '$1 ');
+});
+
+// Expiry formatting
+const expiryInput = document.getElementById('cardExpiry');
+expiryInput.addEventListener('input', (e) => {
+  let v = e.target.value.replace(/\D/g, '').slice(0, 4);
+  if (v.length >= 2) v = v.slice(0, 2) + ' / ' + v.slice(2);
+  e.target.value = v;
+});
+
+// CVC - numbers only
+document.getElementById('cardCvc').addEventListener('input', (e) => {
+  e.target.value = e.target.value.replace(/\D/g, '').slice(0, 4);
+});
+
+// Cancel button
+document.getElementById('cancelBtn').addEventListener('click', (e) => {
+  e.preventDefault();
+  // Notify API of cancellation
+  fetch(`${API_URL}/api/payment-cancel?session=${sessionId}`).catch(() => {});
+  window.location.href = 'reservation.html';
+});
+
+// Pay button
+document.getElementById('payBtn').addEventListener('click', async () => {
+  const btn = document.getElementById('payBtn');
+  const cardNum = cardInput.value.replace(/\s/g, '');
+  const expiry = expiryInput.value;
+  const cvc = document.getElementById('cardCvc').value;
+  const name = document.getElementById('cardName').value;
+
+  // Basic validation
+  if (cardNum.length < 13) {
+    document.getElementById('cardError').style.display = 'block';
+    cardInput.focus();
+    return;
+  }
+  document.getElementById('cardError').style.display = 'none';
+
+  // Simulate processing
+  btn.disabled = true;
+  btn.classList.add('checkout__btn--processing');
+  btn.textContent = 'Traitement...';
+
+  // Simulate 2s processing delay
+  await new Promise(r => setTimeout(r, 2000));
+
+  // Call payment-success API
+  try {
+    const res = await fetch(`${API_URL}/api/payment-success?session=${sessionId}`);
+    const data = await res.json();
+
+    if (data.ok) {
+      // Show success state
+      document.getElementById('paymentForm').style.display = 'none';
+      document.getElementById('successState').classList.add('active');
+      document.getElementById('successRef').textContent = ref;
+      document.getElementById('successAcompte').textContent = `EUR${acompte}`;
+      document.getElementById('successRemaining').textContent = `EUR${remaining}`;
+      document.getElementById('successDeposit').textContent = `EUR${deposit}`;
+    } else {
+      btn.disabled = false;
+      btn.classList.remove('checkout__btn--processing');
+      btn.innerHTML = `Payer l'acompte de <span>EUR${acompte}</span>`;
+      alert('Erreur de paiement: ' + (data.error || 'inconnue'));
+    }
+  } catch (err) {
+    btn.disabled = false;
+    btn.classList.remove('checkout__btn--processing');
+    btn.innerHTML = `Payer l'acompte de <span>EUR${acompte}</span>`;
+    alert('Erreur de connexion au serveur');
+  }
+});
+
+// Return button
+document.getElementById('returnBtn').addEventListener('click', () => {
+  window.location.href = `reservation.html?paid=1&ref=${ref}&acompte=${acompte}&total=${total}&deposit=${deposit}`;
+});
+</script>
+
+</body>
+</html>

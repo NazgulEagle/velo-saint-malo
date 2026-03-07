@@ -1,0 +1,614 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Our Bikes - Velo Saint-Malo | City, Electric, Mountain, Kids</title>
+  <meta name="description" content="Discover our full range of bikes for rent in Saint-Malo: city bikes, electric bikes, mountain bikes, tandems, kids bikes and accessories. From 5 EUR/day.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://velo-saint-malo.fr/en/velos.html">
+  <meta name="theme-color" content="#0c4a6e">
+
+  <!-- Alternate languages -->
+  <link rel="alternate" hreflang="fr" href="https://velo-saint-malo.fr/velos.html">
+  <link rel="alternate" hreflang="en" href="https://velo-saint-malo.fr/en/velos.html">
+
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🚲</text></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+  <!-- Top Info Bar -->
+  <div class="info-bar">
+    <div class="info-bar__container">
+      <div class="info-bar__item">
+        <span>12 Rue de Dinan, Intra-Muros - 35400 Saint-Malo</span>
+      </div>
+      <div class="info-bar__item">
+        <span class="info-bar__hours">Open 7/7 Apr-Oct 8am-7pm</span>
+        <span>|</span>
+        <span><a href="tel:+33299123456">02 99 12 34 56</a></span>
+        <span>|</span>
+        <span><a href="mailto:bonjour@velo-saint-malo.fr">bonjour@velo-saint-malo.fr</a></span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Navigation -->
+  <nav class="nav" id="nav">
+    <div class="nav__container">
+      <a href="index.html" class="nav__logo">
+        <span class="nav__logo-text">Velo Saint-Malo</span>
+      </a>
+      <button class="nav__toggle" id="navToggle" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav__menu" id="navMenu">
+        <li><a href="velos.html" class="nav__link">Our Bikes</a></li>
+        <li><a href="tarifs.html" class="nav__link">Rates</a></li>
+        <li><a href="itineraires.html" class="nav__link">Routes</a></li>
+        <li><a href="index.html#avis" class="nav__link">Reviews</a></li>
+        <li><a href="index.html#faq" class="nav__link">FAQ</a></li>
+        <li><a href="reservation.html" class="nav__link nav__link--cta">Book Now</a></li>
+        <li class="nav__lang"><a href="../velos.html">FR</a><span class="nav__lang-sep">|</span><a href="velos.html" class="active">EN</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <main>
+
+  <!-- Page Header -->
+  <section class="hero hero--mini" id="hero">
+    <div class="hero__bg"></div>
+    <div class="hero__content">
+      <h1 class="hero__title">Our Bikes</h1>
+      <p class="hero__subtitle">Rent directly Intra-Muros. From city bikes to electric mountain bikes, pick up your bike inside the walled city.</p>
+    </div>
+  </section>
+
+  <!-- Our Bikes -->
+  <section class="section velos" id="velos">
+    <div class="container">
+
+      <div class="bike-filters">
+        <button class="bike-filter active" data-filter="all">All</button>
+        <button class="bike-filter" data-filter="city">City</button>
+        <button class="bike-filter" data-filter="electric">Electric</button>
+        <button class="bike-filter" data-filter="sport">MTB</button>
+        <button class="bike-filter" data-filter="kids">Kids</button>
+        <button class="bike-filter" data-filter="accessory">Accessories</button>
+      </div>
+
+      <div class="bikes-grid">
+
+        <!-- ==================== CITY BIKES ==================== -->
+
+        <!-- Gazelle Paris C7 -->
+        <div class="bike-card" data-category="city">
+          <div class="bike-card__image" style="--bike-color: #3b82f6">
+            <div class="bike-card__icon">🚲</div>
+            <span class="bike-card__badge">Popular</span>
+          </div>
+          <div class="bike-card__content">
+            <span class="bike-card__brand">Gazelle</span>
+            <h3 class="bike-card__name">Paris C7</h3>
+            <p class="bike-card__desc">The quintessential Dutch bike. Ultra-comfortable upright position for city rides and strolls along the ramparts.</p>
+            <ul class="bike-card__specs">
+              <li><span>Frame</span><span>Aluminium - step-through (low entry)</span></li>
+              <li><span>Gears</span><span>Shimano Nexus 7 (hub)</span></li>
+              <li><span>Brakes</span><span>Roller brake front + rear</span></li>
+              <li><span>Weight</span><span>19 kg</span></li>
+            </ul>
+            <ul class="bike-card__features">
+              <li>Rear rack + frame lock</li>
+              <li>Integrated dynamo lighting</li>
+              <li>Front basket available</li>
+            </ul>
+            <div class="bike-card__footer">
+              <div class="bike-card__price">
+                <span class="bike-card__price-amount">&euro;15</span>
+                <span class="bike-card__price-period">/day</span>
+              </div>
+              <button class="btn btn--primary btn--sm add-to-booking" data-bike="gazelle-paris" data-name="Gazelle Paris C7" data-price="15">Add</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- ==================== ELECTRIC BIKES ==================== -->
+
+        <!-- Moustache Samedi 28.3 -->
+        <div class="bike-card" data-category="electric">
+          <div class="bike-card__image" style="--bike-color: #10b981">
+            <div class="bike-card__icon">⚡</div>
+            <span class="bike-card__badge bike-card__badge--green">Best-seller</span>
+          </div>
+          <div class="bike-card__content">
+            <span class="bike-card__brand">Moustache</span>
+            <h3 class="bike-card__name">Samedi 28.3</h3>
+            <p class="bike-card__desc">Premium French e-bike. Powerful Bosch motor and long-range battery: perfect for the trip to Mont Saint-Michel (55 km).</p>
+            <ul class="bike-card__specs">
+              <li><span>Motor</span><span>Bosch Performance Line CX (85 Nm)</span></li>
+              <li><span>Battery</span><span>Bosch PowerTube 625 Wh</span></li>
+              <li><span>Range</span><span>80-120 km (Eco mode)</span></li>
+              <li><span>Gears</span><span>Shimano Deore 10-speed</span></li>
+              <li><span>Weight</span><span>25 kg</span></li>
+            </ul>
+            <ul class="bike-card__features">
+              <li>Bosch Intuvia display - 4 assist modes</li>
+              <li>Shimano hydraulic disc brakes</li>
+              <li>Integrated rear rack + mudguards</li>
+            </ul>
+            <div class="bike-card__footer">
+              <div class="bike-card__price">
+                <span class="bike-card__price-amount">&euro;35</span>
+                <span class="bike-card__price-period">/day</span>
+              </div>
+              <button class="btn btn--primary btn--sm add-to-booking" data-bike="moustache-28" data-name="Moustache Samedi 28.3" data-price="35">Add</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Trek Verve+ 3 -->
+        <div class="bike-card" data-category="electric">
+          <div class="bike-card__image" style="--bike-color: #22c55e">
+            <div class="bike-card__icon">⚡</div>
+          </div>
+          <div class="bike-card__content">
+            <span class="bike-card__brand">Trek</span>
+            <h3 class="bike-card__name">Verve+ 3 Lowstep</h3>
+            <p class="bike-card__desc">Comfortable e-bike with low step-through frame. Easy to mount and dismount, ideal for leisurely rides along the Emerald Coast.</p>
+            <ul class="bike-card__specs">
+              <li><span>Motor</span><span>Bosch Active Line Plus (50 Nm)</span></li>
+              <li><span>Battery</span><span>Bosch PowerTube 500 Wh</span></li>
+              <li><span>Range</span><span>60-100 km</span></li>
+              <li><span>Gears</span><span>Shimano Alivio 9-speed</span></li>
+              <li><span>Weight</span><span>23 kg</span></li>
+            </ul>
+            <ul class="bike-card__features">
+              <li>Lowstep frame - very easy step-through</li>
+              <li>Bosch Purion display - handlebar control</li>
+              <li>Bontrager Boulevard gel saddle</li>
+            </ul>
+            <div class="bike-card__footer">
+              <div class="bike-card__price">
+                <span class="bike-card__price-amount">&euro;30</span>
+                <span class="bike-card__price-period">/day</span>
+              </div>
+              <button class="btn btn--primary btn--sm add-to-booking" data-bike="trek-verve" data-name="Trek Verve+ 3 Lowstep" data-price="30">Add</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- ==================== MOUNTAIN & SPORT ==================== -->
+
+        <!-- Giant Talon 2 -->
+        <div class="bike-card" data-category="sport">
+          <div class="bike-card__image" style="--bike-color: #f59e0b">
+            <div class="bike-card__icon">🏔️</div>
+          </div>
+          <div class="bike-card__content">
+            <span class="bike-card__brand">Giant</span>
+            <h3 class="bike-card__name">Talon 2 - 29"</h3>
+            <p class="bike-card__desc">High-performance hardtail mountain bike for coastal trails and paths around the Pointe du Grouin. Excellent value for money.</p>
+            <ul class="bike-card__specs">
+              <li><span>Frame</span><span>ALUXX aluminium</span></li>
+              <li><span>Suspension</span><span>SR Suntour XCE 100 mm</span></li>
+              <li><span>Gears</span><span>Shimano Deore 2x10 (20-speed)</span></li>
+              <li><span>Brakes</span><span>Shimano MT200 hydraulic disc</span></li>
+              <li><span>Wheels</span><span>29" - Maxxis Ikon tyres</span></li>
+            </ul>
+            <ul class="bike-card__features">
+              <li>Repair kit + pump included</li>
+              <li>MTB helmet included</li>
+            </ul>
+            <div class="bike-card__footer">
+              <div class="bike-card__price">
+                <span class="bike-card__price-amount">&euro;22</span>
+                <span class="bike-card__price-period">/day</span>
+              </div>
+              <button class="btn btn--primary btn--sm add-to-booking" data-bike="giant-talon" data-name="Giant Talon 2 29&quot;" data-price="22">Add</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Tandem -->
+        <div class="bike-card" data-category="city">
+          <div class="bike-card__image" style="--bike-color: #ec4899">
+            <div class="bike-card__icon">👫</div>
+          </div>
+          <div class="bike-card__content">
+            <span class="bike-card__brand">Tandem</span>
+            <h3 class="bike-card__name">Peugeot T02 - 2 seats</h3>
+            <p class="bike-card__desc">Share the adventure for two! Perfect for couples or friends who want to pedal together along the ramparts.</p>
+            <ul class="bike-card__specs">
+              <li><span>Frame</span><span>Reinforced steel - 2 positions</span></li>
+              <li><span>Gears</span><span>Shimano Tourney 7-speed</span></li>
+              <li><span>Brakes</span><span>V-brake front + rear</span></li>
+              <li><span>Wheels</span><span>26" - city tyres</span></li>
+            </ul>
+            <ul class="bike-card__features">
+              <li>2 adjustable saddles</li>
+              <li>Dual synchronised pedal system</li>
+              <li>2 helmets included</li>
+            </ul>
+            <div class="bike-card__footer">
+              <div class="bike-card__price">
+                <span class="bike-card__price-amount">&euro;30</span>
+                <span class="bike-card__price-period">/day</span>
+              </div>
+              <button class="btn btn--primary btn--sm add-to-booking" data-bike="tandem" data-name="Tandem Peugeot T02" data-price="30">Add</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- ==================== KIDS BIKES ==================== -->
+
+        <!-- Balance Bike 2-4 years -->
+        <div class="bike-card" data-category="kids">
+          <div class="bike-card__image" style="--bike-color: #f472b6">
+            <div class="bike-card__icon">👶</div>
+          </div>
+          <div class="bike-card__content">
+            <span class="bike-card__brand">Btwin</span>
+            <h3 class="bike-card__name">Balance Bike RunRide 500 - Ages 2 to 4</h3>
+            <p class="bike-card__desc">First experience on two wheels! No pedals - your child learns to balance naturally. 10" puncture-proof wheels.</p>
+            <ul class="bike-card__specs">
+              <li><span>Age</span><span>2-4 years (85-100 cm)</span></li>
+              <li><span>Wheels</span><span>10" - puncture-proof foam</span></li>
+              <li><span>Weight</span><span>3.4 kg</span></li>
+              <li><span>Saddle</span><span>Adjustable 29-39 cm</span></li>
+            </ul>
+            <ul class="bike-card__features">
+              <li>Kids helmet included</li>
+              <li>Rear brake</li>
+            </ul>
+            <div class="bike-card__footer">
+              <div class="bike-card__price">
+                <span class="bike-card__price-amount">&euro;5</span>
+                <span class="bike-card__price-period">/day</span>
+              </div>
+              <button class="btn btn--primary btn--sm add-to-booking" data-bike="draisienne" data-name="Balance Bike RunRide 500" data-price="5">Add</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Kids bike 16" (4-6 years) -->
+        <div class="bike-card" data-category="kids">
+          <div class="bike-card__image" style="--bike-color: #06b6d4">
+            <div class="bike-card__icon">🧒</div>
+          </div>
+          <div class="bike-card__content">
+            <span class="bike-card__brand">Btwin</span>
+            <h3 class="bike-card__name">500 Doctogirl / Heroboy - 16"</h3>
+            <p class="bike-card__desc">First real bike with pedals. Removable stabilisers, lowered frame and brake adapted for small hands.</p>
+            <ul class="bike-card__specs">
+              <li><span>Age</span><span>4-6 years (100-120 cm)</span></li>
+              <li><span>Wheels</span><span>16"</span></li>
+              <li><span>Gears</span><span>Single speed (fixed gear)</span></li>
+              <li><span>Weight</span><span>8.5 kg</span></li>
+            </ul>
+            <ul class="bike-card__features">
+              <li>Removable stabilisers included</li>
+              <li>Kids helmet included</li>
+              <li>Enclosed chain guard</li>
+            </ul>
+            <div class="bike-card__footer">
+              <div class="bike-card__price">
+                <span class="bike-card__price-amount">&euro;8</span>
+                <span class="bike-card__price-period">/day</span>
+              </div>
+              <button class="btn btn--primary btn--sm add-to-booking" data-bike="enfant-16" data-name="Kids Bike 16&quot; (4-6 years)" data-price="8">Add</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Kids bike 20" (6-9 years) -->
+        <div class="bike-card" data-category="kids">
+          <div class="bike-card__image" style="--bike-color: #14b8a6">
+            <div class="bike-card__icon">🚴‍♂️</div>
+          </div>
+          <div class="bike-card__content">
+            <span class="bike-card__brand">Btwin</span>
+            <h3 class="bike-card__name">Riverside 500 Junior - 20"</h3>
+            <p class="bike-card__desc">The big kids' bike! 6 gears, V-brakes, and a cool look for family rides along the Emerald Coast.</p>
+            <ul class="bike-card__specs">
+              <li><span>Age</span><span>6-9 years (120-135 cm)</span></li>
+              <li><span>Wheels</span><span>20"</span></li>
+              <li><span>Gears</span><span>Shimano 6-speed (twist grip)</span></li>
+              <li><span>Weight</span><span>10.5 kg</span></li>
+            </ul>
+            <ul class="bike-card__features">
+              <li>Kids helmet included</li>
+              <li>Kickstand + mudguards</li>
+              <li>Front/rear lights</li>
+            </ul>
+            <div class="bike-card__footer">
+              <div class="bike-card__price">
+                <span class="bike-card__price-amount">&euro;10</span>
+                <span class="bike-card__price-period">/day</span>
+              </div>
+              <button class="btn btn--primary btn--sm add-to-booking" data-bike="enfant-20" data-name="Kids Bike 20&quot; (6-9 years)" data-price="10">Add</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Kids/teen bike 24" (9-12 years) -->
+        <div class="bike-card" data-category="kids">
+          <div class="bike-card__image" style="--bike-color: #2563eb">
+            <div class="bike-card__icon">🚵</div>
+          </div>
+          <div class="bike-card__content">
+            <span class="bike-card__brand">Trek</span>
+            <h3 class="bike-card__name">Precaliber 24 - Ages 9 to 12</h3>
+            <p class="bike-card__desc">Serious junior mountain bike. Front suspension, 8 gears and disc brakes: ready for real trails just like the adults.</p>
+            <ul class="bike-card__specs">
+              <li><span>Age</span><span>9-12 years (135-150 cm)</span></li>
+              <li><span>Wheels</span><span>24"</span></li>
+              <li><span>Gears</span><span>Shimano Altus 8-speed</span></li>
+              <li><span>Suspension</span><span>SR Suntour 50 mm</span></li>
+              <li><span>Brakes</span><span>Mechanical disc brakes</span></li>
+            </ul>
+            <ul class="bike-card__features">
+              <li>Junior MTB helmet included</li>
+              <li>Semi-slick all-terrain tyres</li>
+            </ul>
+            <div class="bike-card__footer">
+              <div class="bike-card__price">
+                <span class="bike-card__price-amount">&euro;14</span>
+                <span class="bike-card__price-period">/day</span>
+              </div>
+              <button class="btn btn--primary btn--sm add-to-booking" data-bike="enfant-24" data-name="Trek Precaliber 24&quot; (9-12 years)" data-price="14">Add</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- ==================== ACCESSORIES ==================== -->
+
+        <!-- Child Seat Rear -->
+        <div class="bike-card" data-category="accessory kids">
+          <div class="bike-card__image" style="--bike-color: #f97316">
+            <div class="bike-card__icon">🪑</div>
+          </div>
+          <div class="bike-card__content">
+            <span class="bike-card__brand">Thule</span>
+            <h3 class="bike-card__name">Yepp 2 Maxi - Rear child seat</h3>
+            <p class="bike-card__desc">Premium rear child seat. Quick-attach to rear rack, 5-point harness. For the little ones who don't pedal yet.</p>
+            <ul class="bike-card__specs">
+              <li><span>Age</span><span>9 months - 6 years (max 22 kg)</span></li>
+              <li><span>Mounting</span><span>Rear rack (quick-click)</span></li>
+              <li><span>Safety</span><span>Adjustable 5-point harness</span></li>
+            </ul>
+            <ul class="bike-card__features">
+              <li>Compatible with our city bikes & e-bikes</li>
+              <li>Side foot protection</li>
+              <li>Baby helmet included</li>
+            </ul>
+            <div class="bike-card__footer">
+              <div class="bike-card__price">
+                <span class="bike-card__price-amount">&euro;5</span>
+                <span class="bike-card__price-period">/day</span>
+              </div>
+              <button class="btn btn--primary btn--sm add-to-booking" data-bike="siege-enfant" data-name="Thule Yepp 2 Maxi Child Seat" data-price="5">Add</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Child Trailer Thule -->
+        <div class="bike-card" data-category="accessory kids">
+          <div class="bike-card__image" style="--bike-color: #ea580c">
+            <div class="bike-card__icon">🛒</div>
+            <span class="bike-card__badge">Family</span>
+          </div>
+          <div class="bike-card__content">
+            <span class="bike-card__brand">Thule</span>
+            <h3 class="bike-card__name">Chariot Cross 2 - Child trailer</h3>
+            <p class="bike-card__desc">The benchmark child trailer. 2 seats, integrated suspension, converts to stroller. Perfect for long family rides.</p>
+            <ul class="bike-card__specs">
+              <li><span>Seats</span><span>2 children (max 45 kg total)</span></li>
+              <li><span>Suspension</span><span>VersaWing shock absorbers</span></li>
+              <li><span>Wheels</span><span>20" + stroller wheel</span></li>
+              <li><span>Weight</span><span>14.5 kg (empty)</span></li>
+            </ul>
+            <ul class="bike-card__features">
+              <li>Rain cover + sun shade included</li>
+              <li>Safety flag + reflectors</li>
+              <li>Converts to stroller in 30 sec</li>
+            </ul>
+            <div class="bike-card__footer">
+              <div class="bike-card__price">
+                <span class="bike-card__price-amount">&euro;12</span>
+                <span class="bike-card__price-period">/day</span>
+              </div>
+              <button class="btn btn--primary btn--sm add-to-booking" data-bike="remorque" data-name="Thule Chariot Cross 2 Trailer" data-price="12">Add</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Babboe Cargo -->
+        <div class="bike-card" data-category="electric accessory">
+          <div class="bike-card__image" style="--bike-color: #14b8a6">
+            <div class="bike-card__icon">📦</div>
+            <span class="bike-card__badge bike-card__badge--green">Family XL</span>
+          </div>
+          <div class="bike-card__content">
+            <span class="bike-card__brand">Babboe</span>
+            <h3 class="bike-card__name">Curve-E - Electric cargo bike</h3>
+            <p class="bike-card__desc">The family cargo bike! Front box for 2 children + shopping. Yamaha electric assist. Total freedom for families.</p>
+            <ul class="bike-card__specs">
+              <li><span>Motor</span><span>Yamaha SyncDrive 250W</span></li>
+              <li><span>Battery</span><span>Yamaha 500 Wh</span></li>
+              <li><span>Box</span><span>2 children + bench (max 80 kg)</span></li>
+              <li><span>Gears</span><span>Shimano Nexus 7-speed (hub)</span></li>
+              <li><span>Weight</span><span>41 kg</span></li>
+            </ul>
+            <ul class="bike-card__features">
+              <li>3-point seatbelts for each child</li>
+              <li>Rain cover with windows</li>
+              <li>Integrated LED lighting</li>
+            </ul>
+            <div class="bike-card__footer">
+              <div class="bike-card__price">
+                <span class="bike-card__price-amount">&euro;45</span>
+                <span class="bike-card__price-period">/day</span>
+              </div>
+              <button class="btn btn--primary btn--sm add-to-booking" data-bike="babboe-cargo" data-name="Babboe Curve-E Cargo" data-price="45">Add</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Panniers -->
+        <div class="bike-card" data-category="accessory">
+          <div class="bike-card__image" style="--bike-color: #78716c">
+            <div class="bike-card__icon">🎒</div>
+          </div>
+          <div class="bike-card__content">
+            <span class="bike-card__brand">Ortlieb</span>
+            <h3 class="bike-card__name">Back-Roller Classic - Waterproof panniers</h3>
+            <p class="bike-card__desc">Waterproof side panniers. Essential for day trips: picnic, beach towels, snorkelling gear...</p>
+            <ul class="bike-card__specs">
+              <li><span>Volume</span><span>2 x 20 litres (pair)</span></li>
+              <li><span>Waterproofing</span><span>IP64 - 100% waterproof</span></li>
+              <li><span>Mounting</span><span>Quick-Lock 2.1 (rear rack)</span></li>
+            </ul>
+            <ul class="bike-card__features">
+              <li>Sold as a pair (left + right)</li>
+              <li>Shoulder strap for carrying on foot</li>
+            </ul>
+            <div class="bike-card__footer">
+              <div class="bike-card__price">
+                <span class="bike-card__price-amount">&euro;4</span>
+                <span class="bike-card__price-period">/day</span>
+              </div>
+              <button class="btn btn--primary btn--sm add-to-booking" data-bike="sacoche" data-name="Ortlieb Panniers (pair)" data-price="4">Add</button>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <p style="text-align: center; margin-top: 1.5rem; font-size: 0.9rem; color: var(--text-lighter);">Helmet and lock included with every rental. Route map provided.</p>
+    </div>
+  </section>
+
+  <!-- Quality & Maintenance -->
+  <section class="section section--alt" id="quality">
+    <div class="container">
+      <div class="section__header">
+        <span class="section__tag">Our Commitment</span>
+        <h2 class="section__title">Quality bikes,<br>maintained by specialists</h2>
+        <p class="section__desc">We only stock trusted brands: Gazelle, Moustache, Trek, Giant, Thule. No cheap bikes - only reliable, comfortable equipment.</p>
+      </div>
+      <div class="quality-grid">
+        <div class="quality-item">
+          <div class="quality-item__icon">🔧</div>
+          <h3 class="quality-item__title">Professional servicing</h3>
+          <p class="quality-item__desc">Every bike is serviced multiple times a year by a specialist mechanic. Brakes, drivetrain, tyres, battery - everything is checked and adjusted.</p>
+        </div>
+        <div class="quality-item">
+          <div class="quality-item__icon">✅</div>
+          <h3 class="quality-item__title">Checked before every rental</h3>
+          <p class="quality-item__desc">Before handing over a bike, we perform a full check: tyre pressure, braking, lights, battery level for e-bikes.</p>
+        </div>
+        <div class="quality-item">
+          <div class="quality-item__icon">🛡️</div>
+          <h3 class="quality-item__title">Premium brands only</h3>
+          <p class="quality-item__desc">Gazelle, Moustache, Trek, Giant, Thule: we work exclusively with brands known for their reliability and durability.</p>
+        </div>
+        <div class="quality-item">
+          <div class="quality-item__icon">🔋</div>
+          <h3 class="quality-item__title">Batteries always charged</h3>
+          <p class="quality-item__desc">Our e-bikes always leave with a 100% charged battery. Bosch Performance Line for a real-world range of 80 to 140 km depending on mode.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- How it works -->
+  <section class="section section--alt how-it-works" id="comment-ca-marche">
+    <div class="container">
+      <div class="section__header">
+        <span class="section__tag">Simple & Fast</span>
+        <h2 class="section__title">How it works</h2>
+        <p class="section__desc">In 3 steps, you're in the saddle. No paperwork, no hassle.</p>
+      </div>
+      <div class="steps-grid">
+        <div class="step">
+          <div class="step__number">01</div>
+          <h3 class="step__title">Choose your dates</h3>
+          <p class="step__desc">Select your dates and the bikes that suit you. Online booking available 24/7.</p>
+        </div>
+        <div class="step__connector"></div>
+        <div class="step">
+          <div class="step__number">02</div>
+          <h3 class="step__title">Pick up on site</h3>
+          <p class="step__desc">Come to our Intra-Muros shop. Quick briefing, adjustments, and off you go!</p>
+        </div>
+        <div class="step__connector"></div>
+        <div class="step">
+          <div class="step__number">03</div>
+          <h3 class="step__title">Ride freely</h3>
+          <p class="step__desc">Explore Saint-Malo at your own pace. Route map included. Flexible return.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div class="footer__brand">
+          <a href="index.html" class="nav__logo">
+            <span class="nav__logo-text">Velo Saint-Malo</span>
+          </a>
+          <p>Bike rental in Saint-Malo since 2024. Discover the Emerald Coast on two wheels.</p>
+        </div>
+        <div class="footer__links">
+          <h4>Navigation</h4>
+          <ul>
+            <li><a href="velos.html">Our Bikes</a></li>
+            <li><a href="tarifs.html">Rates</a></li>
+            <li><a href="itineraires.html">Routes</a></li>
+            <li><a href="reservation.html">Booking</a></li>
+          </ul>
+        </div>
+        <div class="footer__links">
+          <h4>Information</h4>
+          <ul>
+            <li><a href="index.html#faq">FAQ</a></li>
+            <li><a href="index.html#avis">Customer reviews</a></li>
+            <li><a href="terms-and-conditions.html">Terms & conditions</a></li>
+            <li><a href="privacy-policy.html">Privacy policy</a></li>
+          </ul>
+        </div>
+        <div class="footer__contact">
+          <h4>Contact</h4>
+          <ul>
+            <li>12 Rue de Dinan, Intra-Muros<br>35400 Saint-Malo</li>
+            <li><a href="tel:+33299123456">02 99 12 34 56</a></li>
+            <li><a href="mailto:bonjour@velo-saint-malo.fr">bonjour@velo-saint-malo.fr</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <p>&copy; 2026 Velo Saint-Malo. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Floating Contact (mobile) -->
+  <div class="floating-contact">
+    <a href="tel:+33299123456" class="floating-contact__btn" aria-label="Call 02 99 12 34 56">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg>
+      Call
+    </a>
+  </div>
+
+  <script src="../js/main.js" defer></script>
+</body>
+</html>

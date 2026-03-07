@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Booking - Velo Saint-Malo | Book online</title>
+  <meta name="description" content="Book your bike online in Saint-Malo. 3 simple steps, small 5% deposit online, pay the rest on-site. Free cancellation up to 24h before.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://velo-saint-malo.fr/en/reservation.html">
+  <link rel="alternate" hreflang="fr" href="https://velo-saint-malo.fr/reservation.html">
+  <link rel="alternate" hreflang="en" href="https://velo-saint-malo.fr/en/reservation.html">
+  <meta name="theme-color" content="#0c4a6e">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🚲</text></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+  <!-- Top Info Bar -->
+  <div class="info-bar">
+    <div class="info-bar__container">
+      <div class="info-bar__item">
+        <span>12 Rue de Dinan, Intra-Muros - 35400 Saint-Malo</span>
+      </div>
+      <div class="info-bar__item">
+        <span class="info-bar__hours">Open 7 days/week Apr-Oct 8am-7pm</span>
+        <span>|</span>
+        <span><a href="tel:+33299123456">02 99 12 34 56</a></span>
+        <span>|</span>
+        <span><a href="mailto:bonjour@velo-saint-malo.fr">bonjour@velo-saint-malo.fr</a></span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Navigation -->
+  <nav class="nav" id="nav">
+    <div class="nav__container">
+      <a href="index.html" class="nav__logo">
+        <span class="nav__logo-text">Velo Saint-Malo</span>
+      </a>
+      <button class="nav__toggle" id="navToggle" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav__menu" id="navMenu">
+        <li><a href="velos.html" class="nav__link">Our Bikes</a></li>
+        <li><a href="tarifs.html" class="nav__link">Rates</a></li>
+        <li><a href="itineraires.html" class="nav__link">Routes</a></li>
+        <li><a href="index.html#avis" class="nav__link">Reviews</a></li>
+        <li><a href="index.html#faq" class="nav__link">FAQ</a></li>
+        <li><a href="reservation.html" class="nav__link nav__link--cta">Book</a></li>
+        <li class="nav__lang"><a href="../reservation.html">FR</a><span class="nav__lang-sep">|</span><a href="reservation.html" class="active">EN</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <main>
+
+  <!-- Page Header -->
+  <section class="hero hero--mini" id="hero">
+    <div class="hero__bg"></div>
+    <div class="hero__content">
+      <h1 class="hero__title">Booking</h1>
+      <p class="hero__subtitle">3 simple steps. Small deposit online, pay the rest on-site. Pick up your bike Intra-Muros.</p>
+    </div>
+  </section>
+
+  <!-- Reservation -->
+  <section class="section section--alt reservation" id="reservation">
+    <div class="container">
+
+      <!-- Progress Steps -->
+      <div class="booking-progress">
+        <div class="booking-progress__step active" data-step="1">
+          <div class="booking-progress__number">1</div>
+          <span>Bikes & Dates</span>
+        </div>
+        <div class="booking-progress__line"></div>
+        <div class="booking-progress__step" data-step="2">
+          <div class="booking-progress__number">2</div>
+          <span>Your details</span>
+        </div>
+        <div class="booking-progress__line"></div>
+        <div class="booking-progress__step" data-step="3">
+          <div class="booking-progress__number">3</div>
+          <span>Confirmation</span>
+        </div>
+      </div>
+
+      <form class="booking-wizard" id="bookingForm" novalidate>
+
+        <!-- ======= STEP 1: Bikes & Dates ======= -->
+        <div class="booking-step active" id="bookingStep1">
+
+          <div class="booking-step__grid">
+            <!-- Left: Cart -->
+            <div class="booking-cart" id="bookingCart">
+              <div class="booking-cart__header">
+                <h3 class="booking-cart__title">Your selection</h3>
+                <span class="booking-cart__count" id="cartCount">0 items</span>
+              </div>
+
+              <div class="booking-cart__items" id="cartItems">
+                <div class="booking-cart__empty" id="cartEmpty">
+                  <div class="booking-cart__empty-icon">🚲</div>
+                  <p>No bike selected</p>
+                  <a href="velos.html" class="btn btn--outline btn--sm">Choose a bike</a>
+                </div>
+              </div>
+
+              <div class="booking-cart__summary" id="cartSummary" style="display:none">
+                <div class="booking-cart__line">
+                  <span>Subtotal / day</span>
+                  <span id="cartSubtotal">&euro;0</span>
+                </div>
+                <div class="booking-cart__line" id="cartDaysLine" style="display:none">
+                  <span>Duration</span>
+                  <span id="cartDays">-</span>
+                </div>
+                <div class="booking-cart__line booking-cart__line--discount" id="cartDiscountLine" style="display:none">
+                  <span>Multi-day discount</span>
+                  <span id="cartDiscount" class="text-green">-</span>
+                </div>
+                <div class="booking-cart__line booking-cart__line--total">
+                  <span>Estimated total</span>
+                  <span id="cartTotal">&euro;0</span>
+                </div>
+                <div class="booking-cart__line booking-cart__line--deposit">
+                  <span>Deposit (refundable)</span>
+                  <span id="cartDeposit">&euro;0</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Right: Date & Time -->
+            <div class="booking-dates">
+              <h3 class="booking-dates__title">Dates & pick-up</h3>
+
+              <div class="booking-form__group">
+                <label for="rentalType">Rental type *</label>
+                <select id="rentalType" name="rentalType">
+                  <option value="day">Full day</option>
+                  <option value="halfday">Half day (4h)</option>
+                </select>
+              </div>
+
+              <div class="booking-form__row" id="dateRow">
+                <div class="booking-form__group">
+                  <label for="dateStart">Start date *</label>
+                  <input type="date" id="dateStart" name="dateStart" required>
+                  <span class="booking-form__error" id="dateStartError"></span>
+                </div>
+                <div class="booking-form__group" id="dateEndGroup">
+                  <label for="dateEnd">Return date *</label>
+                  <input type="date" id="dateEnd" name="dateEnd" required>
+                  <span class="booking-form__error" id="dateEndError"></span>
+                </div>
+              </div>
+
+              <div class="booking-dates__duration" id="durationDisplay" style="display:none">
+                <span class="booking-dates__duration-icon">-</span>
+                <span id="durationText">-</span>
+              </div>
+
+              <div class="booking-form__group">
+                <label for="pickupTime">Pick-up time *</label>
+                <select id="pickupTime" name="pickupTime" required>
+                  <option value="">- Choose a time slot -</option>
+                  <optgroup label="Morning">
+                    <option value="08:00">08:00 - Opening</option>
+                    <option value="08:30">08:30</option>
+                    <option value="09:00">09:00</option>
+                    <option value="09:30">09:30</option>
+                    <option value="10:00">10:00</option>
+                    <option value="10:30">10:30</option>
+                    <option value="11:00">11:00</option>
+                    <option value="11:30">11:30</option>
+                  </optgroup>
+                  <optgroup label="Afternoon">
+                    <option value="12:00">12:00</option>
+                    <option value="14:00">14:00</option>
+                    <option value="14:30">14:30</option>
+                    <option value="15:00">15:00</option>
+                    <option value="15:30">15:30</option>
+                    <option value="16:00">16:00</option>
+                  </optgroup>
+                </select>
+                <span class="booking-form__error" id="pickupTimeError"></span>
+              </div>
+
+              <div class="booking-form__group">
+                <label for="returnTime">Preferred return time</label>
+                <select id="returnTime" name="returnTime">
+                  <option value="flexible">Flexible (before closing)</option>
+                  <optgroup label="Morning">
+                    <option value="08:00">08:00</option>
+                    <option value="09:00">09:00</option>
+                    <option value="10:00">10:00</option>
+                    <option value="11:00">11:00</option>
+                  </optgroup>
+                  <optgroup label="Afternoon">
+                    <option value="14:00">14:00</option>
+                    <option value="15:00">15:00</option>
+                    <option value="16:00">16:00</option>
+                    <option value="17:00">17:00</option>
+                    <option value="18:00">18:00</option>
+                    <option value="19:00">19:00 - Closing</option>
+                  </optgroup>
+                </select>
+              </div>
+
+              <div class="booking-info-box">
+                <strong>Good to know</strong>
+                <ul>
+                  <li>Small 5% deposit online to confirm your booking</li>
+                  <li>Remaining amount + security deposit paid on-site (card or cash)</li>
+                  <li>Free cancellation up to 24h before (deposit refunded)</li>
+                  <li>Free hotel delivery (3+ days, Intra-Muros)</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="booking-step__actions">
+            <span></span>
+            <button type="button" class="btn btn--primary btn--lg" id="toStep2">
+              Continue - Your details
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </button>
+          </div>
+        </div>
+
+        <!-- ======= STEP 2: Your details ======= -->
+        <div class="booking-step" id="bookingStep2">
+          <div class="booking-step__grid">
+
+            <div class="booking-contact">
+              <h3 class="booking-dates__title">Your details</h3>
+              <p class="booking-contact__intro">So we can send you a confirmation and contact you on the day.</p>
+
+              <div class="booking-form__row">
+                <div class="booking-form__group">
+                  <label for="firstName">First name *</label>
+                  <input type="text" id="firstName" name="firstName" placeholder="Your first name" required autocomplete="given-name">
+                  <span class="booking-form__error" id="firstNameError"></span>
+                </div>
+                <div class="booking-form__group">
+                  <label for="lastName">Last name *</label>
+                  <input type="text" id="lastName" name="lastName" placeholder="Your last name" required autocomplete="family-name">
+                  <span class="booking-form__error" id="lastNameError"></span>
+                </div>
+              </div>
+
+              <div class="booking-form__group">
+                <label for="email">Email address *</label>
+                <input type="email" id="email" name="email" placeholder="your@email.com" required autocomplete="email">
+                <span class="booking-form__hint">We will send the confirmation here</span>
+                <span class="booking-form__error" id="emailError"></span>
+              </div>
+
+              <div class="booking-form__group">
+                <label for="phone">Phone number *</label>
+                <input type="tel" id="phone" name="phone" placeholder="+33 6 12 34 56 78" required autocomplete="tel">
+                <span class="booking-form__hint">In case we need to reach you on the rental day</span>
+                <span class="booking-form__error" id="phoneError"></span>
+              </div>
+
+              <!-- Per-participant details -->
+              <div class="participants-section">
+                <div class="participants-header">
+                  <h4 class="participants-title">Participants</h4>
+                  <p class="participants-desc">So we can assign the ideal bike and the right size for you.</p>
+                </div>
+                <div class="participants-list" id="participantsList">
+                  <!-- Participant cards generated by JS -->
+                </div>
+                <button type="button" class="btn btn--outline btn--sm participants-add" id="addParticipant">+ Add a participant</button>
+              </div>
+
+              <div class="booking-form__group">
+                <label for="accommodation">Accommodation in Saint-Malo (optional)</label>
+                <input type="text" id="accommodation" name="accommodation" placeholder="Hotel name, campsite, Airbnb...">
+                <span class="booking-form__hint">For free delivery (rentals of 3+ days)</span>
+              </div>
+
+              <div class="booking-form__group">
+                <label for="notes">Comments or special requests</label>
+                <textarea id="notes" name="notes" rows="3" placeholder="Specific needs, requirements..."></textarea>
+              </div>
+
+              <div class="booking-form__checkbox">
+                <input type="checkbox" id="acceptTerms" name="acceptTerms" required>
+                <label for="acceptTerms">I accept the <a href="terms-and-conditions.html" target="_blank">terms and conditions</a> and the <a href="terms-and-conditions.html" target="_blank">cancellation policy</a> *</label>
+                <span class="booking-form__error" id="acceptTermsError"></span>
+              </div>
+            </div>
+
+            <!-- Mini recap sidebar -->
+            <div class="booking-recap">
+              <h4 class="booking-recap__title">Summary</h4>
+              <div class="booking-recap__dates" id="recapDates">-</div>
+              <div class="booking-recap__items" id="recapItems">-</div>
+              <div class="booking-recap__total">
+                <span>Total</span>
+                <span id="recapTotal">&euro;0</span>
+              </div>
+              <button type="button" class="booking-recap__edit" id="backToStep1Edit">Edit selection</button>
+            </div>
+
+          </div>
+
+          <div class="booking-step__actions">
+            <button type="button" class="btn btn--outline btn--lg" id="backToStep1">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+              Back
+            </button>
+            <button type="submit" class="btn btn--primary btn--lg" id="submitBooking">
+              Confirm and pay deposit (5%)
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </button>
+          </div>
+        </div>
+
+        <!-- ======= STEP 3: Confirmation (shown in modal) ======= -->
+
+      </form>
+    </div>
+  </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div class="footer__brand">
+          <a href="index.html" class="nav__logo">
+            <span class="nav__logo-text">Velo Saint-Malo</span>
+          </a>
+          <p>Bike rental in Saint-Malo since 2024. Explore the Emerald Coast on two wheels.</p>
+        </div>
+        <div class="footer__links">
+          <h4>Navigation</h4>
+          <ul>
+            <li><a href="velos.html">Our Bikes</a></li>
+            <li><a href="tarifs.html">Rates</a></li>
+            <li><a href="itineraires.html">Routes</a></li>
+            <li><a href="reservation.html">Booking</a></li>
+          </ul>
+        </div>
+        <div class="footer__links">
+          <h4>Information</h4>
+          <ul>
+            <li><a href="index.html#faq">FAQ</a></li>
+            <li><a href="index.html#avis">Customer reviews</a></li>
+            <li><a href="terms-and-conditions.html">Terms and conditions</a></li>
+            <li><a href="privacy-policy.html">Privacy policy</a></li>
+          </ul>
+        </div>
+        <div class="footer__contact">
+          <h4>Contact</h4>
+          <ul>
+            <li>12 Rue de Dinan, Intra-Muros<br>35400 Saint-Malo</li>
+            <li><a href="tel:+33299123456">02 99 12 34 56</a></li>
+            <li><a href="mailto:bonjour@velo-saint-malo.fr">bonjour@velo-saint-malo.fr</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <p>&copy; 2026 Velo Saint-Malo. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Confirmation Modal -->
+  <div class="modal" id="confirmationModal">
+    <div class="modal__overlay"></div>
+    <div class="modal__content modal__content--receipt">
+      <button class="modal__close" id="modalClose">&times;</button>
+
+      <div class="receipt">
+        <div class="receipt__header">
+          <div class="receipt__icon">✅</div>
+          <h2 class="receipt__title">Booking confirmed!</h2>
+          <p class="receipt__subtitle">Thank you! A confirmation email will arrive in a few minutes.</p>
+          <div class="receipt__ref">Ref.: <strong id="receiptRef">VSM-000000</strong></div>
+        </div>
+
+        <div class="receipt__section">
+          <h4>Customer</h4>
+          <div class="receipt__row">
+            <span>Name</span>
+            <span id="receiptName">-</span>
+          </div>
+          <div class="receipt__row">
+            <span>Email</span>
+            <span id="receiptEmail">-</span>
+          </div>
+          <div class="receipt__row">
+            <span>Phone</span>
+            <span id="receiptPhone">-</span>
+          </div>
+          <div class="receipt__row" id="receiptGroupRow" style="display:none">
+            <span>Group</span>
+            <span id="receiptGroup">-</span>
+          </div>
+        </div>
+
+        <div class="receipt__section">
+          <h4>Rental period</h4>
+          <div class="receipt__row">
+            <span>From</span>
+            <span id="receiptDateStart">-</span>
+          </div>
+          <div class="receipt__row">
+            <span>To</span>
+            <span id="receiptDateEnd">-</span>
+          </div>
+          <div class="receipt__row">
+            <span>Duration</span>
+            <span id="receiptDuration">-</span>
+          </div>
+          <div class="receipt__row">
+            <span>Pick-up</span>
+            <span id="receiptPickup">-</span>
+          </div>
+          <div class="receipt__row">
+            <span>Return</span>
+            <span id="receiptReturn">-</span>
+          </div>
+        </div>
+
+        <div class="receipt__section">
+          <h4>Rented items</h4>
+          <div id="receiptItems"><!-- filled by JS --></div>
+        </div>
+
+        <div class="receipt__section receipt__section--total">
+          <div class="receipt__row" id="receiptDiscountRow" style="display:none">
+            <span>Multi-day discount</span>
+            <span id="receiptDiscount" class="text-green">-</span>
+          </div>
+          <div class="receipt__row receipt__row--bold">
+            <span>Total rental</span>
+            <span id="receiptTotal">&euro;0</span>
+          </div>
+          <div class="receipt__row receipt__row--highlight">
+            <span>Online deposit (5%)</span>
+            <span id="receiptAcompte">&euro;0</span>
+          </div>
+          <div class="receipt__row">
+            <span>Remaining - pay on-site</span>
+            <span id="receiptRemaining">&euro;0</span>
+          </div>
+          <div class="receipt__row">
+            <span>Security deposit on-site (refundable)</span>
+            <span id="receiptDeposit">&euro;0</span>
+          </div>
+        </div>
+
+        <div class="receipt__section" id="receiptNotesSection" style="display:none">
+          <h4>Notes</h4>
+          <p id="receiptNotes">-</p>
+        </div>
+
+        <div class="receipt__footer">
+          <div class="receipt__info-row">
+            <span>12 Rue de Dinan, Intra-Muros - 35400 Saint-Malo</span>
+          </div>
+          <div class="receipt__info-row">
+            <span>02 99 12 34 56 &middot; bonjour@velo-saint-malo.fr</span>
+          </div>
+          <p class="receipt__cancel">Free cancellation up to 24h before (deposit refunded). Contact us by phone or email.</p>
+        </div>
+      </div>
+
+      <div class="modal__actions">
+        <button class="btn btn--primary btn--full btn--lg" id="modalOk">Close</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Floating Contact (mobile) -->
+  <div class="floating-contact">
+    <a href="tel:+33299123456" class="floating-contact__btn" aria-label="Call 02 99 12 34 56">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg>
+      Call
+    </a>
+  </div>
+
+  <script src="../js/main.js" defer></script>
+</body>
+</html>

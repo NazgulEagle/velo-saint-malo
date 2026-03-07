@@ -2,9 +2,29 @@
    Velo Saint-Malo — JavaScript
    =========================== */
 
+// --- Config ---
+const API_URL = window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1'
+  ? 'http://localhost:3456'
+  : 'https://velo-saint-malo.fr/api';  // Update when deployed
+
 // --- State ---
 const cart = {};
 let currentStep = 1;
+
+// --- Cart Persistence ---
+function saveCart() {
+  localStorage.setItem('vsm_cart', JSON.stringify(cart));
+}
+
+function loadCart() {
+  try {
+    const saved = localStorage.getItem('vsm_cart');
+    if (saved) {
+      const parsed = JSON.parse(saved);
+      Object.assign(cart, parsed);
+    }
+  } catch { /* ignore corrupt data */ }
+}
 
 // Half-day price map (4h rental, ~65% of daily rate)
 const halfDayPrices = {
@@ -19,8 +39,34 @@ const halfDayPrices = {
 
 let participantCount = 0;
 
+// Mapping: catalog model name -> data-bike ID in HTML
+const MODEL_TO_BIKE_ID = {
+  'Gazelle Paris C7': 'gazelle-paris',
+  'Riverside 500': 'riverside-500',
+  'Trek FX 3 Disc': 'trek-fx3',
+  'Tandem Peugeot T02': 'tandem',
+  'Moustache Samedi 28.3': 'moustache-28',
+  'Trek Verve+ 3 Lowstep': 'trek-verve',
+  'Cube Touring Hybrid One 625': 'cube-touring',
+  'Giant Talon 2 29"': 'giant-talon',
+  'Cube Stereo Hybrid 140': 'cube-stereo',
+  'Draisienne RunRide 500': 'draisienne',
+  'Btwin 500 16"': 'enfant-16',
+  'Riverside 500 Junior 20"': 'enfant-20',
+  'Trek Precaliber 24"': 'enfant-24',
+  'Thule Yepp 2 Maxi': 'siege-enfant',
+  'Thule Chariot Cross 2': 'remorque',
+  'FollowMe': 'followme',
+  'Babboe Curve-E': 'babboe-cargo',
+  'Sacoches Ortlieb Back-Roller': 'sacoche',
+  'Casque adulte Giro Register MIPS': 'casque',
+  'GPS Garmin Edge Explore 2': 'gps',
+};
+
 // --- DOM Ready ---
 document.addEventListener('DOMContentLoaded', () => {
+  loadCart();
+  updateNavCartCount();
   initNavigation();
   initBikeFilters();
   initBikeToggles();
@@ -30,7 +76,55 @@ document.addEventListener('DOMContentLoaded', () => {
   initScrollAnimations();
   initDateDefaults();
   initParticipants();
+  loadLivePrices();
+  handlePaymentReturn();
+  renderCart();
+  updateRecap();
 });
+
+// --- Load live prices from backend ---
+async function loadLivePrices() {
+  try {
+    const res = await fetch(`${API_URL}/api/bikes`);
+    if (!res.ok) return;
+    const bikes = await res.json();
+
+    for (const bike of bikes) {
+      const bikeId = MODEL_TO_BIKE_ID[bike.name];
+      if (!bikeId) continue;
+
+      // Update daily price in halfDayPrices map
+      halfDayPrices[bikeId] = bike.priceHalfDay;
+
+      // Find the add-to-booking button for this bike
+      const btn = document.querySelector(`[data-bike="${bikeId}"]`);
+      if (!btn) continue;
+
+      // Update data-price attribute
+      btn.dataset.price = bike.priceDay;
+
+      // Update the displayed price in the card
+      const card = btn.closest('.bike-card');
+      if (card) {
+        const priceAmount = card.querySelector('.bike-card__price-amount');
+        if (priceAmount) priceAmount.innerHTML = `&euro;${bike.priceDay}`;
+      }
+
+      // Update cart if this item is already in cart
+      if (cart[bikeId]) {
+        cart[bikeId].price = bike.priceDay;
+        cart[bikeId].priceHalfDay = bike.priceHalfDay;
+      }
+    }
+
+    // Re-render cart with updated prices
+    renderCart();
+    updateRecap();
+  } catch (err) {
+    // Silent: use hardcoded prices as fallback
+    console.warn('Live prices unavailable, using defaults');
+  }
+}
 
 // --- Navigation ---
 function initNavigation() {
@@ -105,6 +199,8 @@ function initBikeFilters() {
 
 // --- Booking Buttons (all "Ajouter" / "+" buttons) ---
 function initBookingButtons() {
+  const isReservationPage = !!document.getElementById('cartItems');
+
   document.addEventListener('click', (e) => {
     const btn = e.target.closest('.add-to-booking');
     if (!btn) return;
@@ -112,7 +208,7 @@ function initBookingButtons() {
     const { bike, name, price } = btn.dataset;
     addToCart(bike, name, parseInt(price));
 
-    // Visual feedback
+    // Button turns green with checkmark
     const original = btn.textContent;
     const originalBg = btn.style.background;
     btn.textContent = '✓';
@@ -122,8 +218,91 @@ function initBookingButtons() {
       btn.textContent = original;
       btn.style.background = originalBg;
       btn.style.borderColor = '';
-    }, 800);
+    }, 1200);
+
+    // Floating "+1" badge animates upward from button
+    showAddedBadge(btn, name);
+
+    // On non-reservation pages, show persistent toast with cart count + link
+    if (!isReservationPage) {
+      const count = Object.values(cart).reduce((sum, item) => sum + item.qty, 0);
+      showCartToast(count);
+    }
   });
+}
+
+function showAddedBadge(btn, name) {
+  // Full-screen overlay flash + centered badge
+  const overlay = document.createElement('div');
+  overlay.style.cssText = 'position:fixed;inset:0;z-index:9999;background:rgba(16,185,129,0.12);pointer-events:none;opacity:0;transition:opacity 0.2s ease';
+
+  const badge = document.createElement('div');
+  const shortName = name.length > 25 ? name.substring(0, 22) + '...' : name;
+  badge.style.cssText = 'position:fixed;top:50%;left:50%;z-index:10000;transform:translate(-50%,-50%) scale(0.5);background:#10b981;color:#fff;padding:16px 32px;border-radius:12px;font-size:1.1rem;font-weight:700;white-space:nowrap;pointer-events:none;opacity:0;transition:all 0.35s cubic-bezier(0.16,1,0.3,1);box-shadow:0 8px 32px rgba(16,185,129,0.45)';
+  badge.innerHTML = '<span style="margin-right:8px;font-size:1.2rem">&#10003;</span>' + shortName;
+
+  document.body.appendChild(overlay);
+  document.body.appendChild(badge);
+
+  requestAnimationFrame(() => {
+    overlay.style.opacity = '1';
+    badge.style.opacity = '1';
+    badge.style.transform = 'translate(-50%,-50%) scale(1)';
+  });
+
+  setTimeout(() => {
+    overlay.style.opacity = '0';
+    badge.style.opacity = '0';
+    badge.style.transform = 'translate(-50%,-60%) scale(0.8)';
+    setTimeout(() => { overlay.remove(); badge.remove(); }, 400);
+  }, 1500);
+
+  // Update navbar cart counter
+  updateNavCartCount();
+}
+
+function updateNavCartCount() {
+  const count = Object.values(cart).reduce((sum, item) => sum + item.qty, 0);
+  const ctaLink = document.querySelector('.nav__link--cta');
+  if (!ctaLink) return;
+
+  ctaLink.classList.add('nav__cart-badge');
+  let counter = ctaLink.querySelector('.nav__cart-count');
+
+  if (count === 0) {
+    if (counter) counter.remove();
+    return;
+  }
+
+  if (!counter) {
+    counter = document.createElement('span');
+    counter.className = 'nav__cart-count';
+    ctaLink.appendChild(counter);
+  }
+
+  counter.textContent = count;
+  counter.classList.remove('pulse');
+  void counter.offsetWidth; // force reflow
+  counter.classList.add('pulse');
+}
+
+function showCartToast(count) {
+  document.querySelector('.toast')?.remove();
+  const isEN = document.documentElement.lang === 'en';
+  const reservationUrl = isEN ? 'reservation.html' : (window.location.pathname.includes('/en/') ? '../reservation.html' : 'reservation.html');
+  const msg = isEN
+    ? `${count} item${count > 1 ? 's' : ''} in your selection. <a href="${reservationUrl}" style="color:#fff;text-decoration:underline;font-weight:600;">Book now</a>`
+    : `${count} article${count > 1 ? 's' : ''} dans votre selection. <a href="${reservationUrl}" style="color:#fff;text-decoration:underline;font-weight:600;">Reserver</a>`;
+
+  const toast = document.createElement('div');
+  toast.className = 'toast';
+  toast.innerHTML = `<span>${msg}</span>`;
+  document.body.appendChild(toast);
+  requestAnimationFrame(() => toast.classList.add('visible'));
+  setTimeout(() => {
+    toast.classList.remove('visible');
+    setTimeout(() => toast.remove(), 300);
+  }, 4000);
 }
 
 // ============================================
@@ -137,6 +316,7 @@ function addToCart(bikeId, name, price) {
     const priceHalfDay = halfDayPrices[bikeId] || Math.round(price * 0.65);
     cart[bikeId] = { name, price, priceHalfDay, qty: 1 };
   }
+  saveCart();
   renderCart();
   updateRecap();
 
@@ -154,12 +334,14 @@ function updateQty(bikeId, delta) {
   if (cart[bikeId].qty <= 0) {
     delete cart[bikeId];
   }
+  saveCart();
   renderCart();
   updateRecap();
 }
 
 function removeFromCart(bikeId) {
   delete cart[bikeId];
+  saveCart();
   renderCart();
   updateRecap();
 }
@@ -700,9 +882,13 @@ function showConfirmation() {
     document.getElementById('receiptDiscount').textContent = `-€${discount} (${discountPct}%)`;
   }
 
-  // Total & deposit
+  // Total & deposit & acompte
+  const acompte = Math.max(1, Math.round(total * 0.05 * 100) / 100);
+  const remaining = Math.round((total - acompte) * 100) / 100;
   document.getElementById('receiptTotal').textContent = `€${total}`;
   document.getElementById('receiptDeposit').textContent = `€${deposit}`;
+  document.getElementById('receiptAcompte').textContent = `€${acompte}`;
+  document.getElementById('receiptRemaining').textContent = `€${remaining}`;
 
   // Notes
   const notesSection = document.getElementById('receiptNotesSection');
@@ -718,10 +904,181 @@ function showConfirmation() {
   });
   document.querySelectorAll('.booking-progress__line').forEach(l => l.classList.add('active'));
 
+  // Send booking to API, then redirect to payment
+  const bookingData = {
+    reference: ref,
+    firstName,
+    lastName,
+    email,
+    phone,
+    dateStart: start,
+    dateEnd: end || undefined,
+    halfDay,
+    pickupTime: pickup,
+    returnTime,
+    participants: participants.length || 1,
+    items: entries.map(([, item]) => `${item.qty}x ${item.name}`).join(', '),
+    subtotal: total + discount,
+    discount: discount > 0 ? `-${discount} (${discountPct}%)` : undefined,
+    total,
+    deposit,
+    notes,
+  };
+
+  redirectToPayment(bookingData);
+}
+
+// --- Redirect to payment after booking ---
+async function redirectToPayment(data) {
+  const submitBtn = document.getElementById('submitBooking');
+  if (submitBtn) {
+    submitBtn.disabled = true;
+    submitBtn.innerHTML = 'Redirection vers l\'acompte...';
+  }
+
+  try {
+    // 1. Create booking in Notion
+    const bookingRes = await fetch(`${API_URL}/api/booking`, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(data),
+    });
+    const bookingResult = bookingRes.ok ? await bookingRes.json() : {};
+
+    // 2. Create checkout session
+    const checkoutRes = await fetch(`${API_URL}/api/create-checkout`, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        reference: data.reference,
+        total: data.total,
+        deposit: data.deposit,
+        email: data.email,
+        bookingId: bookingResult.bookingId,
+        clientId: bookingResult.clientId,
+      }),
+    });
+    const checkout = await checkoutRes.json();
+
+    if (checkout.checkoutUrl) {
+      // Save booking data for receipt on return
+      sessionStorage.setItem('vsm_booking', JSON.stringify(data));
+      window.location.href = checkout.checkoutUrl;
+      return;
+    }
+  } catch (err) {
+    console.warn('Payment redirect failed:', err.message);
+  }
+
+  // Fallback: show confirmation modal without payment
+  if (submitBtn) {
+    submitBtn.disabled = false;
+    submitBtn.innerHTML = 'Continuer vers le paiement <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>';
+  }
+  showConfirmationModal(data);
+}
+
+// --- Show confirmation modal (after payment or as fallback) ---
+function showConfirmationModal(data) {
+  const { total, deposit, entries, halfDay, days, discountPct, discount } = getCartTotals();
+
   // Show modal
   const modal = document.getElementById('confirmationModal');
   modal.classList.add('active');
   document.body.style.overflow = 'hidden';
+}
+
+// --- Handle return from payment page ---
+function handlePaymentReturn() {
+  const params = new URLSearchParams(window.location.search);
+  if (params.get('paid') !== '1') return;
+
+  const ref = params.get('ref');
+  const acompte = params.get('acompte');
+  const totalParam = params.get('total');
+  const depositParam = params.get('deposit');
+
+  // Restore booking data
+  const savedData = sessionStorage.getItem('vsm_booking');
+  if (!savedData) {
+    showPaymentSuccessModal(ref, acompte, totalParam, depositParam);
+    return;
+  }
+
+  const data = JSON.parse(savedData);
+  sessionStorage.removeItem('vsm_booking');
+
+  const paidAcompte = parseFloat(acompte) || Math.max(1, Math.round(data.total * 0.05 * 100) / 100);
+  const remaining = Math.round((data.total - paidAcompte) * 100) / 100;
+
+  // Fill receipt from saved data
+  document.getElementById('receiptRef').textContent = data.reference || ref;
+  document.getElementById('receiptName').textContent = `${data.firstName} ${data.lastName}`;
+  document.getElementById('receiptEmail').textContent = data.email;
+  document.getElementById('receiptPhone').textContent = data.phone;
+  document.getElementById('receiptDateStart').textContent = formatDate(data.dateStart);
+
+  if (data.halfDay) {
+    document.getElementById('receiptDateEnd').textContent = 'Meme jour';
+    document.getElementById('receiptDuration').textContent = 'Demi-journee (4h)';
+  } else if (data.dateEnd) {
+    document.getElementById('receiptDateEnd').textContent = formatDate(data.dateEnd);
+    const d = Math.ceil((new Date(data.dateEnd) - new Date(data.dateStart)) / 86400000);
+    document.getElementById('receiptDuration').textContent = `${d} jour${d > 1 ? 's' : ''}`;
+  }
+
+  document.getElementById('receiptPickup').textContent = data.pickupTime || '-';
+  document.getElementById('receiptReturn').textContent = data.returnTime === 'flexible' ? 'Flexible (avant fermeture)' : (data.returnTime || '-');
+  document.getElementById('receiptItems').innerHTML = `<div class="receipt__row"><span>${data.items}</span><span></span></div>`;
+  document.getElementById('receiptTotal').textContent = `EUR${data.total}`;
+  document.getElementById('receiptAcompte').innerHTML = `EUR${paidAcompte} <span style="color:#16a34a;font-size:0.8em;font-weight:600;">PAYE</span>`;
+  document.getElementById('receiptRemaining').textContent = `EUR${remaining}`;
+  document.getElementById('receiptDeposit').textContent = `EUR${data.deposit}`;
+
+  if (data.notes) {
+    document.getElementById('receiptNotesSection').style.display = '';
+    document.getElementById('receiptNotes').textContent = data.notes;
+  }
+
+  // Update receipt header for confirmed status
+  const receiptTitle = document.querySelector('.receipt__title');
+  if (receiptTitle) receiptTitle.textContent = 'Reservation confirmee !';
+  const receiptSubtitle = document.querySelector('.receipt__subtitle');
+  if (receiptSubtitle) receiptSubtitle.textContent = 'Votre acompte est paye. Le reste sera regle sur place. Un email de confirmation arrive dans quelques minutes.';
+
+  // Show modal
+  const modal = document.getElementById('confirmationModal');
+  modal.classList.add('active');
+  document.body.style.overflow = 'hidden';
+
+  // Update progress bar
+  document.querySelectorAll('.booking-progress__step').forEach(el => {
+    el.classList.add('active', 'completed');
+  });
+  document.querySelectorAll('.booking-progress__line').forEach(l => l.classList.add('active'));
+
+  // Clean URL
+  window.history.replaceState({}, '', window.location.pathname);
+}
+
+function showPaymentSuccessModal(ref, acompte, total, deposit) {
+  document.getElementById('receiptRef').textContent = ref || '-';
+  const paidAcompte = parseFloat(acompte) || 0;
+  const totalVal = parseFloat(total) || 0;
+  const remaining = Math.round((totalVal - paidAcompte) * 100) / 100;
+  document.getElementById('receiptTotal').textContent = `EUR${totalVal}`;
+  document.getElementById('receiptAcompte').innerHTML = `EUR${paidAcompte} <span style="color:#16a34a;font-size:0.8em;font-weight:600;">PAYE</span>`;
+  document.getElementById('receiptRemaining').textContent = `EUR${remaining}`;
+  document.getElementById('receiptDeposit').textContent = `EUR${deposit || 0}`;
+
+  const receiptTitle = document.querySelector('.receipt__title');
+  if (receiptTitle) receiptTitle.textContent = 'Reservation confirmee !';
+
+  const modal = document.getElementById('confirmationModal');
+  modal.classList.add('active');
+  document.body.style.overflow = 'hidden';
+
+  window.history.replaceState({}, '', window.location.pathname);
 }
 
 function closeModal() {
@@ -732,6 +1089,7 @@ function closeModal() {
   // Reset everything
   document.getElementById('bookingForm')?.reset();
   Object.keys(cart).forEach(k => delete cart[k]);
+  saveCart();
   renderCart();
   updateRecap();
   initDateDefaults();

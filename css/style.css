@@ -284,6 +284,34 @@ a:hover {
   background: var(--primary) !important;
 }
 
+.nav__lang {
+  display: inline-flex;
+  align-items: center;
+  gap: 2px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+}
+.nav__lang a {
+  padding: 4px 8px;
+  border-radius: 4px;
+  text-decoration: none;
+  color: var(--text-light);
+  transition: all 0.2s;
+}
+.nav__lang a:hover {
+  color: var(--accent);
+}
+.nav__lang a.active {
+  background: var(--accent);
+  color: #fff;
+  pointer-events: none;
+}
+.nav__lang-sep {
+  color: var(--text-light);
+  opacity: 0.4;
+}
+
 .nav__toggle {
   display: none;
   flex-direction: column;
@@ -311,6 +339,13 @@ a:hover {
   align-items: center;
   justify-content: center;
   overflow: hidden;
+}
+
+.hero--mini {
+  min-height: 30vh;
+}
+.hero--mini .hero__content {
+  padding: 120px 24px 40px;
 }
 
 .hero__bg {
@@ -1192,68 +1227,152 @@ a:hover {
   border-radius: var(--radius);
 }
 
-/* --- Reviews --- */
-.reviews-grid {
+/* --- Google Reviews Wall --- */
+.google-reviews-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.google-reviews-header__logo {
+  flex-shrink: 0;
+}
+
+.google-reviews-header__rating {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.google-reviews-header__score {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--primary-dark);
+  line-height: 1;
+}
+
+.google-reviews-header__stars {
+  color: #fbbc04;
+  font-size: 1.3rem;
+  letter-spacing: 1px;
+}
+
+.google-reviews-header__count {
+  font-size: 0.85rem;
+  color: var(--text-lighter);
+  margin-left: 4px;
+}
+
+.google-reviews-wall {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 24px;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  max-height: 720px;
+  overflow-y: auto;
+  padding-right: 4px;
 }
 
-.review-card {
+.google-reviews-wall::-webkit-scrollbar {
+  width: 6px;
+}
+
+.google-reviews-wall::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.google-reviews-wall::-webkit-scrollbar-thumb {
+  background: var(--border);
+  border-radius: 3px;
+}
+
+.google-review {
   background: var(--bg);
-  border-radius: var(--radius-lg);
-  padding: 28px;
+  border-radius: 8px;
+  padding: 20px;
   border: 1px solid var(--border);
-  transition: all var(--transition);
+  transition: box-shadow var(--transition);
 }
 
-.review-card:hover {
-  box-shadow: var(--shadow-md);
+.google-review:hover {
+  box-shadow: 0 1px 6px rgba(32, 33, 36, .18);
 }
 
-.review-card__stars {
-  color: var(--warm);
-  font-size: 1.1rem;
-  margin-bottom: 12px;
-  letter-spacing: 2px;
-}
-
-.review-card__text {
-  font-size: 0.95rem;
-  color: var(--text);
-  line-height: 1.7;
-  margin-bottom: 20px;
-  font-style: italic;
-}
-
-.review-card__author {
+.google-review__header {
   display: flex;
   align-items: center;
   gap: 12px;
+  margin-bottom: 8px;
 }
 
-.review-card__avatar {
-  width: 44px;
-  height: 44px;
+.google-review__avatar {
+  width: 36px;
+  height: 36px;
   border-radius: 50%;
-  background: var(--primary);
   color: #fff;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 0.85rem;
-  font-weight: 700;
+  font-size: 0.75rem;
+  font-weight: 600;
+  flex-shrink: 0;
 }
 
-.review-card__author strong {
+.google-review__meta strong {
   display: block;
-  font-size: 0.9rem;
-  color: var(--primary-dark);
+  font-size: 0.85rem;
+  color: var(--text);
+  font-weight: 600;
 }
 
-.review-card__author span {
-  font-size: 0.8rem;
+.google-review__meta span {
+  font-size: 0.75rem;
   color: var(--text-lighter);
+}
+
+.google-review__stars {
+  color: #fbbc04;
+  font-size: 0.9rem;
+  letter-spacing: 1px;
+  margin-bottom: 8px;
+}
+
+.google-review__text {
+  font-size: 0.88rem;
+  color: var(--text);
+  line-height: 1.55;
+  margin: 0;
+}
+
+/* --- Quality Grid --- */
+.quality-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 24px;
+}
+
+.quality-item {
+  text-align: center;
+  padding: 28px 20px;
+}
+
+.quality-item__icon {
+  font-size: 2rem;
+  margin-bottom: 12px;
+}
+
+.quality-item__title {
+  font-family: var(--font-heading);
+  font-size: 1.1rem;
+  color: var(--primary-dark);
+  margin-bottom: 8px;
+}
+
+.quality-item__desc {
+  font-size: 0.9rem;
+  color: var(--text-light);
+  line-height: 1.6;
 }
 
 /* --- Booking Progress Bar --- */
@@ -2132,6 +2251,74 @@ a:hover {
   font-size: 1.1rem;
 }
 
+/* --- Added to cart badge (floats up from button) --- */
+.added-badge {
+  position: fixed;
+  z-index: 3000;
+  background: #10b981;
+  color: #fff;
+  padding: 12px 24px;
+  border-radius: 10px;
+  font-size: 1rem;
+  font-weight: 700;
+  white-space: nowrap;
+  pointer-events: none;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%) scale(0.5);
+  opacity: 0;
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: 0 8px 32px rgba(16, 185, 129, 0.4);
+}
+
+.added-badge.visible {
+  opacity: 1;
+  transform: translate(-50%, -50%) scale(1);
+}
+
+.added-badge.fade-out {
+  opacity: 0;
+  transform: translate(-50%, -60%) scale(0.8);
+}
+
+.added-badge__check {
+  margin-right: 6px;
+  font-size: 1.1rem;
+}
+
+/* --- Navbar cart counter badge --- */
+.nav__cart-badge {
+  position: relative;
+}
+
+.nav__cart-count {
+  position: absolute;
+  top: -8px;
+  right: -12px;
+  background: #ef4444;
+  color: #fff;
+  font-size: 0.7rem;
+  font-weight: 700;
+  min-width: 20px;
+  height: 20px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 5px;
+  line-height: 1;
+}
+
+.nav__cart-count.pulse {
+  animation: cartPulse 0.5s ease;
+}
+
+@keyframes cartPulse {
+  0% { transform: scale(1); }
+  40% { transform: scale(1.5); }
+  100% { transform: scale(1); }
+}
+
 /* --- FAQ --- */
 .faq-list {
   max-width: 700px;
@@ -2470,6 +2657,12 @@ a:hover {
   color: #fff;
 }
 
+@media (max-width: 1024px) {
+  .google-reviews-wall {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
 @media (max-width: 768px) {
   .info-bar {
     display: none;
@@ -2609,8 +2802,9 @@ a:hover {
     grid-template-columns: 1fr;
   }
 
-  .reviews-grid {
+  .google-reviews-wall {
     grid-template-columns: 1fr;
+    max-height: 500px;
   }
 
   .tarifs__advantages {

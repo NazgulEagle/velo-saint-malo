@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tarifs Location Velos - Velo Saint-Malo | Des 5 EUR/jour</title>
+  <meta name="description" content="Tarifs location de velos a Saint-Malo. Demi-journee des 3 EUR, journee des 5 EUR, remises 3j+ et 7j+. Forfaits famille disponibles. Caution reduite.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://velo-saint-malo.fr/tarifs.html">
+  <meta name="theme-color" content="#0c4a6e">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🚲</text></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+
+  <link rel="alternate" hreflang="fr" href="https://velo-saint-malo.fr/tarifs.html">
+  <link rel="alternate" hreflang="en" href="https://velo-saint-malo.fr/en/tarifs.html">
+</head>
+<body>
+
+  <!-- Top Info Bar -->
+  <div class="info-bar">
+    <div class="info-bar__container">
+      <div class="info-bar__item">
+        <span>12 Rue de Dinan, Intra-Muros - 35400 Saint-Malo</span>
+      </div>
+      <div class="info-bar__item">
+        <span class="info-bar__hours">Ouvert 7j/7 avr-oct 8h-19h</span>
+        <span>|</span>
+        <span><a href="tel:+33299123456">02 99 12 34 56</a></span>
+        <span>|</span>
+        <span><a href="mailto:bonjour@velo-saint-malo.fr">bonjour@velo-saint-malo.fr</a></span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Navigation -->
+  <nav class="nav" id="nav">
+    <div class="nav__container">
+      <a href="index.html" class="nav__logo">
+        <span class="nav__logo-text">Velo Saint-Malo</span>
+      </a>
+      <button class="nav__toggle" id="navToggle" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav__menu" id="navMenu">
+        <li><a href="velos.html" class="nav__link">Nos Velos</a></li>
+        <li><a href="tarifs.html" class="nav__link">Tarifs</a></li>
+        <li><a href="itineraires.html" class="nav__link">Itineraires</a></li>
+        <li><a href="index.html#avis" class="nav__link">Avis</a></li>
+        <li><a href="index.html#faq" class="nav__link">FAQ</a></li>
+        <li><a href="reservation.html" class="nav__link nav__link--cta">Reserver</a></li>
+        <li class="nav__lang"><a href="tarifs.html" class="active">FR</a><span class="nav__lang-sep">|</span><a href="en/tarifs.html">EN</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <main>
+
+  <!-- Page Header -->
+  <section class="hero hero--mini" id="hero">
+    <div class="hero__bg"></div>
+    <div class="hero__content">
+      <h1 class="hero__title">Nos Tarifs</h1>
+      <p class="hero__subtitle">Le seul loueur Intra-Muros. Des tarifs clairs, sans surprises. Plus vous louez, moins vous payez.</p>
+    </div>
+  </section>
+
+  <!-- Tarifs -->
+  <section class="section tarifs" id="tarifs">
+    <div class="container">
+
+      <!-- Competitive advantages banner -->
+      <div class="tarifs__advantages">
+        <div class="tarifs__advantage">
+          <strong>Caution reduite</strong>
+          <span>&euro;150 seulement (&euro;300 e-bikes) - la plus basse de la region</span>
+        </div>
+        <div class="tarifs__advantage">
+          <strong>Demi-journee disponible</strong>
+          <span>Ideal pour une balade de quelques heures</span>
+        </div>
+        <div class="tarifs__advantage">
+          <strong>Remise 3j+ et 7j+</strong>
+          <span>-10% des 3 jours, -20% des 7 jours</span>
+        </div>
+        <div class="tarifs__advantage">
+          <strong>Livraison hotel gratuite</strong>
+          <span>Intra-Muros & Saint-Servan (3+ jours)</span>
+        </div>
+      </div>
+
+      <div class="pricing-toggle">
+        <button class="pricing-toggle__btn active" data-duration="day">Journee</button>
+        <button class="pricing-toggle__btn" data-duration="weekend">Week-end</button>
+        <button class="pricing-toggle__btn" data-duration="week">Semaine</button>
+      </div>
+
+      <div class="pricing-table-wrapper">
+        <table class="pricing-table">
+          <thead>
+            <tr>
+              <th>Velo / Accessoire</th>
+              <th>Demi-journee<br><small>(4h)</small></th>
+              <th>1 jour</th>
+              <th>Week-end<br><small>(sam-dim)</small></th>
+              <th>Semaine<br><small>(7 jours, -20%)</small></th>
+              <th></th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="pricing-table__category"><td colspan="6">Velos de Ville</td></tr>
+            <tr>
+              <td><strong>Riverside 500</strong> <span class="pricing-table__sub">Hybride 9v</span></td>
+              <td>&euro;8</td>
+              <td>&euro;12</td>
+              <td>&euro;20</td>
+              <td>&euro;60</td>
+              <td><button class="btn btn--primary btn--sm add-to-booking" data-bike="riverside-500" data-name="Riverside 500" data-price="12">+</button></td>
+            </tr>
+            <tr>
+              <td><strong>Gazelle Paris C7</strong> <span class="pricing-table__sub">Hollandais confort</span></td>
+              <td>&euro;10</td>
+              <td>&euro;15</td>
+              <td>&euro;26</td>
+              <td>&euro;75</td>
+              <td><button class="btn btn--primary btn--sm add-to-booking" data-bike="gazelle-paris" data-name="Gazelle Paris C7" data-price="15">+</button></td>
+            </tr>
+            <tr>
+              <td><strong>Trek FX 3 Disc</strong> <span class="pricing-table__sub">Fitness / sportif</span></td>
+              <td>&euro;12</td>
+              <td>&euro;18</td>
+              <td>&euro;32</td>
+              <td>&euro;90</td>
+              <td><button class="btn btn--primary btn--sm add-to-booking" data-bike="trek-fx3" data-name="Trek FX 3 Disc" data-price="18">+</button></td>
+            </tr>
+            <tr>
+              <td><strong>Tandem Peugeot T02</strong> <span class="pricing-table__sub">2 places</span></td>
+              <td>&euro;20</td>
+              <td>&euro;30</td>
+              <td>&euro;52</td>
+              <td>&euro;155</td>
+              <td><button class="btn btn--primary btn--sm add-to-booking" data-bike="tandem" data-name="Tandem Peugeot T02" data-price="30">+</button></td>
+            </tr>
+
+            <tr class="pricing-table__category"><td colspan="6">Velos Electriques</td></tr>
+            <tr class="pricing-table__highlight">
+              <td><strong>Trek Verve+ 3</strong> <span class="pricing-table__sub">Bosch 500 Wh - confort</span> <span class="pricing-table__badge">Populaire</span></td>
+              <td>&euro;20</td>
+              <td>&euro;30</td>
+              <td>&euro;52</td>
+              <td>&euro;155</td>
+              <td><button class="btn btn--primary btn--sm add-to-booking" data-bike="trek-verve" data-name="Trek Verve+ 3 Lowstep" data-price="30">+</button></td>
+            </tr>
+            <tr class="pricing-table__highlight">
+              <td><strong>Moustache Samedi 28.3</strong> <span class="pricing-table__sub">Bosch CX 625 Wh - performant</span></td>
+              <td>&euro;23</td>
+              <td>&euro;35</td>
+              <td>&euro;62</td>
+              <td>&euro;180</td>
+              <td><button class="btn btn--primary btn--sm add-to-booking" data-bike="moustache-28" data-name="Moustache Samedi 28.3" data-price="35">+</button></td>
+            </tr>
+            <tr class="pricing-table__highlight">
+              <td><strong>Cube Touring Hybrid One</strong> <span class="pricing-table__sub">Bosch CX 625 Wh - longue distance</span></td>
+              <td>&euro;25</td>
+              <td>&euro;38</td>
+              <td>&euro;68</td>
+              <td>&euro;200</td>
+              <td><button class="btn btn--primary btn--sm add-to-booking" data-bike="cube-touring" data-name="Cube Touring Hybrid One 625" data-price="38">+</button></td>
+            </tr>
+
+            <tr class="pricing-table__category"><td colspan="6">VTT & Sport</td></tr>
+            <tr>
+              <td><strong>Giant Talon 2 - 29"</strong> <span class="pricing-table__sub">Hardtail, Deore 20v</span></td>
+              <td>&euro;15</td>
+              <td>&euro;22</td>
+              <td>&euro;38</td>
+              <td>&euro;110</td>
+              <td><button class="btn btn--primary btn--sm add-to-booking" data-bike="giant-talon" data-name="Giant Talon 2 29&quot;" data-price="22">+</button></td>
+            </tr>
+            <tr>
+              <td><strong>Cube Stereo Hybrid 140</strong> <span class="pricing-table__sub">E-VTT full - Bosch 750 Wh</span> <span class="pricing-table__badge">Premium</span></td>
+              <td>&euro;35</td>
+              <td>&euro;55</td>
+              <td>&euro;95</td>
+              <td>&euro;280</td>
+              <td><button class="btn btn--primary btn--sm add-to-booking" data-bike="cube-stereo" data-name="Cube Stereo Hybrid 140 E-VTT" data-price="55">+</button></td>
+            </tr>
+
+            <tr class="pricing-table__category"><td colspan="6">Velos Enfants</td></tr>
+            <tr>
+              <td><strong>Draisienne RunRide 500</strong> <span class="pricing-table__sub">2-4 ans</span></td>
+              <td>&euro;3</td>
+              <td>&euro;5</td>
+              <td>&euro;8</td>
+              <td>&euro;25</td>
+              <td><button class="btn btn--primary btn--sm add-to-booking" data-bike="draisienne" data-name="Draisienne RunRide 500" data-price="5">+</button></td>
+            </tr>
+            <tr>
+              <td><strong>Btwin 500 - 16"</strong> <span class="pricing-table__sub">4-6 ans</span></td>
+              <td>&euro;5</td>
+              <td>&euro;8</td>
+              <td>&euro;14</td>
+              <td>&euro;40</td>
+              <td><button class="btn btn--primary btn--sm add-to-booking" data-bike="enfant-16" data-name="Velo Enfant 16&quot; (4-6 ans)" data-price="8">+</button></td>
+            </tr>
+            <tr>
+              <td><strong>Riverside 500 Junior - 20"</strong> <span class="pricing-table__sub">6-9 ans</span></td>
+              <td>&euro;7</td>
+              <td>&euro;10</td>
+              <td>&euro;17</td>
+              <td>&euro;50</td>
+              <td><button class="btn btn--primary btn--sm add-to-booking" data-bike="enfant-20" data-name="Velo Enfant 20&quot; (6-9 ans)" data-price="10">+</button></td>
+            </tr>
+            <tr>
+              <td><strong>Trek Precaliber 24"</strong> <span class="pricing-table__sub">9-12 ans - VTT junior</span></td>
+              <td>&euro;9</td>
+              <td>&euro;14</td>
+              <td>&euro;24</td>
+              <td>&euro;70</td>
+              <td><button class="btn btn--primary btn--sm add-to-booking" data-bike="enfant-24" data-name="Trek Precaliber 24&quot; (9-12 ans)" data-price="14">+</button></td>
+            </tr>
+
+            <tr class="pricing-table__category"><td colspan="6">Forfaits Famille</td></tr>
+            <tr class="pricing-table__highlight">
+              <td><strong>Forfait Famille Classique</strong> <span class="pricing-table__sub">2 adultes ville + 1 enfant + casques</span> <span class="pricing-table__badge">-15%</span></td>
+              <td>&euro;18</td>
+              <td>&euro;27</td>
+              <td>&euro;48</td>
+              <td>&euro;140</td>
+              <td><button class="btn btn--primary btn--sm add-to-booking" data-bike="forfait-famille" data-name="Forfait Famille Classique (2+1)" data-price="27">+</button></td>
+            </tr>
+            <tr class="pricing-table__highlight">
+              <td><strong>Forfait Famille Electrique</strong> <span class="pricing-table__sub">2 e-bikes + 1 enfant + casques</span> <span class="pricing-table__badge">-15%</span></td>
+              <td>&euro;35</td>
+              <td>&euro;55</td>
+              <td>&euro;96</td>
+              <td>&euro;275</td>
+              <td><button class="btn btn--primary btn--sm add-to-booking" data-bike="forfait-famille-elec" data-name="Forfait Famille Electrique (2+1)" data-price="55">+</button></td>
+            </tr>
+
+            <tr class="pricing-table__category"><td colspan="6">Accessoires</td></tr>
+            <tr>
+              <td><strong>Casque adulte Giro MIPS</strong></td>
+              <td>&euro;2</td>
+              <td>&euro;2</td>
+              <td>&euro;3</td>
+              <td>&euro;8</td>
+              <td><button class="btn btn--primary btn--sm add-to-booking" data-bike="casque" data-name="Casque Giro Register MIPS" data-price="2">+</button></td>
+            </tr>
+            <tr>
+              <td><strong>Sacoches Ortlieb</strong> <span class="pricing-table__sub">Paire etanche 2x20L</span></td>
+              <td>&euro;3</td>
+              <td>&euro;4</td>
+              <td>&euro;7</td>
+              <td>&euro;20</td>
+              <td><button class="btn btn--primary btn--sm add-to-booking" data-bike="sacoche" data-name="Sacoches Ortlieb (paire)" data-price="4">+</button></td>
+            </tr>
+            <tr>
+              <td><strong>GPS Garmin Edge Explore 2</strong></td>
+              <td>&euro;5</td>
+              <td>&euro;7</td>
+              <td>&euro;12</td>
+              <td>&euro;35</td>
+              <td><button class="btn btn--primary btn--sm add-to-booking" data-bike="gps" data-name="GPS Garmin Edge Explore 2" data-price="7">+</button></td>
+            </tr>
+            <tr>
+              <td><strong>Siege enfant Thule Yepp 2</strong> <span class="pricing-table__sub">9 mois-6 ans</span></td>
+              <td>&euro;3</td>
+              <td>&euro;5</td>
+              <td>&euro;8</td>
+              <td>&euro;25</td>
+              <td><button class="btn btn--primary btn--sm add-to-booking" data-bike="siege-enfant" data-name="Siege Thule Yepp 2 Maxi" data-price="5">+</button></td>
+            </tr>
+            <tr>
+              <td><strong>Remorque Thule Chariot Cross 2</strong> <span class="pricing-table__sub">2 enfants</span></td>
+              <td>&euro;8</td>
+              <td>&euro;12</td>
+              <td>&euro;20</td>
+              <td>&euro;60</td>
+              <td><button class="btn btn--primary btn--sm add-to-booking" data-bike="remorque" data-name="Remorque Thule Chariot Cross 2" data-price="12">+</button></td>
+            </tr>
+            <tr>
+              <td><strong>Barre FollowMe</strong> <span class="pricing-table__sub">Tandem parent-enfant</span></td>
+              <td>&euro;4</td>
+              <td>&euro;6</td>
+              <td>&euro;10</td>
+              <td>&euro;30</td>
+              <td><button class="btn btn--primary btn--sm add-to-booking" data-bike="followme" data-name="Barre FollowMe Tandem" data-price="6">+</button></td>
+            </tr>
+            <tr>
+              <td><strong>Babboe Curve-E Cargo</strong> <span class="pricing-table__sub">Biporteur electrique familial</span></td>
+              <td>&euro;30</td>
+              <td>&euro;45</td>
+              <td>&euro;78</td>
+              <td>&euro;230</td>
+              <td><button class="btn btn--primary btn--sm add-to-booking" data-bike="babboe-cargo" data-name="Babboe Curve-E Cargo" data-price="45">+</button></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="tarifs__includes">
+        <h4>Toujours inclus - sans supplement</h4>
+        <div class="tarifs__includes-grid">
+          <div class="tarifs__include-item">Antivol Abus</div>
+          <div class="tarifs__include-item">Carte itineraires</div>
+          <div class="tarifs__include-item">Assistance 7j/7</div>
+          <div class="tarifs__include-item">Kit reparation</div>
+          <div class="tarifs__include-item">Eclairage LED</div>
+          <div class="tarifs__include-item">Casque enfant (-12 ans)</div>
+          <div class="tarifs__include-item">Depannage 20 km gratuit</div>
+          <div class="tarifs__include-item">Annulation gratuite 24h</div>
+        </div>
+      </div>
+
+      <p class="tarifs__note">Caution de &euro;150 par velo (&euro;300 pour les e-bikes) - parmi les plus basses de la region. Remboursee integralement au retour en bon etat. Reglement sur place par CB ou especes.</p>
+    </div>
+  </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div class="footer__brand">
+          <a href="index.html" class="nav__logo">
+            <span class="nav__logo-text">Velo Saint-Malo</span>
+          </a>
+          <p>Location de velos a Saint-Malo depuis 2024. Decouvrez la Cote d'Emeraude sur deux roues.</p>
+        </div>
+        <div class="footer__links">
+          <h4>Navigation</h4>
+          <ul>
+            <li><a href="velos.html">Nos Velos</a></li>
+            <li><a href="tarifs.html">Tarifs</a></li>
+            <li><a href="itineraires.html">Itineraires</a></li>
+            <li><a href="reservation.html">Reservation</a></li>
+          </ul>
+        </div>
+        <div class="footer__links">
+          <h4>Informations</h4>
+          <ul>
+            <li><a href="index.html#faq">FAQ</a></li>
+            <li><a href="index.html#avis">Avis clients</a></li>
+            <li><a href="conditions-generales.html">Conditions generales</a></li>
+            <li><a href="politique-confidentialite.html">Politique de confidentialite</a></li>
+          </ul>
+        </div>
+        <div class="footer__contact">
+          <h4>Contact</h4>
+          <ul>
+            <li>12 Rue de Dinan, Intra-Muros<br>35400 Saint-Malo</li>
+            <li><a href="tel:+33299123456">02 99 12 34 56</a></li>
+            <li><a href="mailto:bonjour@velo-saint-malo.fr">bonjour@velo-saint-malo.fr</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <p>&copy; 2026 Velo Saint-Malo. Tous droits reserves.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Floating Contact (mobile) -->
+  <div class="floating-contact">
+    <a href="tel:+33299123456" class="floating-contact__btn" aria-label="Appeler le 02 99 12 34 56">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg>
+      Appeler
+    </a>
+  </div>
+
+  <script src="js/main.js" defer></script>
+</body>
+</html>
