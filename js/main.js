@@ -211,14 +211,15 @@ function initBookingButtons() {
     const { bike, name, price } = btn.dataset;
     addToCart(bike, name, parseInt(price));
 
-    // Button flash: green checkmark (inline !important to beat any CSS)
+    // Button flash: green checkmark
     var original = btn.innerHTML;
     btn.innerHTML = '&#10003; Ajoute !';
-    btn.setAttribute('style', 'background:#10b981 !important;border-color:#10b981 !important;color:#fff !important;transform:scale(1.08);box-shadow:0 0 0 4px rgba(16,185,129,0.35) !important;transition:all 0.2s ease');
+    btn.setAttribute('style', 'background:#10b981 !important;border-color:#10b981 !important;color:#fff !important;transform:scale(1.08);box-shadow:0 0 0 4px rgba(16,185,129,0.35) !important');
+    alert('DEBUG: Kijk of de button achter dit alert groen is.');
     setTimeout(function() {
       btn.innerHTML = original;
       btn.removeAttribute('style');
-    }, 1400);
+    }, 5000);
 
     // Update navbar cart badge
     updateNavCartCount();
