@@ -1,7 +1,6 @@
 /* ===========================
    Velo Saint-Malo — JavaScript
    =========================== */
-console.log('[VSM] main.js loaded - v20260307');
 
 // --- Config ---
 const API_URL = window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1'
@@ -208,7 +207,6 @@ function initBookingButtons() {
     if (!btn) return;
     e.preventDefault();
     e.stopPropagation();
-    console.log('[VSM] Button clicked:', btn.dataset.name);
 
     const { bike, name, price } = btn.dataset;
     addToCart(bike, name, parseInt(price));
