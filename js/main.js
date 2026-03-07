@@ -220,23 +220,14 @@ function initBookingButtons() {
     var price = btn.getAttribute('data-price');
     addToCart(bike, name, parseInt(price));
 
-    // Insert a confirmation element AFTER the button
-    var confirm = document.createElement('div');
-    confirm.textContent = '\u2713 Ajoute !';
-    confirm.style.cssText = 'display:inline-block;background:#10b981;color:#fff;font-weight:700;font-size:0.85rem;padding:8px 16px;border-radius:8px;margin-left:8px;animation:fadeConfirm 2s forwards';
-    btn.parentNode.insertBefore(confirm, btn.nextSibling);
-
-    // Also overlay the entire card with a brief green flash
-    var card = btn.closest('.bike-card');
-    if (card) {
-      var flash = document.createElement('div');
-      flash.style.cssText = 'position:absolute;inset:0;background:rgba(16,185,129,0.15);border-radius:inherit;pointer-events:none;z-index:10;animation:fadeConfirm 1.5s forwards';
-      card.style.position = 'relative';
-      card.appendChild(flash);
-      setTimeout(function() { flash.remove(); }, 1600);
-    }
-
-    setTimeout(function() { confirm.remove(); }, 2500);
+    // Fixed green banner at top of screen (outside all containers)
+    var banner = document.createElement('div');
+    banner.style.cssText = 'position:fixed;top:0;left:0;right:0;z-index:99999;background:#10b981;color:#fff;text-align:center;padding:14px 20px;font-size:1rem;font-weight:700;font-family:sans-serif;animation:fadeConfirm 2.5s forwards';
+    var count = 0;
+    for (var k in cart) { if (cart[k]) count += cart[k].qty; }
+    banner.textContent = '\u2713 ' + name + ' ajoute ! (' + count + ' article' + (count > 1 ? 's' : '') + ' dans votre selection)';
+    document.body.appendChild(banner);
+    setTimeout(function() { if (banner.parentNode) banner.parentNode.removeChild(banner); }, 2600);
 
     // Update navbar cart badge
     updateNavCartCount();
