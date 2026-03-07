@@ -1,0 +1,2046 @@
+{
+  "timestamp": "2026-03-07T12:34:33.028Z",
+  "queries": {
+    "location velo Saint-Malo": {
+      "organic_results": [
+        {
+          "position": 1,
+          "title": "Velo Emeraude: Location de vélo à Saint-Malo",
+          "link": "https://www.velo-corsaire.fr/velo-emeraude-location-de-velo-a-saint-malo/",
+          "snippet": "Location de vélos, vélos électriques, triporteurs, vélos de grande randonnées à Saint-Malo dans la baie du Mont-Saint-Michel.",
+          "displayed_link": "https://www.velo-corsaire.fr › velo-emeraude-location-de-..."
+        },
+        {
+          "position": 2,
+          "title": "Location de Vélos à Saint Malo - Réservation en ligne",
+          "link": "https://www.velocouest.fr/location-velos-saint-malo/",
+          "snippet": "Location de vélos à Saint-Malo : Découvrez la cité corsaire à vélo avec Les Vélos Bleus Livraison de vélos dès le lendemain matin pour toute commande avant 17h.",
+          "displayed_link": "https://www.velocouest.fr › location-velos-saint-malo"
+        },
+        {
+          "position": 3,
+          "title": "Locations de vélos | Saint-Malo – Baie du Mont-Saint-Michel",
+          "link": "https://www.saint-malo-tourisme.com/poser-ses-valises/se-deplacer/locations-de-velos/",
+          "snippet": "Locations de vélos ; Electricycles de la Baie · Electricycles de la Baie. LOCATION DE VÉLOS CLASSIQUES. 06 17 87 00 76. Dol-de-Bretagne ; Vélo Émeraude · Vélo ...",
+          "displayed_link": "https://www.saint-malo-tourisme.com › ... › [...]"
+        },
+        {
+          "position": 4,
+          "title": "Saint Malo - vélos ou vélos électriques à Saint-Malo",
+          "link": "https://www.lokki.rent/loueur/saint-malo",
+          "snippet": "Nos vélos sont régulièrement entretenus pour garantir sécurité et qualité, et sont disponibles à la demi-journée, journée ou pour des locations plus longues.",
+          "displayed_link": "https://www.lokki.rent › ... › Saint Malo"
+        },
+        {
+          "position": 5,
+          "title": "Les Vélos Bleus: Location de Vélos à Saint-Malo",
+          "link": "https://velos-bleus.fr/",
+          "snippet": "Les Vélos Bleus, c'est plus de 200 vélos en location à Saint-Malo. Nous vous proposons des vélos classiques, des vélos à assistance électriques, des VTT enfants ...",
+          "displayed_link": "https://velos-bleus.fr"
+        },
+        {
+          "position": 6,
+          "title": "Loc'Malouine Les Paddles et Vélos à Saint Malo - Location de ...",
+          "link": "https://www.loc-malouine.com/",
+          "snippet": "Loc'Malouine vous propose des locations de Vélos, de Paddles et de Paddles XL sur Saint Malo et d'organiser vos sorties de groupe, Team Building, ...",
+          "displayed_link": "https://www.loc-malouine.com"
+        },
+        {
+          "position": 7,
+          "title": "Comment utiliser le Vélo MAT",
+          "link": "https://velomat.stmalo-agglomeration.fr/fr/sharing",
+          "snippet": "Les tarifs ; Location au trajet. Louez un vélo à assistance électrique pour vos trajets ponctuels. 1,40€ les 30 premières minutes ; Abonnement mensuel à 6€/mois.",
+          "displayed_link": "https://velomat.stmalo-agglomeration.fr › sharing"
+        },
+        {
+          "position": 8,
+          "title": "Location de vélos classiques, électriques et scooters",
+          "link": "https://www.cyclesnicole.fr/location/",
+          "snippet": "Tarifs de location : Vélo classique: 13€ TTC | Vélo électrique: 30€ TTC | Scooter électrique 50cc: 39€",
+          "displayed_link": "https://www.cyclesnicole.fr › location"
+        },
+        {
+          "position": 9,
+          "title": "Location de vélos à Saint Malo (35)",
+          "link": "https://www.pagesjaunes.fr/annuaire/saint-malo-35/location-de-velos",
+          "displayed_link": "https://www.pagesjaunes.fr › annuaire › location-de-velos"
+        },
+        {
+          "position": 10,
+          "title": "Louer un vélo à Saint-Malo",
+          "link": "https://www.dolcevia.eu/fr/location-velo-saint-malo",
+          "snippet": "Quel est le prix de la location d'un vélo à Saint-Malo ? La location d'un vélo à Saint-Malo commence à 19 € pour 4 heures. Les tarifs varient selon le modèle et ...",
+          "displayed_link": "https://www.dolcevia.eu › location-velo-saint-malo"
+        }
+      ],
+      "local_results": [
+        {
+          "title": "Gyro Malo Sasu",
+          "address": "Esp. Saint-Vincent 5400, 35400 Saint-Malo",
+          "phone": "07 71 12 09 00",
+          "rating": 4.9,
+          "reviews": 145,
+          "type": "Service de location de vélo",
+          "place_id": "10378472204291913185",
+          "links": {
+            "phone": "tel:07 71 12 09 00",
+            "website": "http://www.gyromalo.fr/?utm_source=gmb"
+          },
+          "website": "http://www.gyromalo.fr/?utm_source=gmb"
+        },
+        {
+          "title": "CANCAVELO, location de Fat Bike, vélos VTC, VAE, scooters, gyropodes, trottinettes électriques",
+          "address": "27 bis Av. du Général de Gaulle, 35260 Cancale",
+          "phone": "07 64 50 40 40",
+          "rating": 4.9,
+          "reviews": 80,
+          "type": "Service de location de vélo",
+          "place_id": "3454446015140045742",
+          "links": {
+            "phone": "tel:07 64 50 40 40",
+            "website": "https://www.cancavelo.fr/"
+          },
+          "website": "https://www.cancavelo.fr/"
+        },
+        {
+          "title": "Alex Hinault Cycles",
+          "address": "Av. de Launay Breton, 35400 Saint-Malo",
+          "phone": "09 81 95 57 98",
+          "rating": 4.7,
+          "reviews": 116,
+          "type": "Magasin de vélos",
+          "place_id": "5738300225992090051",
+          "links": {
+            "phone": "tel:09 81 95 57 98",
+            "website": "http://alexhinaultsaintmalocycles.fr/"
+          },
+          "website": "http://alexhinaultsaintmalocycles.fr/"
+        },
+        {
+          "title": "Mobilici",
+          "address": "Esp. Saint-Vincent, 35400 Saint-Malo",
+          "phone": "07 64 50 40 40",
+          "rating": 4.2,
+          "reviews": 5,
+          "type": "Service de location de vélo",
+          "place_id": "14737350508380942567",
+          "links": {
+            "phone": "tel:07 64 50 40 40",
+            "website": "https://cancavelo-scootescape.lokki.rent/"
+          },
+          "website": "https://cancavelo-scootescape.lokki.rent/"
+        },
+        {
+          "title": "Giant Saint Malo",
+          "address": "44 Rue du Général Patton, 35400 Saint-Malo",
+          "phone": "02 99 82 01 84",
+          "rating": 4.6,
+          "reviews": 82,
+          "type": "Magasin de vélos",
+          "place_id": "6454323716633977772",
+          "links": {
+            "phone": "tel:02 99 82 01 84",
+            "website": "https://www.mistervelo.fr/"
+          },
+          "website": "https://www.mistervelo.fr/"
+        },
+        {
+          "title": "Cycles Nicole",
+          "address": "11 Rue du Président Robert Schuman, 35400 Saint-Malo",
+          "phone": "02 99 56 11 06",
+          "rating": 4.3,
+          "reviews": 55,
+          "type": "Magasin de vélos",
+          "place_id": "9336202018522778074",
+          "links": {
+            "phone": "tel:02 99 56 11 06",
+            "website": "http://www.cyclesnicole.fr/?utm_source=gmb"
+          },
+          "website": "http://www.cyclesnicole.fr/?utm_source=gmb"
+        }
+      ],
+      "ads": [],
+      "related_questions": [],
+      "knowledge_graph": null
+    },
+    "location velo electrique Saint-Malo": {
+      "organic_results": [
+        {
+          "position": 1,
+          "title": "Velo Emeraude: Location de vélo à Saint-Malo",
+          "link": "https://www.velo-corsaire.fr/velo-emeraude-location-de-velo-a-saint-malo/",
+          "snippet": "Location de vélos, vélos électriques, triporteurs, vélos de grande randonnées à Saint-Malo dans la baie du Mont-Saint-Michel.",
+          "displayed_link": "https://www.velo-corsaire.fr › velo-emeraude-location-de..."
+        },
+        {
+          "position": 2,
+          "title": "Location de Vélos à Saint Malo - Réservation en ligne",
+          "link": "https://www.velocouest.fr/location-velos-saint-malo/",
+          "snippet": "Location de Vélos à Saint Malo. Réservez en ligne. VTC, VTT, Vélo électrique, vélo enfant. Séminaire à vélo, déstockage de vélos.",
+          "displayed_link": "https://www.velocouest.fr › location-velos-saint-malo"
+        },
+        {
+          "position": 3,
+          "title": "Saint Malo - vélos ou vélos électriques à Saint-Malo",
+          "link": "https://www.lokki.rent/loueur/saint-malo",
+          "snippet": "Profitez de Saint-Malo avec les vélos, vélos électriques de Saint Malo. Large choix, accueil 5☆ et réservation rapide sur Lokki.",
+          "displayed_link": "https://www.lokki.rent › ... › Saint Malo"
+        },
+        {
+          "position": 4,
+          "title": "À SAINT-MALO, UN NOUVEAU SERVICE DE VÉLOS EN ...",
+          "link": "https://www.saint-malo.fr/actualites/mobilite-douce-a-saint-malo-un-nouveau-service-de-velos-a-assistance-electrique/",
+          "snippet": "Des vélos à assistance électrique en libre-service sont désormais disponibles ! Prenez le guidon avec Vélo MAT. Ce 14 mai, l'Agglomération, la ...",
+          "displayed_link": "https://www.saint-malo.fr › actualites › mobilite-douce-..."
+        },
+        {
+          "position": 5,
+          "title": "Loc'Malouine Les Paddles et Vélos à Saint Malo",
+          "link": "https://www.loc-malouine.com/",
+          "snippet": "Loc'Malouine vous propose des locations de Vélos, de Paddles et de Paddles XL sur Saint Malo et d'organiser vos sorties de groupe, Team Building, ...",
+          "displayed_link": "https://www.loc-malouine.com"
+        },
+        {
+          "position": 6,
+          "title": "Comment utiliser le Vélo MAT",
+          "link": "https://velomat.stmalo-agglomeration.fr/fr/sharing",
+          "snippet": "Les tarifs ; Location au trajet. Louez un vélo à assistance électrique pour vos trajets ponctuels. 1,40€ les 30 premières minutes ; Abonnement mensuel à 6€/mois.",
+          "displayed_link": "https://velomat.stmalo-agglomeration.fr › sharing"
+        },
+        {
+          "position": 7,
+          "title": "Locations de vélos | Saint-Malo – Baie du Mont-Saint-Michel",
+          "link": "https://www.saint-malo-tourisme.com/poser-ses-valises/se-deplacer/locations-de-velos/",
+          "snippet": "Locations de vélos ; Electricycles de la Baie · Electricycles de la Baie. LOCATION DE VÉLOS CLASSIQUES. 06 17 87 00 76. Dol-de-Bretagne ; Vélo Émeraude · Vélo ...",
+          "displayed_link": "https://www.saint-malo-tourisme.com › ... › [...]"
+        },
+        {
+          "position": 8,
+          "title": "Location de vélos classiques, électriques et scooters",
+          "link": "https://www.cyclesnicole.fr/location/",
+          "snippet": "Tarifs de location : Vélo classique: 13€ TTC | Vélo électrique: 30€ TTC | Scooter électrique 50cc: 39€",
+          "displayed_link": "https://www.cyclesnicole.fr › location"
+        },
+        {
+          "position": 9,
+          "title": "Location de vélos à Saint Malo (35)",
+          "link": "https://www.pagesjaunes.fr/annuaire/saint-malo-35/location-de-velos",
+          "displayed_link": "https://www.pagesjaunes.fr › annuaire › location-de-velos"
+        },
+        {
+          "position": 10,
+          "title": "Location de vélo De Rennes à Saint-Malo et Bretagne",
+          "link": "https://gerald-services.fr/location-de-velos/",
+          "snippet": "Location de vélos en BRETAGNE de Rennes à Saint Malo ... Vélo classique · Vélo à assistance électrique · Vélo cargo triporteur · Vélo cargo famille · Vélo ...",
+          "displayed_link": "https://gerald-services.fr › location-de-velos"
+        }
+      ],
+      "local_results": [
+        {
+          "title": "Gyro Malo Sasu",
+          "address": "Esp. Saint-Vincent 5400, 35400 Saint-Malo",
+          "phone": "07 71 12 09 00",
+          "rating": 4.9,
+          "reviews": 145,
+          "type": "Service de location de vélo",
+          "place_id": "10378472204291913185",
+          "links": {
+            "phone": "tel:07 71 12 09 00",
+            "website": "http://www.gyromalo.fr/?utm_source=gmb"
+          },
+          "website": "http://www.gyromalo.fr/?utm_source=gmb"
+        },
+        {
+          "title": "Alex Hinault Cycles",
+          "address": "Av. de Launay Breton, 35400 Saint-Malo",
+          "phone": "09 81 95 57 98",
+          "rating": 4.7,
+          "reviews": 116,
+          "type": "Magasin de vélos",
+          "place_id": "5738300225992090051",
+          "links": {
+            "phone": "tel:09 81 95 57 98",
+            "website": "http://alexhinaultsaintmalocycles.fr/"
+          },
+          "website": "http://alexhinaultsaintmalocycles.fr/"
+        },
+        {
+          "title": "Velo Emeraude",
+          "address": "5 Rue d'Aleth, 35350 La Gouesnière",
+          "phone": "02 99 89 75 43",
+          "rating": 4.7,
+          "reviews": 83,
+          "type": "Service de location de vélo",
+          "place_id": "14208237458676413061",
+          "links": {
+            "phone": "tel:02 99 89 75 43",
+            "website": "http://velo-corsaire.fr/"
+          },
+          "website": "http://velo-corsaire.fr/"
+        },
+        {
+          "title": "CANCAVELO, location de Fat Bike, vélos VTC, VAE, scooters, gyropodes, trottinettes électriques",
+          "address": "27 bis Av. du Général de Gaulle, 35260 Cancale",
+          "phone": "07 64 50 40 40",
+          "rating": 4.9,
+          "reviews": 80,
+          "type": "Service de location de vélo",
+          "place_id": "3454446015140045742",
+          "links": {
+            "phone": "tel:07 64 50 40 40",
+            "website": "https://www.cancavelo.fr/"
+          },
+          "website": "https://www.cancavelo.fr/"
+        },
+        {
+          "title": "Cycles Nicole",
+          "address": "11 Rue du Président Robert Schuman, 35400 Saint-Malo",
+          "phone": "02 99 56 11 06",
+          "rating": 4.3,
+          "reviews": 55,
+          "type": "Magasin de vélos",
+          "place_id": "9336202018522778074",
+          "links": {
+            "phone": "tel:02 99 56 11 06",
+            "website": "http://www.cyclesnicole.fr/?utm_source=gmb"
+          },
+          "website": "http://www.cyclesnicole.fr/?utm_source=gmb"
+        },
+        {
+          "title": "Giant Saint Malo",
+          "address": "44 Rue du Général Patton, 35400 Saint-Malo",
+          "phone": "02 99 82 01 84",
+          "rating": 4.6,
+          "reviews": 82,
+          "type": "Magasin de vélos",
+          "place_id": "6454323716633977772",
+          "links": {
+            "phone": "tel:02 99 82 01 84",
+            "website": "https://www.mistervelo.fr/"
+          },
+          "website": "https://www.mistervelo.fr/"
+        }
+      ],
+      "ads": [],
+      "related_questions": [
+        {
+          "question": "Quel est le prix de la location d'un vélo électrique ?",
+          "snippet": "Exemple de grille tarifaire indicative :"
+        },
+        {
+          "question": "Quel est le prix d'une location de vélo pour 1 heure ?",
+          "snippet": "Le déverrouillage coûte 1 £ et l'utilisation 23 pence par minute. Une heure de trajet coûte 1 £ de déverrouillage plus 13,80 £ pour 60 minutes. Ce n'est pas donné. Voici les réponses officielles de la municipalité de Hounslow aux questions fréquentes concernant son programme pilote de vélos électriques Lime Bike."
+        },
+        {
+          "question": "Comment obtenir la prime de 500 € pour l'achat d'un vélo électrique ?",
+          "snippet": "Sont éligibles : les personnes physiques majeures, domiciliées en France, ayant un revenu fiscal de référence par part, inférieur ou égal à 15 400 € (Revenu fiscal de référence de 2022 pour un achat ou une location en 2024. Consultez votre avis d'imposition de 2023)."
+        },
+        {
+          "question": "Quel est le prix d'un trajet en vélo MAT à Saint-Malo ?",
+          "snippet": "Abonnement mensuel à 6€/mois Après avoir souscrit, vous paierez les trois premiers mois de souscription d'un montant total de 18€. À partir du quatrième mois, vous serez prélevé mensuellement de 6€."
+        }
+      ],
+      "knowledge_graph": null
+    },
+    "bike rental Saint-Malo": {
+      "organic_results": [
+        {
+          "position": 1,
+          "title": "Location vélo Saint Malo dès 14€/jour | Réservation en ligne",
+          "link": "https://www.lokki.rent/location/saint-malo/velo",
+          "snippet": "Saint Malo ; Vélo de balade 28p. 16 €/jour ; Vélo électrique. 39.5 €/jour ; Vtc électrique randonnée. 45 €/jour ; Vtc randonnée. 25 €/jour ; Vtt adulte 27,5 pouces ...",
+          "displayed_link": "https://www.lokki.rent › location › saint-malo › velo"
+        },
+        {
+          "position": 2,
+          "title": "Location de Vélos à Saint Malo - Réservation en ligne",
+          "link": "https://www.velocouest.fr/location-velos-saint-malo/",
+          "snippet": "Les Vélos Bleus 19 Rue Alphonse Thébault, 35400 Saint-Malo · Du 1er avril au 31 octobre INCLUS · 9h à 12h30/ 14h à 18h · 06 15 38 95 92 · saintmalo.velocouest@gmail ...",
+          "displayed_link": "https://www.velocouest.fr › location-velos-saint-malo"
+        },
+        {
+          "position": 3,
+          "title": "Locations de vélos | Saint-Malo – Baie du Mont-Saint-Michel",
+          "link": "https://www.saint-malo-tourisme.com/poser-ses-valises/se-deplacer/locations-de-velos/",
+          "snippet": "Locations de vélos ; Electricycles de la Baie · Electricycles de la Baie. LOCATION DE VÉLOS CLASSIQUES. 06 17 87 00 76. Dol-de-Bretagne ; Vélo Émeraude · Vélo ...",
+          "displayed_link": "https://www.saint-malo-tourisme.com › ... › [...]"
+        },
+        {
+          "position": 4,
+          "title": "Velo Emeraude: Location de vélo à Saint-Malo",
+          "link": "https://www.velo-corsaire.fr/velo-emeraude-location-de-velo-a-saint-malo/",
+          "snippet": "Nous vous livrons les vélos à domicile ou sur votre lieu de séjour ! Nous sommes idalement situés à 35kms du Mont-Saint-Michel et à proximité de ...",
+          "displayed_link": "https://www.velo-corsaire.fr › velo-emeraude-location-de..."
+        },
+        {
+          "position": 5,
+          "title": "Loc'Malouine Les Paddles et Vélos à Saint Malo - Location de ...",
+          "link": "https://www.loc-malouine.com/",
+          "snippet": "Loc'Malouine vous propose des locations de Vélos, de Paddles et de Paddles XL sur Saint Malo et d'organiser vos sorties de groupe, Team Building, ...",
+          "displayed_link": "https://www.loc-malouine.com"
+        },
+        {
+          "position": 6,
+          "title": "Les Vélos Bleus: Location de Vélos à Saint-Malo",
+          "link": "https://velos-bleus.fr/",
+          "snippet": "Les Vélos Bleus, c'est plus de 200 vélos en location à Saint-Malo. Nous vous proposons des vélos classiques, des vélos à assistance électriques, des VTT enfants ...",
+          "displayed_link": "https://velos-bleus.fr"
+        },
+        {
+          "position": 7,
+          "title": "Bike rental in Saint-Malo",
+          "link": "https://www.manawa.com/en-GB/activity/france/saint-malo/bike-tours/bike-rental-in-saint-malo/25080",
+          "snippet": "Discover Saint-Malo by bike and explore the surrounding area! Véloc'Ouest offers you a choice of rental periods: from half a day to a week.",
+          "displayed_link": "https://www.manawa.com › ... › Saint-Malo › Bike Tours"
+        },
+        {
+          "position": 8,
+          "title": "Saint Malo Bike Rentals | Rent a Road Bike or Gravel",
+          "link": "https://www.cctbikerental.com/rentals/saint-malo-saint-brieuc-bike-rentals/",
+          "snippet": "Plan your bike rental in 4 easy steps ; Adris L'Aventure · € 149 for 3 days ; Gravel Bike Le Vadrouille · € 124 for 3 days ; E-Cargo Bike · € 267 for 3 days ; Riese & ...",
+          "displayed_link": "https://www.cctbikerental.com › s..."
+        },
+        {
+          "position": 9,
+          "title": "Saint Malo - vélos ou vélos électriques à Saint-Malo",
+          "link": "https://www.lokki.rent/loueur/saint-malo",
+          "snippet": "Nos vélos sont régulièrement entretenus pour garantir sécurité et qualité, et sont disponibles à la demi-journée, journée ou pour des locations plus longues.",
+          "displayed_link": "https://www.lokki.rent › ... › Saint Malo"
+        },
+        {
+          "position": 10,
+          "title": "Location de vélos à Saint Malo (35)",
+          "link": "https://www.pagesjaunes.fr/annuaire/saint-malo-35/location-de-velos",
+          "displayed_link": "https://www.pagesjaunes.fr › annuaire › location-de-velos"
+        }
+      ],
+      "local_results": [
+        {
+          "title": "Gyro Malo Sasu",
+          "address": "Esp. Saint-Vincent 5400, 35400 Saint-Malo",
+          "phone": "07 71 12 09 00",
+          "rating": 4.9,
+          "reviews": 145,
+          "type": "Service de location de vélo",
+          "place_id": "10378472204291913185",
+          "links": {
+            "phone": "tel:07 71 12 09 00",
+            "website": "http://www.gyromalo.fr/?utm_source=gmb"
+          },
+          "website": "http://www.gyromalo.fr/?utm_source=gmb"
+        },
+        {
+          "title": "Velo Emeraude",
+          "address": "5 Rue d'Aleth, 35350 La Gouesnière",
+          "phone": "02 99 89 75 43",
+          "rating": 4.7,
+          "reviews": 83,
+          "type": "Service de location de vélo",
+          "place_id": "14208237458676413061",
+          "links": {
+            "phone": "tel:02 99 89 75 43",
+            "website": "http://velo-corsaire.fr/"
+          },
+          "website": "http://velo-corsaire.fr/"
+        },
+        {
+          "title": "CANCAVELO, location de Fat Bike, vélos VTC, VAE, scooters, gyropodes, trottinettes électriques",
+          "address": "27 bis Av. du Général de Gaulle, 35260 Cancale",
+          "phone": "07 64 50 40 40",
+          "rating": 4.9,
+          "reviews": 80,
+          "type": "Service de location de vélo",
+          "place_id": "3454446015140045742",
+          "links": {
+            "phone": "tel:07 64 50 40 40",
+            "website": "https://www.cancavelo.fr/"
+          },
+          "website": "https://www.cancavelo.fr/"
+        },
+        {
+          "title": "Mobilici",
+          "address": "Esp. Saint-Vincent, 35400 Saint-Malo",
+          "phone": "07 64 50 40 40",
+          "rating": 4.2,
+          "reviews": 5,
+          "type": "Service de location de vélo",
+          "place_id": "14737350508380942567",
+          "links": {
+            "phone": "tel:07 64 50 40 40",
+            "website": "https://cancavelo-scootescape.lokki.rent/"
+          },
+          "website": "https://cancavelo-scootescape.lokki.rent/"
+        },
+        {
+          "title": "Scoot Escape Le meilleur moyen de découvrir le Pays malouin en deux-roues électriques",
+          "address": "27 Av. du Général de Gaulle, 35260 Cancale",
+          "phone": "07 74 68 67 40",
+          "rating": 4.8,
+          "reviews": 63,
+          "type": "Service de location de vélo",
+          "place_id": "9582600374907671315",
+          "links": {
+            "phone": "tel:07 74 68 67 40",
+            "website": "https://www.scootescape.bzh/"
+          },
+          "website": "https://www.scootescape.bzh/"
+        },
+        {
+          "title": "Giant Saint Malo",
+          "address": "44 Rue du Général Patton, 35400 Saint-Malo",
+          "phone": "02 99 82 01 84",
+          "rating": 4.6,
+          "reviews": 82,
+          "type": "Magasin de vélos",
+          "place_id": "6454323716633977772",
+          "links": {
+            "phone": "tel:02 99 82 01 84",
+            "website": "https://www.mistervelo.fr/"
+          },
+          "website": "https://www.mistervelo.fr/"
+        }
+      ],
+      "ads": [],
+      "related_questions": [
+        {
+          "question": "Quel est le prix moyen de la location d'un vélo ?",
+          "snippet": "Quels sont les tarifs moyens de location de vélo ?"
+        },
+        {
+          "question": "Comment se déplacer à St Malo ?",
+          "snippet": "De là, vous pouvez vous rendre à Saint-Malo en train, en navette ou en taxi. Le train est le moyen de transport le plus populaire et le plus pratique pour se rendre à Saint-Malo. Si vous voyagez en voiture, la D137 est la principale départementale reliant Saint-Malo et Rennes, en une heure de trajet environ."
+        },
+        {
+          "question": "Quelles sont les pistes cyclables les plus belles autour de Saint-Malo ?"
+        },
+        {
+          "question": "Est-il possible de louer un vélo chez Decathlon ?"
+        }
+      ],
+      "knowledge_graph": {
+        "place_id": "ChIJn60dpWKBDkgR4bUVeHu9B5A",
+        "afficher_les_résultats_pour": [
+          {
+            "name": "Location de vélo électrique à Saint Pierre Quiberon",
+            "link": "https://www.google.fr/search?newwindow=1&sca_esv=ec80bda997b12d86&hl=fr&gl=fr&q=Location+de+v%C3%A9lo+%C3%A9lectrique+%C3%A0+Saint+Pierre+Quiberon&si=AL3DRZEWVmFiGud7Reg_5teiS4bT88xTWryqJTn-q1g2V9kM0pgst0UGGZzfzcsVxzRmkm6WlH_broQ7HO6alEsK5TPyblhDM16cERah5tWo7q3N-Eve_nd8Kz6vdbrO7bK64cm3oKHV7eni5DqH-S3VvUhUtiHMcShUJGu-781x0ook0aaF1INLc7bhlCICsq-3l5Gsh9XzmJk0V1TmUMHVUFv8GM7uApnUSNbwMVjkR2oFCUxNRnI%3D&sa=X&ved=2ahUKEwi3s_ai5o2TAxWJc_EDHVysNIIQ6RN6BAgdEAE"
+          }
+        ]
+      }
+    },
+    "maps:location velo Saint-Malo": {
+      "local_results": [
+        {
+          "title": "Gyro Malo Sasu",
+          "address": "Esp. Saint-Vincent 5400, 35400 Saint-Malo",
+          "phone": "07 71 12 09 00",
+          "rating": 4.9,
+          "reviews": 145,
+          "type": "Service de location de vélo",
+          "types": [
+            "Service de location de vélo",
+            "Service d'organisation d'événements professionnels",
+            "Agence de visites touristiques"
+          ],
+          "place_id": "ChIJn60dpWKBDkgR4bUVeHu9B5A",
+          "data_id": "0x480e8162a51dad9f:0x9007bd7b7815b5e1",
+          "website": "http://www.gyromalo.fr/?utm_source=gmb",
+          "thumbnail": "https://lh3.googleusercontent.com/gps-cs-s/AHVAwerg6Szj0SSVhkS59ThNm49KDd6iNZfA2jK8Hk7MG9z0kFUUqVL1m-iewoC-rPH6HzYGy4OvxBvRdkGlqqt97mZz-iuSdDFmY87gMSGX9Yfhy3avwKSkEFocUJFJ1luLuIRoM7-2=w122-h92-k-no",
+          "gps_coordinates": {
+            "latitude": 48.650572499999996,
+            "longitude": -2.0212187
+          },
+          "operating_hours": {
+            "samedi": "09:00–20:00",
+            "dimanche": "09:00–20:00",
+            "lundi": "09:00–20:00",
+            "mardi": "09:00–20:00",
+            "mercredi": "09:00–20:00",
+            "jeudi": "09:00–20:00",
+            "vendredi": "09:00–20:00"
+          },
+          "extensions": [
+            {
+              "accessibility": [
+                "Parking accessible en fauteuil roulant"
+              ]
+            },
+            {
+              "payments": [
+                "Cartes de crédit",
+                "Cartes de débit",
+                "Paiements mobiles NFC"
+              ]
+            },
+            {
+              "children": [
+                "Remise pour les familles"
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Alex Hinault Cycles",
+          "address": "Av. de Launay Breton, 35400 Saint-Malo",
+          "phone": "09 81 95 57 98",
+          "rating": 4.7,
+          "reviews": 116,
+          "type": "Magasin de vélos",
+          "types": [
+            "Magasin de vélos"
+          ],
+          "place_id": "ChIJ2ZqmG_6DDkgRw2HNGKeJok8",
+          "data_id": "0x480e83fe1ba69ad9:0x4fa289a718cd61c3",
+          "website": "http://alexhinaultsaintmalocycles.fr/",
+          "thumbnail": "https://lh3.googleusercontent.com/gps-cs-s/AHVAweoaF8H8L0ZXO2bxEFAS2ko6PoNp2tLIi4gcs_PHvDoJt0hS7UNI8wARjTonTRz-YeAX9PQA7ed8GF1ng-b1a_Tude6o3Qh11UqmYTCRZah3zkowMz4MHa1w-i4dQIiFrPstYlkLWg=w326-h92-k-no",
+          "gps_coordinates": {
+            "latitude": 48.6264828,
+            "longitude": -1.9937951999999999
+          },
+          "operating_hours": {
+            "samedi": "10:00–18:00",
+            "dimanche": "Fermé",
+            "lundi": "Fermé",
+            "mardi": "10:00–12:30, 14:00–19:00",
+            "mercredi": "10:00–12:30, 14:00–19:00",
+            "jeudi": "10:00–12:30, 14:00–19:00",
+            "vendredi": "10:00–12:30, 14:00–19:00"
+          },
+          "extensions": [
+            {
+              "accessibility": [
+                "Entrée accessible en fauteuil roulant",
+                "Parking accessible en fauteuil roulant"
+              ]
+            },
+            {
+              "payments": [
+                "Cartes de débit",
+                "Paiements mobiles NFC"
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Scoot Escape Le meilleur moyen de découvrir le Pays malouin en deux-roues électriques",
+          "address": "27 Av. du Général de Gaulle, 35260 Cancale",
+          "phone": "07 74 68 67 40",
+          "rating": 4.8,
+          "reviews": 63,
+          "type": "Service de location de vélo",
+          "types": [
+            "Service de location de vélo",
+            "Service de location de scooters"
+          ],
+          "place_id": "ChIJ5-GMfDydDkgRE5PlKkU8_IQ",
+          "data_id": "0x480e9d3c7c8ce1e7:0x84fc3c452ae59313",
+          "website": "https://www.scootescape.bzh/",
+          "thumbnail": "https://lh3.googleusercontent.com/gps-cs-s/AHVAwep8qykyU0SFm8QK-DVrw_VjaRUxCcjJzR-dI6dhve2Y-IMyDSGxZZc6EdQUjAl402d21bozTpZhhj21LbHLWSBo2_tXwQqUH8oa3vsOA7Jxy3Y1rG25vD-iqE_uP-0rhGzoY3k=w80-h106-k-no",
+          "gps_coordinates": {
+            "latitude": 48.676933,
+            "longitude": -1.8559196
+          },
+          "operating_hours": {
+            "samedi": "09:00–19:00",
+            "dimanche": "09:00–19:00",
+            "lundi": "09:00–19:00",
+            "mardi": "09:00–19:00",
+            "mercredi": "09:00–19:00",
+            "jeudi": "09:00–19:00",
+            "vendredi": "09:00–19:00"
+          },
+          "extensions": [
+            {
+              "accessibility": [
+                "Entrée accessible en fauteuil roulant",
+                "Toilettes accessibles en fauteuil roulant"
+              ]
+            },
+            {
+              "amenities": [
+                "Toilettes",
+                "Toilettes non genrées"
+              ]
+            },
+            {
+              "crowd": [
+                "LGBTQ+ friendly",
+                "Safe place pour les transgenres"
+              ]
+            },
+            {
+              "payments": [
+                "Cartes de crédit",
+                "Cartes de débit",
+                "Paiements mobiles NFC"
+              ]
+            }
+          ]
+        },
+        {
+          "title": "BIK'INBAIE",
+          "address": "2 Rue d'Asteriac, 50170 Beauvoir",
+          "phone": "07 49 26 56 22",
+          "rating": 5,
+          "reviews": 381,
+          "type": "Service de location de vélo",
+          "types": [
+            "Service de location de vélo"
+          ],
+          "place_id": "ChIJWdyLBOivDkgRcbTVvgAPF6k",
+          "data_id": "0x480eafe8048bdc59:0xa9170f00bed5b471",
+          "website": "https://www.bikinbaie.com/",
+          "thumbnail": "https://lh3.googleusercontent.com/gps-cs-s/AHVAweq5mWUzesJiOVWRg2zxzFhYvH-GRy0SjwmHXC6eBSAfed9SHZiHEEfVRib7CBKF4PHxMOZ-XIrdxuzLjPJ-u6FjE3dIre6gJSN6MxqHYscaR7re_8oAk8fGIMpgKWWbo3u50V74-Vdn26D9=w163-h92-k-no",
+          "gps_coordinates": {
+            "latitude": 48.5975015,
+            "longitude": -1.5123026
+          },
+          "operating_hours": {
+            "samedi": "09:00–18:00",
+            "dimanche": "09:00–18:00",
+            "lundi": "Fermé",
+            "mardi": "Fermé",
+            "mercredi": "09:00–18:00",
+            "jeudi": "09:00–18:00",
+            "vendredi": "09:00–18:00"
+          },
+          "extensions": [
+            {
+              "service_options": [
+                "Services sur place"
+              ]
+            },
+            {
+              "accessibility": [
+                "Entrée accessible en fauteuil roulant",
+                "Parking accessible en fauteuil roulant"
+              ]
+            },
+            {
+              "crowd": [
+                "LGBTQ+ friendly",
+                "Safe place pour les transgenres"
+              ]
+            },
+            {
+              "payments": [
+                "Cartes de crédit",
+                "Cartes de débit",
+                "Paiements mobiles NFC"
+              ]
+            },
+            {
+              "parking": [
+                "Parking gratuit",
+                "Parking gratuit dans la rue",
+                "Parking payant",
+                "Parking sur place"
+              ]
+            }
+          ],
+          "service_options": {
+            "services_sur_place": true
+          }
+        },
+        {
+          "title": "KAOUANN",
+          "address": "21 Rue du Quai, 22100 Dinan",
+          "phone": "02 56 11 00 42",
+          "rating": 4.8,
+          "reviews": 125,
+          "type": "Service de location de vélo",
+          "types": [
+            "Service de location de vélo",
+            "Agence de voyages"
+          ],
+          "place_id": "ChIJCUAHKSKLDkgRn9VJVzKbb7Q",
+          "data_id": "0x480e8b2229074009:0xb46f9b325749d59f",
+          "website": "http://www.kaouann.fr/",
+          "thumbnail": "https://lh3.googleusercontent.com/gps-cs-s/AHVAwepVS4VrZIrPqNKOHaBxY0T76YE8mlgQJ8QgGmodWh2Kpw3Ng325SR8JTst2moOrZB7IjG_UMnUqdiUxANehlI3KRFS2UQUNLgMUGHkR9U4e9Yfp91Wjq-DoTUyG5vpREzJOL3Kc=w122-h92-k-no",
+          "gps_coordinates": {
+            "latitude": 48.457142399999995,
+            "longitude": -2.0379384
+          },
+          "operating_hours": {
+            "samedi": "10:00–18:00",
+            "dimanche": "Fermé",
+            "lundi": "10:00–18:00",
+            "mardi": "10:00–18:00",
+            "mercredi": "10:00–18:00",
+            "jeudi": "10:00–18:00",
+            "vendredi": "10:00–18:00"
+          },
+          "extensions": [
+            {
+              "payments": [
+                "Cartes de crédit",
+                "Cartes de débit"
+              ]
+            }
+          ]
+        },
+        {
+          "title": "CANCAVELO, location de Fat Bike, vélos VTC, VAE, scooters, gyropodes, trottinettes électriques",
+          "address": "27 bis Av. du Général de Gaulle, 35260 Cancale",
+          "phone": "07 64 50 40 40",
+          "rating": 4.9,
+          "reviews": 80,
+          "type": "Service de location de vélo",
+          "types": [
+            "Service de location de vélo"
+          ],
+          "place_id": "ChIJccdeMFydDkgRrqMvLFmo8C8",
+          "data_id": "0x480e9d5c305ec771:0x2ff0a8592c2fa3ae",
+          "website": "https://www.cancavelo.fr/",
+          "thumbnail": "https://lh3.googleusercontent.com/gps-cs-s/AHVAweqrg6Snuz4rAW27Fy6nxXLFYnZCl3egGhwWY0p4irUom5UP-U_WYlcpf7ePbb31nw0ePm_GKGYIyUDK4QAkByR3KzOTDUVZqe5VE5hHlsj_Rpu8emsjmbPH6XOm-me4I2T_6pN0PzRCQlw=w80-h106-k-no",
+          "gps_coordinates": {
+            "latitude": 48.676845199999995,
+            "longitude": -1.8562036
+          },
+          "operating_hours": {
+            "samedi": "09:30–19:00",
+            "dimanche": "09:30–13:00, 17:00–18:30",
+            "lundi": "09:30–19:00",
+            "mardi": "09:30–19:00",
+            "mercredi": "09:30–19:00",
+            "jeudi": "09:30–19:00",
+            "vendredi": "09:30–19:00"
+          },
+          "extensions": [
+            {
+              "accessibility": [
+                "Parking accessible en fauteuil roulant"
+              ]
+            },
+            {
+              "amenities": [
+                "Toilettes non genrées"
+              ]
+            },
+            {
+              "crowd": [
+                "LGBTQ+ friendly",
+                "Safe place pour les transgenres"
+              ]
+            },
+            {
+              "payments": [
+                "Cartes de crédit",
+                "Cartes de débit",
+                "Paiements mobiles NFC"
+              ]
+            },
+            {
+              "parking": [
+                "Parking gratuit dans la rue"
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Bicloque - Location vélo et vélo électrique à Granville",
+          "phone": "06 77 56 91 92",
+          "rating": 5,
+          "reviews": 15,
+          "type": "Service de location de vélo",
+          "types": [
+            "Service de location de vélo",
+            "Service establishment"
+          ],
+          "place_id": "ChIJqULlE6JM6IURIEhDKkKH988",
+          "data_id": "0x85e84ca213e542a9:0xcff787422a434820",
+          "website": "https://bicloque.fr/",
+          "thumbnail": "https://lh3.googleusercontent.com/gps-cs-s/AHVAwerpXXiSK0AM0rQjb3NNnn16NYmPaS7IrEps1k1sp4fyPhepmprNcFwTsrxMgdv-O4HTNidDz2Sv2nj5c5L4Mmc5JAewpG4_m9zjUl3dd3cBvTYcRJLfVXaNQzvNR3fIOVRN4U7O=w121-h92-k-no",
+          "gps_coordinates": {
+            "latitude": 48.707805,
+            "longitude": 0.6972746
+          },
+          "operating_hours": {
+            "samedi": "Ouvert 24h/24",
+            "dimanche": "Ouvert 24h/24",
+            "lundi": "Ouvert 24h/24",
+            "mardi": "Ouvert 24h/24",
+            "mercredi": "Ouvert 24h/24",
+            "jeudi": "Ouvert 24h/24",
+            "vendredi": "Ouvert 24h/24"
+          }
+        },
+        {
+          "title": "IRIS SPORT - Location de Vélo à Domicile",
+          "phone": "06 67 10 91 23",
+          "rating": 4.9,
+          "reviews": 77,
+          "type": "Service de location de vélo",
+          "types": [
+            "Service de location de vélo",
+            "Service establishment"
+          ],
+          "place_id": "ChIJS6P0e09VCUgRw5ToYLhPtUo",
+          "data_id": "0x4809554f7bf4a34b:0x4ab54fb860e894c3",
+          "website": "https://www.iris-sport.fr/",
+          "thumbnail": "https://lh3.googleusercontent.com/gps-cs-s/AHVAweqLIcpeVkQS8KnYu_DaqT4z7T_D-0ZksOdGY4RvHky77tlshP4edp0-zGqXdpejD5BVbz_FAZ1vLNhU8gsTOYtbFO0oQe5d1Orpb67dp1ykZsDnJ_XFuU5kKJ-WOIHNwd6UIgMo=w80-h106-k-no",
+          "gps_coordinates": {
+            "latitude": 48.675807,
+            "longitude": -1.4609773
+          },
+          "operating_hours": {
+            "samedi": "08:00–20:00",
+            "dimanche": "08:00–20:00",
+            "lundi": "08:00–20:00",
+            "mardi": "08:00–20:00",
+            "mercredi": "08:00–20:00",
+            "jeudi": "08:00–20:00",
+            "vendredi": "08:00–20:00"
+          }
+        },
+        {
+          "title": "Vélos Aventure",
+          "address": "6 Rue Jacques Cartier, 22380 Saint-Cast-le-Guildo",
+          "phone": "07 85 35 15 33",
+          "rating": 4.8,
+          "reviews": 38,
+          "type": "Service de location de vélo",
+          "types": [
+            "Service de location de vélo"
+          ],
+          "place_id": "ChIJHerJ59txDkgRLRXAF3K1bug",
+          "data_id": "0x480e71dbe7c9ea1d:0xe86eb57217c0152d",
+          "website": "https://www.velosaventure.fr/",
+          "thumbnail": "https://lh3.googleusercontent.com/gps-cs-s/AHVAwepcn8H5Lb01wWifTQEdJzZ_a4AkJVqgcspQHeC8c01sz4UaZrckJeJlDXsfVKHaYVtzKLugdFisBemIbOtZlhH7J1jigL3l8YEhtblaM3EXfdnUhZlG15-22xgsM6Unp0c7Hi_hYQ=w122-h92-k-no",
+          "gps_coordinates": {
+            "latitude": 48.633186599999995,
+            "longitude": -2.2569597
+          },
+          "operating_hours": {
+            "samedi": "09:30–18:30",
+            "dimanche": "09:30–18:30",
+            "lundi": "09:30–18:30",
+            "mardi": "09:30–18:30",
+            "mercredi": "09:30–18:30",
+            "jeudi": "09:30–18:30",
+            "vendredi": "09:30–18:30"
+          },
+          "extensions": [
+            {
+              "accessibility": [
+                "Entrée accessible en fauteuil roulant",
+                "Parking accessible en fauteuil roulant"
+              ]
+            },
+            {
+              "payments": [
+                "Cartes de crédit",
+                "Cartes de débit",
+                "Paiements mobiles NFC"
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Loc M'Road",
+          "address": "90 Rue du Bord de Mer, 35120 Hirel",
+          "phone": "07 85 08 52 33",
+          "rating": 4.9,
+          "reviews": 177,
+          "type": "Service de location de vélo",
+          "types": [
+            "Service de location de vélo",
+            "Service de location de scooters"
+          ],
+          "place_id": "ChIJIaQD3GaZDkgRB1q30q8UN_A",
+          "data_id": "0x480e9966dc03a421:0xf03714afd2b75a07",
+          "website": "https://www.facebook.com/Loc-MRoad-1896011680528364/",
+          "thumbnail": "https://lh3.googleusercontent.com/gps-cs-s/AHVAwepaHvks_rpFVnRUC4zTU0Je4-Z2UdxO4AIBCLBi1LRrTJQ-fpszhRbWRd-Wh85nX0ppphmIRd2dBpb6sxC0-ejYh9uvGinHkS0v6KJp0TFzEwjTzzfwQptbEGBDT8cOz1Z0QfPNig=w122-h92-k-no",
+          "gps_coordinates": {
+            "latitude": 48.608055099999994,
+            "longitude": -1.8201509999999999
+          },
+          "operating_hours": {
+            "samedi": "09:30–11:30, 17:00–19:00",
+            "dimanche": "09:30–11:30, 17:00–19:00",
+            "lundi": "09:30–11:30, 17:00–19:00",
+            "mardi": "09:30–11:30, 17:00–19:00",
+            "mercredi": "09:30–11:30, 17:00–19:00",
+            "jeudi": "09:30–11:30, 17:00–19:00",
+            "vendredi": "09:30–11:30, 17:00–19:00"
+          },
+          "extensions": [
+            {
+              "accessibility": [
+                "Entrée accessible en fauteuil roulant",
+                "Parking accessible en fauteuil roulant"
+              ]
+            },
+            {
+              "payments": [
+                "Cartes de crédit",
+                "Cartes de débit"
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Velo Emeraude",
+          "address": "5 Rue d'Aleth, 35350 La Gouesnière",
+          "phone": "02 99 89 75 43",
+          "rating": 4.7,
+          "reviews": 83,
+          "type": "Service de location de vélo",
+          "types": [
+            "Service de location de vélo",
+            "Magasin de vélos",
+            "Service de livraison"
+          ],
+          "place_id": "ChIJa5mHB2iDDkgRhXLOsLDMLcU",
+          "data_id": "0x480e83680787996b:0xc52dccb0b0ce7285",
+          "website": "http://velo-corsaire.fr/",
+          "thumbnail": "https://lh3.googleusercontent.com/gps-cs-s/AHVAwepVcCnIzkznr2V2CH1AR6ge3672syHvG76VaB9JLPJ2yn5itXb5KvRxVWa1W_iKH9qLXExFNtTmJQ4cpufA0iib-Gi4g5Bo3xmdDTsxfanOK9TPAcNod1EnEe-NooZdRu93fOX2SA=w80-h142-k-no",
+          "gps_coordinates": {
+            "latitude": 48.604138999999996,
+            "longitude": -1.8963850999999998
+          },
+          "operating_hours": {
+            "samedi": "09:30–12:00, 15:00–18:00",
+            "dimanche": "Fermé",
+            "lundi": "Fermé",
+            "mardi": "09:30–12:00, 14:30–18:00",
+            "mercredi": "09:30–12:00, 14:30–18:00",
+            "jeudi": "09:30–12:00, 14:30–18:00",
+            "vendredi": "09:30–12:00, 14:30–18:00"
+          },
+          "extensions": [
+            {
+              "service_options": [
+                "Livraison"
+              ]
+            },
+            {
+              "accessibility": [
+                "Entrée accessible en fauteuil roulant",
+                "Parking accessible en fauteuil roulant"
+              ]
+            },
+            {
+              "payments": [
+                "Cartes de crédit",
+                "Cartes de débit",
+                "Paiements mobiles NFC"
+              ]
+            }
+          ],
+          "service_options": {
+            "livraison": true
+          }
+        },
+        {
+          "title": "BICLOUZH",
+          "phone": "06 66 53 91 55",
+          "rating": 5,
+          "reviews": 209,
+          "type": "Service de location de vélo",
+          "types": [
+            "Service de location de vélo",
+            "Magasin de réparation de vélos",
+            "Service establishment"
+          ],
+          "place_id": "ChIJFSAxTB2FdAIRNexCr8DA4jg",
+          "data_id": "0x274851d4c312015:0x38e2c0c0af42ec35",
+          "website": "https://biclouzh.fr/",
+          "thumbnail": "https://lh3.googleusercontent.com/gps-cs-s/AHVAweo65HZQ6pA9W0ZryXFFhBjf-V6A0AnW8qmTK1uaMRnm5377zDQ0jycydFMolhnjzxFuA249ENGQ4jZdxEVC8AuARSgC-lLa0ablsclb9K3okkhLtmyOkJmlTaQm8-o2WiHBNRek=w137-h92-k-no",
+          "gps_coordinates": {
+            "latitude": 48.1321272,
+            "longitude": -1.5754241
+          },
+          "operating_hours": {
+            "samedi": "08:00–20:00",
+            "dimanche": "08:00–20:00",
+            "lundi": "08:00–20:00",
+            "mardi": "08:00–20:00",
+            "mercredi": "08:00–20:00",
+            "jeudi": "08:00–20:00",
+            "vendredi": "08:00–20:00"
+          },
+          "extensions": [
+            {
+              "crowd": [
+                "LGBTQ+ friendly"
+              ]
+            },
+            {
+              "planning": [
+                "Rendez-vous obligatoire"
+              ]
+            }
+          ]
+        },
+        {
+          "title": "thomlaloc",
+          "address": "Rue de Ker Gai, 35800 Saint-Briac-sur-Mer",
+          "phone": "06 72 85 27 86",
+          "rating": 4.7,
+          "reviews": 29,
+          "type": "Service de location de vélo",
+          "types": [
+            "Service de location de vélo"
+          ],
+          "place_id": "ChIJvZH6tY1_DkgRhsbyA9MOk64",
+          "data_id": "0x480e7f8db5fa91bd:0xae930ed303f2c686",
+          "website": "https://thomlaloc.lokki.rent/",
+          "thumbnail": "https://lh3.googleusercontent.com/gps-cs-s/AHVAweo6sC6iEP2UgO7Pj5BKxZvxEtOkTCvnWScAhsb13yFKa3IDY4DvA98W9iR8w_qeD0PEKV0pScCjvZA3Q0nJrYjeTFfZPtWwSOG74gYD4ZBDpgi2xP7opfETWhpvwo5KCwr3P5Gi=w122-h92-k-no",
+          "gps_coordinates": {
+            "latitude": 48.632504399999995,
+            "longitude": -2.1255005
+          },
+          "operating_hours": {
+            "samedi": "09:00–20:00",
+            "dimanche": "09:00–20:00",
+            "lundi": "09:00–20:00",
+            "mardi": "09:00–20:00",
+            "mercredi": "09:00–20:00",
+            "jeudi": "09:00–20:00",
+            "vendredi": "09:00–20:00"
+          },
+          "extensions": [
+            {
+              "accessibility": [
+                "Entrée accessible en fauteuil roulant",
+                "Parking accessible en fauteuil roulant"
+              ]
+            },
+            {
+              "payments": [
+                "Cartes de crédit",
+                "Cartes de débit",
+                "Chèques",
+                "Paiements mobiles NFC"
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Mobilici",
+          "address": "Esp. Saint-Vincent, 35400 Saint-Malo",
+          "phone": "07 64 50 40 40",
+          "rating": 4.2,
+          "reviews": 5,
+          "type": "Service de location de vélo",
+          "types": [
+            "Service de location de vélo"
+          ],
+          "place_id": "ChIJLaQo_YyBDkgR5_B3njSWhcw",
+          "data_id": "0x480e818cfd28a42d:0xcc8596349e77f0e7",
+          "website": "https://cancavelo-scootescape.lokki.rent/",
+          "thumbnail": "https://lh3.googleusercontent.com/gps-cs-s/AHVAweob6xDsi1oakK3jnjdPiCN-97-b6J2Q1kNKSe6Lnj4owjrSsrkIJtiPgy4bNu2LXHM1Q7vCZPHGkevVvR7zfvvcfi2H-Pr1qa75P2Dx4GwVR5jZ9X88P6caf-4vDS8NSrhOw-fMIg=w122-h92-k-no",
+          "gps_coordinates": {
+            "latitude": 48.650118899999995,
+            "longitude": -2.0217337
+          },
+          "operating_hours": {
+            "samedi": "09:00–19:00",
+            "dimanche": "09:00–19:00",
+            "lundi": "09:00–19:00",
+            "mardi": "09:00–19:00",
+            "mercredi": "09:00–19:00",
+            "jeudi": "09:00–19:00",
+            "vendredi": "09:00–19:00"
+          },
+          "extensions": [
+            {
+              "crowd": [
+                "LGBTQ+ friendly",
+                "Safe place pour les transgenres"
+              ]
+            },
+            {
+              "payments": [
+                "Cartes de débit"
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Cycles Nicole",
+          "address": "11 Rue du Président Robert Schuman, 35400 Saint-Malo",
+          "phone": "02 99 56 11 06",
+          "rating": 4.3,
+          "reviews": 55,
+          "type": "Magasin de vélos",
+          "types": [
+            "Magasin de vélos",
+            "Magasin de réparation de vélos"
+          ],
+          "place_id": "ChIJidXRR9KDDkgR2slVQUXakIE",
+          "data_id": "0x480e83d247d1d589:0x8190da454155c9da",
+          "website": "http://www.cyclesnicole.fr/?utm_source=gmb",
+          "thumbnail": "https://lh3.googleusercontent.com/gps-cs-s/AHVAweoa1B4esaa-D8uaiCJUGRvpBPb6qydicwp1KPYUcXZGTyz2s__5-45bpl7DwCCOu08Psn5306f-VeTcflLB36lgUNpM6XMAlJ76X8Doji6ld-mCcS3lxE6eBQ-9zLpe2eCgR5k59w=w80-h106-k-no",
+          "gps_coordinates": {
+            "latitude": 48.6582557,
+            "longitude": -1.9853901999999999
+          },
+          "operating_hours": {
+            "samedi": "09:00–12:30, 14:00–18:00",
+            "dimanche": "Fermé",
+            "lundi": "Fermé",
+            "mardi": "09:00–12:30, 14:00–19:00",
+            "mercredi": "09:00–12:30, 14:00–19:00",
+            "jeudi": "09:00–12:30, 14:00–19:00",
+            "vendredi": "09:00–12:30, 14:00–19:00"
+          },
+          "extensions": [
+            {
+              "service_options": [
+                "Retrait en magasin",
+                "Achats en magasin",
+                "Services sur place"
+              ]
+            },
+            {
+              "accessibility": [
+                "Entrée accessible en fauteuil roulant",
+                "Parking accessible en fauteuil roulant"
+              ]
+            },
+            {
+              "activities": [
+                "Location de vélos"
+              ]
+            },
+            {
+              "payments": [
+                "Cartes de crédit",
+                "Cartes de débit",
+                "Chèques",
+                "Paiements mobiles NFC"
+              ]
+            }
+          ],
+          "service_options": {
+            "achats_en_magasin": true,
+            "retrait_en_magasin": true
+          }
+        },
+        {
+          "title": "Vélogen | Atelier mobile de réparation de cycles",
+          "phone": "06 95 14 95 95",
+          "rating": 5,
+          "reviews": 90,
+          "type": "Service de location de vélo",
+          "types": [
+            "Service de location de vélo",
+            "Magasin de réparation de vélos",
+            "Magasin de vélos",
+            "Service establishment",
+            "Magasin de vélos d'occasion"
+          ],
+          "place_id": "ChIJqwCqKZYzV2MR6A9tSpQmNlM",
+          "data_id": "0x6357339629aa00ab:0x533626944a6d0fe8",
+          "website": "http://www.velogen.fr/",
+          "thumbnail": "https://lh3.googleusercontent.com/gps-cs-s/AHVAweqCXINAtJHkSIJaNhLEsBIwRdouvL_g35KbUjsusIfElt2xFzrlt7F1RrsEzbi0gJOcu9Iq2LCBXkiK1A7HKkC1t-4inQhunb5BxTSDVUHVNLYLorT_3I8H03sM1Saw7JFNalaa=w122-h92-k-no",
+          "gps_coordinates": {
+            "latitude": 48.6103029,
+            "longitude": -2.074874
+          },
+          "operating_hours": {
+            "samedi": "Fermé",
+            "dimanche": "Fermé",
+            "lundi": "08:00–18:15",
+            "mardi": "08:00–18:15",
+            "mercredi": "08:00–18:15",
+            "jeudi": "08:00–18:15",
+            "vendredi": "08:00–18:15"
+          },
+          "extensions": [
+            {
+              "planning": [
+                "Rendez-vous obligatoire"
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Juno Vélo",
+          "address": "20 Rte de Langrune, 14750 Saint-Aubin-sur-Mer",
+          "phone": "02 31 97 30 71",
+          "rating": 4.9,
+          "reviews": 211,
+          "type": "Service de location de vélo",
+          "types": [
+            "Service de location de vélo"
+          ],
+          "place_id": "ChIJwVhffGlfCkgRL7jcZf--Jaw",
+          "data_id": "0x480a5f697c5f58c1:0xac25beff65dcb82f",
+          "website": "http://www.junovelo.fr/",
+          "thumbnail": "https://lh3.googleusercontent.com/gps-cs-s/AHVAweosOzwe2EhKOmc2OIIbFmVMImcCRLo_IX6K4EG0pe5AE4E5mb6Z2wvkVN9nLUY2whArm_OTb70g7wKC9x1lIgjnsrBBLGRylg4vV9A86AGuKdizopGN1Rd0mIMRzC1DfDKFHzz1=w80-h106-k-no",
+          "gps_coordinates": {
+            "latitude": 49.3264073,
+            "longitude": -0.3869608
+          },
+          "operating_hours": {
+            "samedi": "09:30–12:30, 14:00–18:00",
+            "dimanche": "09:30–12:30, 14:00–18:00",
+            "lundi": "09:00–17:00",
+            "mardi": "09:00–17:00",
+            "mercredi": "09:00–17:00",
+            "jeudi": "09:00–17:00",
+            "vendredi": "09:00–17:00"
+          },
+          "extensions": [
+            {
+              "service_options": [
+                "Services sur place"
+              ]
+            },
+            {
+              "accessibility": [
+                "Entrée accessible en fauteuil roulant",
+                "Parking accessible en fauteuil roulant"
+              ]
+            },
+            {
+              "payments": [
+                "Cartes de crédit",
+                "Cartes de débit",
+                "Paiements mobiles NFC"
+              ]
+            }
+          ],
+          "service_options": {
+            "services_sur_place": true
+          }
+        },
+        {
+          "title": "Location de vélos Saint Briac & Mini-golf de Saint Briac Sur Mer",
+          "address": "Balcon d'Émeraude, 35800 Saint-Briac-sur-Mer",
+          "phone": "06 66 18 30 82",
+          "rating": 4.6,
+          "reviews": 84,
+          "type": "Service de location de vélo",
+          "types": [
+            "Service de location de vélo",
+            "Mini-golf",
+            "Restaurant",
+            "Snack"
+          ],
+          "place_id": "ChIJecBVYJt-DkgRYWnPpOEAHk0",
+          "data_id": "0x480e7e9b6055c079:0x4d1e00e1a4cf6961",
+          "website": "https://www.minigolfsaintbriac.com/",
+          "thumbnail": "https://lh3.googleusercontent.com/gps-cs-s/AHVAwepeeW8-_BxGQtSDVXHFRRD8dkHP5rRJOS-9d4ECR7xJ24Hic2F3bQTmZP1Mtamj_Z9k6aGZJa98HoALqdH5ALv7oHZWLEOtfzgjChqVcXPCVqO72m9RtK8lTCu_JKes2Yg8VQC1=w80-h106-k-no",
+          "gps_coordinates": {
+            "latitude": 48.6242637,
+            "longitude": -2.1371769
+          },
+          "operating_hours": {
+            "samedi": "10:00–19:30",
+            "dimanche": "10:00–19:30",
+            "lundi": "10:00–19:30",
+            "mardi": "10:00–19:30",
+            "mercredi": "10:00–19:30",
+            "jeudi": "10:00–19:30",
+            "vendredi": "10:00–19:30"
+          },
+          "extensions": [
+            {
+              "payments": [
+                "Cartes de crédit",
+                "Cartes de débit"
+              ]
+            },
+            {
+              "parking": [
+                "Parking gratuit dans la rue"
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Giant Saint Malo",
+          "address": "44 Rue du Général Patton, 35400 Saint-Malo",
+          "phone": "02 99 82 01 84",
+          "rating": 4.6,
+          "reviews": 82,
+          "type": "Service de location de vélo",
+          "types": [
+            "Service de location de vélo",
+            "Magasin de vélos",
+            "Magasin de réparation de vélos",
+            "Magasin d'articles de sports",
+            "Magasin de vélos d'occasion"
+          ],
+          "place_id": "ChIJ1SrPzVSBDkgRrONYSzldklk",
+          "data_id": "0x480e8154cdcf2ad5:0x59925d394b58e3ac",
+          "website": "https://www.mistervelo.fr/",
+          "thumbnail": "https://lh3.googleusercontent.com/gps-cs-s/AHVAweoV9Y9N8S6K2qj12GAnfZ8oqG-XXLdnSvTj2qDh1osA953t1aEhfV2PA4zNybeCwqsT8m7rps4vqsozb-H1G80mQ0VuxtJkWs1nWyXRFOD3Ys-LXpw9j_uzE9FXH2Fv1qKqYKM=w122-h92-k-no",
+          "gps_coordinates": {
+            "latitude": 48.6219274,
+            "longitude": -1.9953424
+          },
+          "operating_hours": {
+            "samedi": "09:30–12:30, 14:30–18:00",
+            "dimanche": "Fermé",
+            "lundi": "Fermé",
+            "mardi": "09:30–12:30, 14:30–19:00",
+            "mercredi": "09:30–12:30, 14:30–19:00",
+            "jeudi": "09:30–12:30, 14:30–19:00",
+            "vendredi": "09:30–12:30, 14:30–19:00"
+          },
+          "description": "Vélos de marque, VTT et de route. Magasin proposant des vélos de marque, y compris pour la route et la montagne, des accessoires et des services d'entretien.",
+          "extensions": [
+            {
+              "service_options": [
+                "Retrait en magasin",
+                "Achats en magasin"
+              ]
+            },
+            {
+              "accessibility": [
+                "Entrée accessible en fauteuil roulant",
+                "Parking accessible en fauteuil roulant"
+              ]
+            },
+            {
+              "offerings": [
+                "Produits d'occasion"
+              ]
+            },
+            {
+              "planning": [
+                "Possibilité de faire des courses rapides"
+              ]
+            },
+            {
+              "payments": [
+                "Cartes de crédit",
+                "Cartes de débit",
+                "Paiements mobiles NFC"
+              ]
+            }
+          ],
+          "service_options": {
+            "achats_en_magasin": true,
+            "retrait_en_magasin": true
+          }
+        },
+        {
+          "title": "Gérald Services",
+          "address": "8 Rue des Lilas, 35270 Combourg",
+          "phone": "06 82 30 88 55",
+          "rating": 4.9,
+          "reviews": 96,
+          "type": "Service de location de vélo",
+          "types": [
+            "Service de location de vélo",
+            "Magasin de réparation de vélos"
+          ],
+          "place_id": "ChIJwTO7lRKVDkgRmOcUYQSY2v0",
+          "data_id": "0x480e951295bb33c1:0xfdda98046114e798",
+          "website": "https://gerald-services.fr/",
+          "thumbnail": "https://lh3.googleusercontent.com/gps-cs-s/AHVAweoqAYgZqDdTtMuJ1YEvBOmplmi2XG2ZHeIyLN1xoKOLSSZKPbJY9hqpfCavGAw3Dysj7QGDVoI42PhMXmP8-Jd5DctX8KNZy36OwdH1j4QH4WAamtzfctqY4MBw4kXo-EqtOxBlXQ=w122-h92-k-no",
+          "gps_coordinates": {
+            "latitude": 48.4146317,
+            "longitude": -1.7379398
+          },
+          "operating_hours": {
+            "samedi": "09:00–12:30, 14:00–18:00",
+            "dimanche": "Fermé",
+            "lundi": "09:00–12:30, 14:00–19:00",
+            "mardi": "09:00–12:30, 14:00–19:00",
+            "mercredi": "09:00–12:30, 14:00–19:00",
+            "jeudi": "09:00–12:30, 14:00–19:00",
+            "vendredi": "09:00–12:30, 14:00–19:00"
+          },
+          "extensions": [
+            {
+              "accessibility": [
+                "Entrée accessible en fauteuil roulant",
+                "Parking accessible en fauteuil roulant"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "autocomplete:location velo Saint-Malo": {
+      "suggestions": [
+        {
+          "value": "location velo saint malo",
+          "type": "QUERY"
+        },
+        {
+          "value": "location vélo saint malo prix",
+          "type": "QUERY"
+        },
+        {
+          "value": "location velo saint malo gare",
+          "type": "QUERY"
+        },
+        {
+          "value": "location velo saint malo de guersac",
+          "type": "QUERY"
+        },
+        {
+          "value": "magasin velo saint malo",
+          "type": "QUERY"
+        },
+        {
+          "value": "loc velo saint malo",
+          "type": "QUERY"
+        },
+        {
+          "value": "location velos st malo",
+          "type": "QUERY"
+        },
+        {
+          "value": "location vtt saint malo",
+          "type": "QUERY"
+        },
+        {
+          "value": "louer velo st malo",
+          "type": "QUERY"
+        },
+        {
+          "value": "magasin vtt saint malo",
+          "type": "QUERY"
+        },
+        {
+          "value": "location velo saint malo intra muros",
+          "type": "QUERY"
+        }
+      ]
+    }
+  },
+  "competitors": {
+    "gyromalosasu": {
+      "name": "Gyro Malo Sasu",
+      "address": "Esp. Saint-Vincent 5400, 35400 Saint-Malo",
+      "phone": "07 71 12 09 00",
+      "website": "http://www.gyromalo.fr/?utm_source=gmb",
+      "rating": 4.9,
+      "reviews": 145,
+      "data_id": null,
+      "type": "Service de location de vélo",
+      "sources": [
+        "local:location velo Saint-Malo",
+        "local:location velo electrique Saint-Malo",
+        "local:bike rental Saint-Malo",
+        "local:maps:location velo Saint-Malo"
+      ],
+      "found_in_urls": []
+    },
+    "cancavelolocationdefatbikevlosvtcvaescootersgyropodestrottinetteslectriques": {
+      "name": "CANCAVELO, location de Fat Bike, vélos VTC, VAE, scooters, gyropodes, trottinettes électriques",
+      "address": "27 bis Av. du Général de Gaulle, 35260 Cancale",
+      "phone": "07 64 50 40 40",
+      "website": "https://www.cancavelo.fr/",
+      "rating": 4.9,
+      "reviews": 80,
+      "data_id": null,
+      "type": "Service de location de vélo",
+      "sources": [
+        "local:location velo Saint-Malo",
+        "local:location velo electrique Saint-Malo",
+        "local:bike rental Saint-Malo",
+        "local:maps:location velo Saint-Malo"
+      ],
+      "found_in_urls": []
+    },
+    "alexhinaultcycles": {
+      "name": "Alex Hinault Cycles",
+      "address": "Av. de Launay Breton, 35400 Saint-Malo",
+      "phone": "09 81 95 57 98",
+      "website": "http://alexhinaultsaintmalocycles.fr/",
+      "rating": 4.7,
+      "reviews": 116,
+      "data_id": null,
+      "type": "Magasin de vélos",
+      "sources": [
+        "local:location velo Saint-Malo",
+        "local:location velo electrique Saint-Malo",
+        "local:maps:location velo Saint-Malo"
+      ],
+      "found_in_urls": []
+    },
+    "mobilici": {
+      "name": "Mobilici",
+      "address": "Esp. Saint-Vincent, 35400 Saint-Malo",
+      "phone": "07 64 50 40 40",
+      "website": "https://cancavelo-scootescape.lokki.rent/",
+      "rating": 4.2,
+      "reviews": 5,
+      "data_id": null,
+      "type": "Service de location de vélo",
+      "sources": [
+        "local:location velo Saint-Malo",
+        "local:bike rental Saint-Malo",
+        "local:maps:location velo Saint-Malo"
+      ],
+      "found_in_urls": []
+    },
+    "giantsaintmalo": {
+      "name": "Giant Saint Malo",
+      "address": "44 Rue du Général Patton, 35400 Saint-Malo",
+      "phone": "02 99 82 01 84",
+      "website": "https://www.mistervelo.fr/",
+      "rating": 4.6,
+      "reviews": 82,
+      "data_id": null,
+      "type": "Magasin de vélos",
+      "sources": [
+        "local:location velo Saint-Malo",
+        "local:location velo electrique Saint-Malo",
+        "local:bike rental Saint-Malo",
+        "local:maps:location velo Saint-Malo"
+      ],
+      "found_in_urls": []
+    },
+    "cyclesnicole": {
+      "name": "Cycles Nicole",
+      "address": "11 Rue du Président Robert Schuman, 35400 Saint-Malo",
+      "phone": "02 99 56 11 06",
+      "website": "http://www.cyclesnicole.fr/?utm_source=gmb",
+      "rating": 4.3,
+      "reviews": 55,
+      "data_id": null,
+      "type": "Magasin de vélos",
+      "sources": [
+        "local:location velo Saint-Malo",
+        "local:location velo electrique Saint-Malo",
+        "local:maps:location velo Saint-Malo"
+      ],
+      "found_in_urls": []
+    },
+    "veloemeraudelocationdevlosaintmalo": {
+      "name": "Velo Emeraude: Location de vélo à Saint-Malo",
+      "address": null,
+      "phone": null,
+      "website": "https://www.velo-corsaire.fr/velo-emeraude-location-de-velo-a-saint-malo/",
+      "rating": null,
+      "reviews": null,
+      "data_id": null,
+      "type": null,
+      "sources": [
+        "organic:location velo Saint-Malo",
+        "organic:location velo electrique Saint-Malo",
+        "organic:bike rental Saint-Malo"
+      ],
+      "found_in_urls": [
+        "https://www.velo-corsaire.fr/velo-emeraude-location-de-velo-a-saint-malo/"
+      ]
+    },
+    "locationdevlossaintmalorservationenligne": {
+      "name": "Location de Vélos à Saint Malo - Réservation en ligne",
+      "address": null,
+      "phone": null,
+      "website": "https://www.velocouest.fr/location-velos-saint-malo/",
+      "rating": null,
+      "reviews": null,
+      "data_id": null,
+      "type": null,
+      "sources": [
+        "organic:location velo Saint-Malo",
+        "organic:location velo electrique Saint-Malo",
+        "organic:bike rental Saint-Malo"
+      ],
+      "found_in_urls": [
+        "https://www.velocouest.fr/location-velos-saint-malo/"
+      ]
+    },
+    "locationsdevlossaintmalobaiedumontsaintmichel": {
+      "name": "Locations de vélos | Saint-Malo – Baie du Mont-Saint-Michel",
+      "address": null,
+      "phone": null,
+      "website": "https://www.saint-malo-tourisme.com/poser-ses-valises/se-deplacer/locations-de-velos/",
+      "rating": null,
+      "reviews": null,
+      "data_id": null,
+      "type": null,
+      "sources": [
+        "organic:location velo Saint-Malo",
+        "organic:location velo electrique Saint-Malo",
+        "organic:bike rental Saint-Malo"
+      ],
+      "found_in_urls": [
+        "https://www.saint-malo-tourisme.com/poser-ses-valises/se-deplacer/locations-de-velos/"
+      ]
+    },
+    "lesvlosbleuslocationdevlossaintmalo": {
+      "name": "Les Vélos Bleus: Location de Vélos à Saint-Malo",
+      "address": null,
+      "phone": null,
+      "website": "https://velos-bleus.fr/",
+      "rating": null,
+      "reviews": null,
+      "data_id": null,
+      "type": null,
+      "sources": [
+        "organic:location velo Saint-Malo",
+        "organic:bike rental Saint-Malo"
+      ],
+      "found_in_urls": [
+        "https://velos-bleus.fr/"
+      ]
+    },
+    "locmalouinelespaddlesetvlossaintmalolocationde": {
+      "name": "Loc'Malouine Les Paddles et Vélos à Saint Malo - Location de ...",
+      "address": null,
+      "phone": null,
+      "website": "https://www.loc-malouine.com/",
+      "rating": null,
+      "reviews": null,
+      "data_id": null,
+      "type": null,
+      "sources": [
+        "organic:location velo Saint-Malo",
+        "organic:bike rental Saint-Malo"
+      ],
+      "found_in_urls": [
+        "https://www.loc-malouine.com/"
+      ]
+    },
+    "commentutiliserlevlomat": {
+      "name": "Comment utiliser le Vélo MAT",
+      "address": null,
+      "phone": null,
+      "website": "https://velomat.stmalo-agglomeration.fr/fr/sharing",
+      "rating": null,
+      "reviews": null,
+      "data_id": null,
+      "type": null,
+      "sources": [
+        "organic:location velo Saint-Malo",
+        "organic:location velo electrique Saint-Malo"
+      ],
+      "found_in_urls": [
+        "https://velomat.stmalo-agglomeration.fr/fr/sharing"
+      ]
+    },
+    "locationdevlosclassiqueslectriquesetscooters": {
+      "name": "Location de vélos classiques, électriques et scooters",
+      "address": null,
+      "phone": null,
+      "website": "https://www.cyclesnicole.fr/location/",
+      "rating": null,
+      "reviews": null,
+      "data_id": null,
+      "type": null,
+      "sources": [
+        "organic:location velo Saint-Malo",
+        "organic:location velo electrique Saint-Malo"
+      ],
+      "found_in_urls": [
+        "https://www.cyclesnicole.fr/location/"
+      ]
+    },
+    "locationdevlossaintmalo35": {
+      "name": "Location de vélos à Saint Malo (35)",
+      "address": null,
+      "phone": null,
+      "website": "https://www.pagesjaunes.fr/annuaire/saint-malo-35/location-de-velos",
+      "rating": null,
+      "reviews": null,
+      "data_id": null,
+      "type": null,
+      "sources": [
+        "organic:location velo Saint-Malo",
+        "organic:location velo electrique Saint-Malo",
+        "organic:bike rental Saint-Malo"
+      ],
+      "found_in_urls": [
+        "https://www.pagesjaunes.fr/annuaire/saint-malo-35/location-de-velos"
+      ]
+    },
+    "louerunvlosaintmalo": {
+      "name": "Louer un vélo à Saint-Malo",
+      "address": null,
+      "phone": null,
+      "website": "https://www.dolcevia.eu/fr/location-velo-saint-malo",
+      "rating": null,
+      "reviews": null,
+      "data_id": null,
+      "type": null,
+      "sources": [
+        "organic:location velo Saint-Malo"
+      ],
+      "found_in_urls": [
+        "https://www.dolcevia.eu/fr/location-velo-saint-malo"
+      ]
+    },
+    "veloemeraude": {
+      "name": "Velo Emeraude",
+      "address": "5 Rue d'Aleth, 35350 La Gouesnière",
+      "phone": "02 99 89 75 43",
+      "website": "http://velo-corsaire.fr/",
+      "rating": 4.7,
+      "reviews": 83,
+      "data_id": null,
+      "type": "Service de location de vélo",
+      "sources": [
+        "local:location velo electrique Saint-Malo",
+        "local:bike rental Saint-Malo",
+        "local:maps:location velo Saint-Malo"
+      ],
+      "found_in_urls": []
+    },
+    "saintmalounnouveauservicedevlosen": {
+      "name": "À SAINT-MALO, UN NOUVEAU SERVICE DE VÉLOS EN ...",
+      "address": null,
+      "phone": null,
+      "website": "https://www.saint-malo.fr/actualites/mobilite-douce-a-saint-malo-un-nouveau-service-de-velos-a-assistance-electrique/",
+      "rating": null,
+      "reviews": null,
+      "data_id": null,
+      "type": null,
+      "sources": [
+        "organic:location velo electrique Saint-Malo"
+      ],
+      "found_in_urls": [
+        "https://www.saint-malo.fr/actualites/mobilite-douce-a-saint-malo-un-nouveau-service-de-velos-a-assistance-electrique/"
+      ]
+    },
+    "locationdevloderennessaintmaloetbretagne": {
+      "name": "Location de vélo De Rennes à Saint-Malo et Bretagne",
+      "address": null,
+      "phone": null,
+      "website": "https://gerald-services.fr/location-de-velos/",
+      "rating": null,
+      "reviews": null,
+      "data_id": null,
+      "type": null,
+      "sources": [
+        "organic:location velo electrique Saint-Malo"
+      ],
+      "found_in_urls": [
+        "https://gerald-services.fr/location-de-velos/"
+      ]
+    },
+    "scootescapelemeilleurmoyendedcouvrirlepaysmalouinendeuxroueslectriques": {
+      "name": "Scoot Escape Le meilleur moyen de découvrir le Pays malouin en deux-roues électriques",
+      "address": "27 Av. du Général de Gaulle, 35260 Cancale",
+      "phone": "07 74 68 67 40",
+      "website": "https://www.scootescape.bzh/",
+      "rating": 4.8,
+      "reviews": 63,
+      "data_id": null,
+      "type": "Service de location de vélo",
+      "sources": [
+        "local:bike rental Saint-Malo",
+        "local:maps:location velo Saint-Malo"
+      ],
+      "found_in_urls": []
+    },
+    "locationvlosaintmalods14jourrservationenligne": {
+      "name": "Location vélo Saint Malo dès 14€/jour | Réservation en ligne",
+      "address": null,
+      "phone": null,
+      "website": "https://www.lokki.rent/location/saint-malo/velo",
+      "rating": null,
+      "reviews": null,
+      "data_id": null,
+      "type": null,
+      "sources": [
+        "organic:bike rental Saint-Malo"
+      ],
+      "found_in_urls": [
+        "https://www.lokki.rent/location/saint-malo/velo"
+      ]
+    },
+    "bikerentalinsaintmalo": {
+      "name": "Bike rental in Saint-Malo",
+      "address": null,
+      "phone": null,
+      "website": "https://www.manawa.com/en-GB/activity/france/saint-malo/bike-tours/bike-rental-in-saint-malo/25080",
+      "rating": null,
+      "reviews": null,
+      "data_id": null,
+      "type": null,
+      "sources": [
+        "organic:bike rental Saint-Malo"
+      ],
+      "found_in_urls": [
+        "https://www.manawa.com/en-GB/activity/france/saint-malo/bike-tours/bike-rental-in-saint-malo/25080"
+      ]
+    },
+    "saintmalobikerentalsrentaroadbikeorgravel": {
+      "name": "Saint Malo Bike Rentals | Rent a Road Bike or Gravel",
+      "address": null,
+      "phone": null,
+      "website": "https://www.cctbikerental.com/rentals/saint-malo-saint-brieuc-bike-rentals/",
+      "rating": null,
+      "reviews": null,
+      "data_id": null,
+      "type": null,
+      "sources": [
+        "organic:bike rental Saint-Malo"
+      ],
+      "found_in_urls": [
+        "https://www.cctbikerental.com/rentals/saint-malo-saint-brieuc-bike-rentals/"
+      ]
+    },
+    "bikinbaie": {
+      "name": "BIK'INBAIE",
+      "address": "2 Rue d'Asteriac, 50170 Beauvoir",
+      "phone": "07 49 26 56 22",
+      "website": "https://www.bikinbaie.com/",
+      "rating": 5,
+      "reviews": 381,
+      "data_id": "0x480eafe8048bdc59:0xa9170f00bed5b471",
+      "type": "Service de location de vélo",
+      "sources": [
+        "local:maps:location velo Saint-Malo"
+      ],
+      "found_in_urls": []
+    },
+    "kaouann": {
+      "name": "KAOUANN",
+      "address": "21 Rue du Quai, 22100 Dinan",
+      "phone": "02 56 11 00 42",
+      "website": "http://www.kaouann.fr/",
+      "rating": 4.8,
+      "reviews": 125,
+      "data_id": "0x480e8b2229074009:0xb46f9b325749d59f",
+      "type": "Service de location de vélo",
+      "sources": [
+        "local:maps:location velo Saint-Malo"
+      ],
+      "found_in_urls": []
+    },
+    "bicloquelocationvloetvlolectriquegranville": {
+      "name": "Bicloque - Location vélo et vélo électrique à Granville",
+      "address": null,
+      "phone": "06 77 56 91 92",
+      "website": "https://bicloque.fr/",
+      "rating": 5,
+      "reviews": 15,
+      "data_id": "0x85e84ca213e542a9:0xcff787422a434820",
+      "type": "Service de location de vélo",
+      "sources": [
+        "local:maps:location velo Saint-Malo"
+      ],
+      "found_in_urls": []
+    },
+    "irissportlocationdevlodomicile": {
+      "name": "IRIS SPORT - Location de Vélo à Domicile",
+      "address": null,
+      "phone": "06 67 10 91 23",
+      "website": "https://www.iris-sport.fr/",
+      "rating": 4.9,
+      "reviews": 77,
+      "data_id": "0x4809554f7bf4a34b:0x4ab54fb860e894c3",
+      "type": "Service de location de vélo",
+      "sources": [
+        "local:maps:location velo Saint-Malo"
+      ],
+      "found_in_urls": []
+    },
+    "vlosaventure": {
+      "name": "Vélos Aventure",
+      "address": "6 Rue Jacques Cartier, 22380 Saint-Cast-le-Guildo",
+      "phone": "07 85 35 15 33",
+      "website": "https://www.velosaventure.fr/",
+      "rating": 4.8,
+      "reviews": 38,
+      "data_id": "0x480e71dbe7c9ea1d:0xe86eb57217c0152d",
+      "type": "Service de location de vélo",
+      "sources": [
+        "local:maps:location velo Saint-Malo"
+      ],
+      "found_in_urls": []
+    },
+    "locmroad": {
+      "name": "Loc M'Road",
+      "address": "90 Rue du Bord de Mer, 35120 Hirel",
+      "phone": "07 85 08 52 33",
+      "website": "https://www.facebook.com/Loc-MRoad-1896011680528364/",
+      "rating": 4.9,
+      "reviews": 177,
+      "data_id": "0x480e9966dc03a421:0xf03714afd2b75a07",
+      "type": "Service de location de vélo",
+      "sources": [
+        "local:maps:location velo Saint-Malo"
+      ],
+      "found_in_urls": []
+    },
+    "biclouzh": {
+      "name": "BICLOUZH",
+      "address": null,
+      "phone": "06 66 53 91 55",
+      "website": "https://biclouzh.fr/",
+      "rating": 5,
+      "reviews": 209,
+      "data_id": "0x274851d4c312015:0x38e2c0c0af42ec35",
+      "type": "Service de location de vélo",
+      "sources": [
+        "local:maps:location velo Saint-Malo"
+      ],
+      "found_in_urls": []
+    },
+    "thomlaloc": {
+      "name": "thomlaloc",
+      "address": "Rue de Ker Gai, 35800 Saint-Briac-sur-Mer",
+      "phone": "06 72 85 27 86",
+      "website": "https://thomlaloc.lokki.rent/",
+      "rating": 4.7,
+      "reviews": 29,
+      "data_id": "0x480e7f8db5fa91bd:0xae930ed303f2c686",
+      "type": "Service de location de vélo",
+      "sources": [
+        "local:maps:location velo Saint-Malo"
+      ],
+      "found_in_urls": []
+    },
+    "vlogenateliermobilederparationdecycles": {
+      "name": "Vélogen | Atelier mobile de réparation de cycles",
+      "address": null,
+      "phone": "06 95 14 95 95",
+      "website": "http://www.velogen.fr/",
+      "rating": 5,
+      "reviews": 90,
+      "data_id": "0x6357339629aa00ab:0x533626944a6d0fe8",
+      "type": "Service de location de vélo",
+      "sources": [
+        "local:maps:location velo Saint-Malo"
+      ],
+      "found_in_urls": []
+    },
+    "junovlo": {
+      "name": "Juno Vélo",
+      "address": "20 Rte de Langrune, 14750 Saint-Aubin-sur-Mer",
+      "phone": "02 31 97 30 71",
+      "website": "http://www.junovelo.fr/",
+      "rating": 4.9,
+      "reviews": 211,
+      "data_id": "0x480a5f697c5f58c1:0xac25beff65dcb82f",
+      "type": "Service de location de vélo",
+      "sources": [
+        "local:maps:location velo Saint-Malo"
+      ],
+      "found_in_urls": []
+    },
+    "locationdevlossaintbriacminigolfdesaintbriacsurmer": {
+      "name": "Location de vélos Saint Briac & Mini-golf de Saint Briac Sur Mer",
+      "address": "Balcon d'Émeraude, 35800 Saint-Briac-sur-Mer",
+      "phone": "06 66 18 30 82",
+      "website": "https://www.minigolfsaintbriac.com/",
+      "rating": 4.6,
+      "reviews": 84,
+      "data_id": "0x480e7e9b6055c079:0x4d1e00e1a4cf6961",
+      "type": "Service de location de vélo",
+      "sources": [
+        "local:maps:location velo Saint-Malo"
+      ],
+      "found_in_urls": []
+    },
+    "graldservices": {
+      "name": "Gérald Services",
+      "address": "8 Rue des Lilas, 35270 Combourg",
+      "phone": "06 82 30 88 55",
+      "website": "https://gerald-services.fr/",
+      "rating": 4.9,
+      "reviews": 96,
+      "data_id": "0x480e951295bb33c1:0xfdda98046114e798",
+      "type": "Service de location de vélo",
+      "sources": [
+        "local:maps:location velo Saint-Malo"
+      ],
+      "found_in_urls": []
+    }
+  }
+}
