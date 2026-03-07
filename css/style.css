@@ -142,6 +142,15 @@ a:hover {
   box-shadow: var(--shadow-md);
 }
 
+.btn--added {
+  background: #10b981 !important;
+  border-color: #10b981 !important;
+  color: #fff !important;
+  transform: scale(1.05);
+  box-shadow: 0 0 0 4px rgba(16, 185, 129, 0.3) !important;
+  transition: all 0.2s ease;
+}
+
 .btn--outline {
   background: transparent;
   color: var(--primary);
