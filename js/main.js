@@ -200,65 +200,124 @@ function initBikeFilters() {
 // --- Booking Buttons (all "Ajouter" / "+" buttons) ---
 function initBookingButtons() {
   const isReservationPage = !!document.getElementById('cartItems');
+  injectMiniCartDrawer();
 
   document.addEventListener('click', (e) => {
     const btn = e.target.closest('.add-to-booking');
     if (!btn) return;
+    e.preventDefault();
+    e.stopPropagation();
 
     const { bike, name, price } = btn.dataset;
     addToCart(bike, name, parseInt(price));
 
-    // Button turns green with checkmark
-    const original = btn.textContent;
+    // Button flash: green checkmark
+    const original = btn.innerHTML;
     const originalBg = btn.style.background;
-    btn.textContent = '✓';
+    btn.innerHTML = '&#10003; Ajoute !';
     btn.style.background = '#10b981';
     btn.style.borderColor = '#10b981';
+    btn.style.color = '#fff';
     setTimeout(() => {
-      btn.textContent = original;
+      btn.innerHTML = original;
       btn.style.background = originalBg;
       btn.style.borderColor = '';
+      btn.style.color = '';
     }, 1200);
 
-    // Floating "+1" badge animates upward from button
-    showAddedBadge(btn, name);
+    // Update navbar cart badge
+    updateNavCartCount();
 
-    // On non-reservation pages, show persistent toast with cart count + link
+    // Show mini-cart drawer (slides in from right)
     if (!isReservationPage) {
-      const count = Object.values(cart).reduce((sum, item) => sum + item.qty, 0);
-      showCartToast(count);
+      showMiniCartDrawer();
     }
   });
 }
 
-function showAddedBadge(btn, name) {
-  // Full-screen overlay flash + centered badge
+// --- Mini-cart drawer (slides in from right, auto-hides) ---
+let miniCartTimeout = null;
+
+function injectMiniCartDrawer() {
+  if (document.getElementById('miniCartDrawer')) return;
+
+  const drawer = document.createElement('div');
+  drawer.id = 'miniCartDrawer';
+  drawer.style.cssText = 'position:fixed;top:0;right:0;width:320px;max-width:85vw;height:100vh;background:#fff;box-shadow:-4px 0 24px rgba(0,0,0,0.15);z-index:9999;transform:translateX(100%);transition:transform 0.35s cubic-bezier(0.16,1,0.3,1);display:flex;flex-direction:column;font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,sans-serif';
+
+  const isEN = document.documentElement.lang === 'en';
+
+  drawer.innerHTML = `
+    <div style="padding:20px 20px 12px;border-bottom:1px solid #e5e7eb;display:flex;justify-content:space-between;align-items:center">
+      <h3 style="margin:0;font-size:1rem;color:#111">${isEN ? 'Your selection' : 'Votre selection'}</h3>
+      <button id="miniCartClose" type="button" style="background:none;border:none;font-size:1.4rem;cursor:pointer;color:#6b7280;padding:4px 8px">&times;</button>
+    </div>
+    <div id="miniCartItems" style="flex:1;overflow-y:auto;padding:16px 20px"></div>
+    <div style="padding:16px 20px;border-top:1px solid #e5e7eb">
+      <div id="miniCartTotal" style="display:flex;justify-content:space-between;font-weight:700;font-size:1rem;margin-bottom:12px;color:#111"></div>
+      <a href="reservation.html" style="display:block;text-align:center;background:#0c4a6e;color:#fff;padding:12px;border-radius:8px;text-decoration:none;font-weight:600;font-size:0.95rem">${isEN ? 'Book now' : 'Reserver maintenant'}</a>
+    </div>
+  `;
+  document.body.appendChild(drawer);
+
+  // Overlay
   const overlay = document.createElement('div');
-  overlay.style.cssText = 'position:fixed;inset:0;z-index:9999;background:rgba(16,185,129,0.12);pointer-events:none;opacity:0;transition:opacity 0.2s ease';
-
-  const badge = document.createElement('div');
-  const shortName = name.length > 25 ? name.substring(0, 22) + '...' : name;
-  badge.style.cssText = 'position:fixed;top:50%;left:50%;z-index:10000;transform:translate(-50%,-50%) scale(0.5);background:#10b981;color:#fff;padding:16px 32px;border-radius:12px;font-size:1.1rem;font-weight:700;white-space:nowrap;pointer-events:none;opacity:0;transition:all 0.35s cubic-bezier(0.16,1,0.3,1);box-shadow:0 8px 32px rgba(16,185,129,0.45)';
-  badge.innerHTML = '<span style="margin-right:8px;font-size:1.2rem">&#10003;</span>' + shortName;
-
+  overlay.id = 'miniCartOverlay';
+  overlay.style.cssText = 'position:fixed;inset:0;background:rgba(0,0,0,0.3);z-index:9998;opacity:0;pointer-events:none;transition:opacity 0.3s ease';
   document.body.appendChild(overlay);
-  document.body.appendChild(badge);
 
-  requestAnimationFrame(() => {
-    overlay.style.opacity = '1';
-    badge.style.opacity = '1';
-    badge.style.transform = 'translate(-50%,-50%) scale(1)';
+  // Close handlers
+  document.getElementById('miniCartClose').addEventListener('click', closeMiniCartDrawer);
+  overlay.addEventListener('click', closeMiniCartDrawer);
+}
+
+function showMiniCartDrawer() {
+  const drawer = document.getElementById('miniCartDrawer');
+  const overlay = document.getElementById('miniCartOverlay');
+  if (!drawer) return;
+
+  // Populate items
+  const itemsEl = document.getElementById('miniCartItems');
+  const isEN = document.documentElement.lang === 'en';
+  let html = '';
+  let totalPrice = 0;
+  const entries = Object.entries(cart);
+
+  entries.forEach(([id, item]) => {
+    totalPrice += item.price * item.qty;
+    html += `
+      <div style="display:flex;justify-content:space-between;align-items:center;padding:10px 0;border-bottom:1px solid #f3f4f6">
+        <div>
+          <div style="font-weight:600;font-size:0.9rem;color:#111">${item.name}</div>
+          <div style="font-size:0.8rem;color:#6b7280">${item.qty}x - ${item.price}EUR/${isEN ? 'day' : 'jour'}</div>
+        </div>
+        <div style="font-weight:700;color:#0c4a6e;font-size:0.95rem">${item.price * item.qty}EUR</div>
+      </div>`;
   });
 
-  setTimeout(() => {
-    overlay.style.opacity = '0';
-    badge.style.opacity = '0';
-    badge.style.transform = 'translate(-50%,-60%) scale(0.8)';
-    setTimeout(() => { overlay.remove(); badge.remove(); }, 400);
-  }, 1500);
+  if (entries.length === 0) {
+    html = `<p style="color:#9ca3af;text-align:center;margin-top:40px">${isEN ? 'Your selection is empty' : 'Votre selection est vide'}</p>`;
+  }
 
-  // Update navbar cart counter
-  updateNavCartCount();
+  itemsEl.innerHTML = html;
+  document.getElementById('miniCartTotal').innerHTML = `<span>Total/${isEN ? 'day' : 'jour'}</span><span>${totalPrice}EUR</span>`;
+
+  // Show
+  drawer.style.transform = 'translateX(0)';
+  overlay.style.opacity = '1';
+  overlay.style.pointerEvents = 'auto';
+
+  // Auto-hide after 4s
+  clearTimeout(miniCartTimeout);
+  miniCartTimeout = setTimeout(closeMiniCartDrawer, 4000);
+}
+
+function closeMiniCartDrawer() {
+  clearTimeout(miniCartTimeout);
+  const drawer = document.getElementById('miniCartDrawer');
+  const overlay = document.getElementById('miniCartOverlay');
+  if (drawer) drawer.style.transform = 'translateX(100%)';
+  if (overlay) { overlay.style.opacity = '0'; overlay.style.pointerEvents = 'none'; }
 }
 
 function updateNavCartCount() {
@@ -266,43 +325,23 @@ function updateNavCartCount() {
   const ctaLink = document.querySelector('.nav__link--cta');
   if (!ctaLink) return;
 
-  ctaLink.classList.add('nav__cart-badge');
-  let counter = ctaLink.querySelector('.nav__cart-count');
-
+  // Add/update badge
+  let counter = ctaLink.querySelector('.nav-cart-count');
   if (count === 0) {
     if (counter) counter.remove();
     return;
   }
-
   if (!counter) {
     counter = document.createElement('span');
-    counter.className = 'nav__cart-count';
+    counter.className = 'nav-cart-count';
+    counter.style.cssText = 'position:absolute;top:-8px;right:-12px;background:#ef4444;color:#fff;font-size:0.7rem;font-weight:700;min-width:18px;height:18px;border-radius:9px;display:flex;align-items:center;justify-content:center;padding:0 4px;line-height:1';
+    ctaLink.style.position = 'relative';
     ctaLink.appendChild(counter);
   }
-
   counter.textContent = count;
-  counter.classList.remove('pulse');
-  void counter.offsetWidth; // force reflow
-  counter.classList.add('pulse');
-}
-
-function showCartToast(count) {
-  document.querySelector('.toast')?.remove();
-  const isEN = document.documentElement.lang === 'en';
-  const reservationUrl = isEN ? 'reservation.html' : (window.location.pathname.includes('/en/') ? '../reservation.html' : 'reservation.html');
-  const msg = isEN
-    ? `${count} item${count > 1 ? 's' : ''} in your selection. <a href="${reservationUrl}" style="color:#fff;text-decoration:underline;font-weight:600;">Book now</a>`
-    : `${count} article${count > 1 ? 's' : ''} dans votre selection. <a href="${reservationUrl}" style="color:#fff;text-decoration:underline;font-weight:600;">Reserver</a>`;
-
-  const toast = document.createElement('div');
-  toast.className = 'toast';
-  toast.innerHTML = `<span>${msg}</span>`;
-  document.body.appendChild(toast);
-  requestAnimationFrame(() => toast.classList.add('visible'));
-  setTimeout(() => {
-    toast.classList.remove('visible');
-    setTimeout(() => toast.remove(), 300);
-  }, 4000);
+  counter.style.animation = 'none';
+  void counter.offsetWidth;
+  counter.style.animation = 'cartPulse 0.4s ease';
 }
 
 // ============================================
